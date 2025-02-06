@@ -20,6 +20,7 @@ private:
     QHostAddress address;
     quint16 port;
     quint16 cl_port = 7070;
+    std::vector<char> array;
     int* createStartMessage();
     void processReceivedData(const QByteArray &data);
 signals:

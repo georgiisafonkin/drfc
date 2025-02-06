@@ -65,7 +65,6 @@ void DataTransmissionHandler::recieveData() {
 }
 
 void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
-    std::vector<char> array;
     static int index = 0;
     static int prevNumPack = 0;
     int numPack = int(data[1] << 8 | data[2]);
@@ -75,7 +74,7 @@ void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
         if (index != 0) {
             QString fileName = QString("reflectogram_%1.bin").arg(index);
             QFile file(fileName);
-            if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            if (!file.open(QIODevice::WriteOnly)) {
                 qDebug() << "Couldn't open " << fileName << "for writing.";
             }
             else {
@@ -87,12 +86,12 @@ void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
             }
             array.clear();
         }
-        array.insert(array.begin(), data.begin(), data.end());
+        array.insert(array.end(), data.begin(), data.end());
+        qDebug() << "Array size: " << array.size() << "data size: " << data.size();
         prevNumPack = numPack;
         index += 1;
     }
     else if (numPack - prevNumPack == 1) {
-        qDebug() << "numPack - prevNumPack == 1";
         prevNumPack = numPack;
         array.insert(array.end(), data.begin(), data.end());
     }
