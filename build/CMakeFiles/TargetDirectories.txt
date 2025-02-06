@@ -1,0 +1,9 @@
+/home/georgy/drfc_qt/build/CMakeFiles/drfc_qt.dir
+/home/georgy/drfc_qt/build/CMakeFiles/edit_cache.dir
+/home/georgy/drfc_qt/build/CMakeFiles/rebuild_cache.dir
+/home/georgy/drfc_qt/build/CMakeFiles/list_install_components.dir
+/home/georgy/drfc_qt/build/CMakeFiles/install.dir
+/home/georgy/drfc_qt/build/CMakeFiles/install/local.dir
+/home/georgy/drfc_qt/build/CMakeFiles/install/strip.dir
+/home/georgy/drfc_qt/build/CMakeFiles/drfc_qt_autogen_timestamp_deps.dir
+/home/georgy/drfc_qt/build/CMakeFiles/drfc_qt_autogen.dir
