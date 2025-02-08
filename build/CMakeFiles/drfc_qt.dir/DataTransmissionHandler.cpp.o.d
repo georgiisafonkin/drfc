@@ -218,6 +218,8 @@ CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o: \
  /usr/include/c++/14.2.1/cstdint /usr/include/c++/14.2.1/limits \
  /usr/include/c++/14.2.1/ctime \
  /usr/include/c++/14.2.1/bits/parse_numbers.h \
+ /usr/include/qt/QtCore/QElapsedTimer \
+ /usr/include/qt/QtCore/qelapsedtimer.h \
  /usr/include/qt/QtNetwork/qudpsocket.h \
  /usr/include/qt/QtNetwork/qtnetworkglobal.h \
  /usr/include/qt/QtNetwork/qtnetwork-config.h \

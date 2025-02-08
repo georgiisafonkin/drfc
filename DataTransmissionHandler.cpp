@@ -17,6 +17,8 @@ DataTransmissionHandler::DataTransmissionHandler(QObject *parent)
         qDebug() << "Socket binded to " << address.toString() << "on the port " << port;
     }
 
+    elapsedTimer = QElapsedTimer();
+    elapsedTimer.start();
 }
 
 
@@ -58,14 +60,18 @@ void DataTransmissionHandler::recieveData() {
             qDebug() << "Received data:" << datagram;
             processReceivedData(datagram);
         }
-        // else {
-        //     qDebug() << "Error receiving data.";
-        // }
+        else {
+            if (elapsedTimer.elapsed() >= 3000) {
+                qDebug() << "Can't receive any packet. Shut down...";
+                processReceivedData();
+                break;
+            }
+        }
     }
 }
 
 void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
-    static int index = 0;
+    elapsedTimer.restart();
     static int prevNumPack = 0;
     int numPack = int(data[1] << 8 | data[2]);
     qDebug() << "numPack: " << numPack;
@@ -96,4 +102,20 @@ void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
         array.insert(array.end(), data.begin(), data.end());
     }
     qDebug() << "Processing received data of size:" << data.size();
+}
+
+void DataTransmissionHandler::processReceivedData() {
+    QString fileName = QString("reflectogram_%1.bin").arg(index);
+    QFile file(fileName);
+    if (!file.open(QIODevice::WriteOnly)) {
+        qDebug() << "Couldn't open " << fileName << "for writing.";
+    }
+    else {
+        qDebug() << "Successful open " << fileName << "for writing.";
+        QDataStream out(&file);
+        out.setByteOrder(QDataStream::BigEndian);
+        out.writeRawData(array.data(), array.size());
+        file.close();
+    }
+    array.clear();
 }

@@ -2,6 +2,7 @@
 #define DATATRANSMISSIONHANDLER_H
 
 #include <QObject>
+#include <QElapsedTimer>
 #include <qudpsocket.h>
 class DataTransmissionHandler : public QObject
 {
@@ -23,6 +24,10 @@ private:
     std::vector<char> array;
     int* createStartMessage();
     void processReceivedData(const QByteArray &data);
+    void processReceivedData();
+    void finishTransmission();
+    int index = 0;
+    QElapsedTimer elapsedTimer;
 signals:
 };
 
