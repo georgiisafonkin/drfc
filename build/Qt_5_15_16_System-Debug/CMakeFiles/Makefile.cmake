@@ -14,6 +14,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib/cmake/Qt5/Qt5Config.cmake"
   "/usr/lib/cmake/Qt5/Qt5ConfigVersion.cmake"
   "/usr/lib/cmake/Qt5/Qt5ModuleLocation.cmake"
+  "/usr/lib/cmake/Qt5Charts/Qt5ChartsConfig.cmake"
+  "/usr/lib/cmake/Qt5Charts/Qt5ChartsConfigVersion.cmake"
   "/usr/lib/cmake/Qt5Core/Qt5CoreConfig.cmake"
   "/usr/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake"
   "/usr/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake"

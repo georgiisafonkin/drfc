@@ -1,29 +1,31 @@
 import socket
 import random
-import string
 import struct
 import time
 
-# Функция для генерации случайного текста длиной (105 - 5 = 100) символов
-def generate_random_message():
-    return ''.join(random.choices(string.ascii_letters + string.digits, k=1024))
+# Функция для генерации рефлектограммы (массив случайных чисел)
+def generate_reflectogram(size):
+    # Генерируем массив случайных 16-битных чисел (от 0 до 65535)
+    return [random.randint(0, 65535) for _ in range(size // 2)]
 
 # Функция для формирования пакета
 def create_packet(packet_number):
-    # Генерируем сообщение
-    message = generate_random_message()
-
-    # Формируем пакет с требуемой структурой
-    packet = bytearray(1024 + 5)
+    # Размер сообщения 1024 + 5 байт (5 байт заголовка + рефлектограмма)
+    packet = bytearray(1029)
 
     # Первый байт нулевой
     packet[0] = 0
 
     # Следующие четыре байта - номер пакета в Big Endian
-    packet[1:3] = struct.pack('>H', packet_number)  # >H - Big Endian 2 байта (unsigned short)
+    packet[1:3] = struct.pack('>H', packet_number)
 
-    # Остальные 100 байт заполняются случайным сообщением
-    packet[3:] = message.encode('latin-1')[:102]  # Используем latin-1, если это ваша кодировка
+    # Генерируем рефлектограмму
+    reflectogram = generate_reflectogram(1019)
+
+    # Заполняем байты начиная с шестого двухбайтовыми значениями рефлектограммы
+    for i, value in enumerate(reflectogram):
+        start = 5 + i * 2
+        packet[start:start + 2] = struct.pack('>H', value)
 
     return packet
 
@@ -37,14 +39,13 @@ def start_udp_server():
     data, addr = server_socket.recvfrom(1024)
 
     try:
-        # Декодируем сообщение с нужной кодировкой
         print(f"Получено стартовое сообщение от {addr}: {data}")
     except UnicodeDecodeError:
-        print(f"Ошибка декодирования данных: получены не latin-1 данные от {addr}")
+        print(f"Ошибка декодирования данных: получены данные в неизвестной кодировке от {addr}")
 
     return server_socket, addr
 
-# Функция для отправки трех сообщений
+# Функция для отправки трёх сообщений
 def send_three_messages(server_socket, addr):
     for msg_number in range(1, 4):
         print(f"Отправка сообщения {msg_number} на {addr}...")

@@ -12,8 +12,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Find the required Qt packages
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Network Widgets SerialPort)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Network Widgets SerialPort)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Network Widgets SerialPort Gui Charts)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Network Widgets SerialPort Gui Charts)
 
 # Add the executable target
 add_executable(drfc_qt
@@ -21,6 +21,7 @@ add_executable(drfc_qt
   DataTransmissionHandler.cpp
   gui.h gui.cpp
   DataTransmissionWorker.h DataTransmissionWorker.cpp
+  RealTimeChart.h RealTimeChart.cpp
 
 )
 
@@ -36,6 +37,8 @@ target_link_libraries(drfc_qt
   Qt${QT_VERSION_MAJOR}::Network
   Qt${QT_VERSION_MAJOR}::Widgets
   Qt${QT_VERSION_MAJOR}::SerialPort
+  Qt${QT_VERSION_MAJOR}::Gui
+  Qt${QT_VERSION_MAJOR}::Charts
 )
 
 # Install rules

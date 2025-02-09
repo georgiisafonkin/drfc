@@ -87,6 +87,10 @@
 		"/usr/share/cmake/Modules/CMakeParseArguments.cmake",
 		"/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake",
 		"/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake",
+		"/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"/lib/cmake/Qt5Charts/Qt5ChartsConfigVersion.cmake",
+		"/lib/cmake/Qt5Charts/Qt5ChartsConfig.cmake",
 		"/usr/share/cmake/Modules/GNUInstallDirs.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/georgy/drfc_qt",
@@ -107,6 +111,12 @@
 			"EWIEGA46WW/moc_DataTransmissionWorker.cpp",
 			null
 		],
+		[
+			"/home/georgy/drfc_qt/RealTimeChart.h",
+			"MU",
+			"EWIEGA46WW/moc_RealTimeChart.cpp",
+			null
+		],
 		[ "/home/georgy/drfc_qt/gui.h", "MU", "EWIEGA46WW/moc_gui.cpp", null ]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -114,6 +124,7 @@
 	"MOC_COMPILATION_FILE" : "/home/georgy/drfc_qt/build/drfc_qt_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
+		"QT_CHARTS_LIB",
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
 		"QT_NETWORK_LIB",
@@ -137,6 +148,7 @@
 		"/usr/include/qt/QtWidgets",
 		"/usr/include/qt/QtGui",
 		"/usr/include/qt/QtSerialPort",
+		"/usr/include/qt/QtCharts",
 		"/usr/include/c++/14.2.1",
 		"/usr/include/c++/14.2.1/x86_64-pc-linux-gnu",
 		"/usr/include/c++/14.2.1/backward",
@@ -172,6 +184,7 @@
 	[
 		[ "/home/georgy/drfc_qt/DataTransmissionHandler.cpp", "MU", null ],
 		[ "/home/georgy/drfc_qt/DataTransmissionWorker.cpp", "MU", null ],
+		[ "/home/georgy/drfc_qt/RealTimeChart.cpp", "MU", null ],
 		[ "/home/georgy/drfc_qt/gui.cpp", "MU", null ],
 		[ "/home/georgy/drfc_qt/main.cpp", "MU", null ]
 	],

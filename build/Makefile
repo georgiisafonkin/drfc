@@ -248,6 +248,30 @@ DataTransmissionWorker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.s
 .PHONY : DataTransmissionWorker.cpp.s
 
+RealTimeChart.o: RealTimeChart.cpp.o
+.PHONY : RealTimeChart.o
+
+# target to build an object file
+RealTimeChart.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.o
+.PHONY : RealTimeChart.cpp.o
+
+RealTimeChart.i: RealTimeChart.cpp.i
+.PHONY : RealTimeChart.i
+
+# target to preprocess a source file
+RealTimeChart.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.i
+.PHONY : RealTimeChart.cpp.i
+
+RealTimeChart.s: RealTimeChart.cpp.s
+.PHONY : RealTimeChart.s
+
+# target to generate assembly for a file
+RealTimeChart.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.s
+.PHONY : RealTimeChart.cpp.s
+
 drfc_qt_autogen/mocs_compilation.o: drfc_qt_autogen/mocs_compilation.cpp.o
 .PHONY : drfc_qt_autogen/mocs_compilation.o
 
@@ -341,6 +365,9 @@ help:
 	@echo "... DataTransmissionWorker.o"
 	@echo "... DataTransmissionWorker.i"
 	@echo "... DataTransmissionWorker.s"
+	@echo "... RealTimeChart.o"
+	@echo "... RealTimeChart.i"
+	@echo "... RealTimeChart.s"
 	@echo "... drfc_qt_autogen/mocs_compilation.o"
 	@echo "... drfc_qt_autogen/mocs_compilation.i"
 	@echo "... drfc_qt_autogen/mocs_compilation.s"

@@ -5,6 +5,9 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    qRegisterMetaType<std::vector<qint16>>("std::vector<qint16>");
+
     GUI gui;
     gui.setWindowTitle("drfc");
     gui.resize(400, 200);

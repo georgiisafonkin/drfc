@@ -231,26 +231,75 @@ CMakeFiles/drfc_qt.dir/main.cpp.o: /home/georgy/drfc_qt/main.cpp \
  /usr/include/qt/QtCore/qset.h /usr/include/qt/QtCore/qcontiguouscache.h \
  /usr/include/qt/QtCore/qsharedpointer.h \
  /usr/include/qt/QtCore/qsharedpointer_impl.h \
- /usr/include/qt/QtNetwork/qhostaddress.h /home/georgy/drfc_qt/gui.h \
+ /usr/include/qt/QtNetwork/qhostaddress.h /usr/include/qt/QtCore/QThread \
+ /usr/include/qt/QtCore/qthread.h /usr/include/qt/QtCore/qdeadlinetimer.h \
+ /usr/include/qt/QtCore/qelapsedtimer.h /usr/include/c++/14.2.1/future \
+ /usr/include/c++/14.2.1/mutex /usr/include/c++/14.2.1/bits/std_mutex.h \
+ /usr/include/c++/14.2.1/bits/unique_lock.h \
+ /usr/include/c++/14.2.1/condition_variable \
+ /usr/include/c++/14.2.1/bits/atomic_futex.h \
+ /usr/include/c++/14.2.1/bits/std_thread.h /home/georgy/drfc_qt/gui.h \
+ /home/georgy/drfc_qt/DataTransmissionWorker.h \
+ /home/georgy/drfc_qt/RealTimeChart.h /usr/include/qt/QtCharts/QChart \
+ /usr/include/qt/QtCharts/qchart.h \
+ /usr/include/qt/QtCharts/QAbstractSeries \
+ /usr/include/qt/QtCharts/qabstractseries.h \
+ /usr/include/qt/QtCharts/QChartGlobal \
+ /usr/include/qt/QtCharts/qchartglobal.h /usr/include/qt/QtCore/QtGlobal \
+ /usr/include/qt/QtCore/qglobal.h /usr/include/qt/QtCharts/QAbstractAxis \
+ /usr/include/qt/QtCharts/qabstractaxis.h /usr/include/qt/QtGui/QPen \
+ /usr/include/qt/QtGui/qpen.h /usr/include/qt/QtGui/qtguiglobal.h \
+ /usr/include/qt/QtGui/qtgui-config.h /usr/include/qt/QtGui/qcolor.h \
+ /usr/include/qt/QtGui/qrgb.h /usr/include/qt/QtGui/qrgba64.h \
+ /usr/include/qt/QtGui/qbrush.h /usr/include/qt/QtCore/qpoint.h \
+ /usr/include/qt/QtGui/qmatrix.h /usr/include/qt/QtGui/qpolygon.h \
+ /usr/include/qt/QtCore/qrect.h /usr/include/qt/QtCore/qmargins.h \
+ /usr/include/qt/QtCore/qsize.h /usr/include/qt/QtGui/qregion.h \
+ /usr/include/qt/QtGui/qwindowdefs.h /usr/include/qt/QtCore/qdatastream.h \
+ /usr/include/qt/QtCore/qline.h /usr/include/qt/QtGui/qtransform.h \
+ /usr/include/qt/QtGui/qimage.h /usr/include/qt/QtGui/qpaintdevice.h \
+ /usr/include/qt/QtGui/qpixelformat.h /usr/include/qt/QtGui/qpixmap.h \
+ /usr/include/qt/QtGui/QFont /usr/include/qt/QtGui/qfont.h \
+ /usr/include/qt/QtCore/QVariant /usr/include/qt/QtCore/qvariant.h \
+ /usr/include/qt/QtCore/QObject /usr/include/qt/QtCharts/QLegend \
+ /usr/include/qt/QtCharts/qlegend.h \
+ /usr/include/qt/QtWidgets/QGraphicsWidget \
+ /usr/include/qt/QtWidgets/qgraphicswidget.h \
+ /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
+ /usr/include/qt/QtWidgets/qtwidgets-config.h \
+ /usr/include/qt/QtGui/qfont.h \
+ /usr/include/qt/QtWidgets/qgraphicslayoutitem.h \
+ /usr/include/qt/QtWidgets/qsizepolicy.h /usr/include/qt/QtGui/qevent.h \
+ /usr/include/qt/QtGui/qkeysequence.h /usr/include/qt/QtCore/qcoreevent.h \
+ /usr/include/qt/QtCore/qurl.h /usr/include/qt/QtCore/qfile.h \
+ /usr/include/qt/QtCore/qfiledevice.h /usr/include/qt/QtGui/qvector2d.h \
+ /usr/include/qt/QtGui/qtouchdevice.h \
+ /usr/include/qt/QtWidgets/qgraphicsitem.h \
+ /usr/include/qt/QtGui/qpainterpath.h /usr/include/qt/QtGui/qpalette.h \
+ /usr/include/qt/QtGui/QBrush /usr/include/qt/QtGui/qbrush.h \
+ /usr/include/qt/QtCore/QMargins /usr/include/qt/QtCore/qmargins.h \
+ /usr/include/qt/QtCharts/QChartView \
+ /usr/include/qt/QtCharts/qchartview.h /usr/include/qt/QtCharts/QChart \
+ /usr/include/qt/QtWidgets/QGraphicsView \
+ /usr/include/qt/QtWidgets/qgraphicsview.h \
+ /usr/include/qt/QtGui/qpainter.h /usr/include/qt/QtGui/qtextoption.h \
+ /usr/include/qt/QtGui/qpen.h /usr/include/qt/QtGui/qfontinfo.h \
+ /usr/include/qt/QtGui/qfontmetrics.h \
+ /usr/include/qt/QtWidgets/qscrollarea.h \
+ /usr/include/qt/QtWidgets/qabstractscrollarea.h \
+ /usr/include/qt/QtWidgets/qframe.h /usr/include/qt/QtWidgets/qwidget.h \
+ /usr/include/qt/QtGui/qcursor.h \
+ /usr/include/qt/QtWidgets/qgraphicsscene.h \
+ /usr/include/qt/QtCharts/QLineSeries \
+ /usr/include/qt/QtCharts/qlineseries.h \
+ /usr/include/qt/QtCharts/QXYSeries /usr/include/qt/QtCharts/qxyseries.h \
+ /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
+ /usr/include/qt/QtCore/QTimer /usr/include/qt/QtCore/qtimer.h \
+ /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCharts/qchart.h \
+ /usr/include/qt/QtCharts/qchartview.h \
+ /usr/include/qt/QtCharts/qlineseries.h \
  /usr/include/qt/QtWidgets/QComboBox \
  /usr/include/qt/QtWidgets/qcombobox.h \
- /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
- /usr/include/qt/QtGui/qtguiglobal.h /usr/include/qt/QtGui/qtgui-config.h \
- /usr/include/qt/QtWidgets/qtwidgets-config.h \
- /usr/include/qt/QtWidgets/qwidget.h /usr/include/qt/QtGui/qwindowdefs.h \
- /usr/include/qt/QtCore/qmargins.h /usr/include/qt/QtGui/qpaintdevice.h \
- /usr/include/qt/QtCore/qrect.h /usr/include/qt/QtCore/qsize.h \
- /usr/include/qt/QtCore/qpoint.h /usr/include/qt/QtGui/qpalette.h \
- /usr/include/qt/QtGui/qcolor.h /usr/include/qt/QtGui/qrgb.h \
- /usr/include/qt/QtGui/qrgba64.h /usr/include/qt/QtGui/qbrush.h \
- /usr/include/qt/QtGui/qmatrix.h /usr/include/qt/QtGui/qpolygon.h \
- /usr/include/qt/QtGui/qregion.h /usr/include/qt/QtCore/qdatastream.h \
- /usr/include/qt/QtCore/qline.h /usr/include/qt/QtGui/qtransform.h \
- /usr/include/qt/QtGui/qimage.h /usr/include/qt/QtGui/qpixelformat.h \
- /usr/include/qt/QtGui/qpixmap.h /usr/include/qt/QtGui/qfont.h \
- /usr/include/qt/QtGui/qfontmetrics.h /usr/include/qt/QtGui/qfontinfo.h \
- /usr/include/qt/QtWidgets/qsizepolicy.h /usr/include/qt/QtGui/qcursor.h \
- /usr/include/qt/QtGui/qkeysequence.h \
  /usr/include/qt/QtWidgets/qabstractitemdelegate.h \
  /usr/include/qt/QtWidgets/qstyleoption.h \
  /usr/include/qt/QtWidgets/qabstractspinbox.h \
@@ -261,7 +310,6 @@ CMakeFiles/drfc_qt.dir/main.cpp.o: /home/georgy/drfc_qt/main.cpp \
  /usr/include/qt/QtWidgets/qstyle.h /usr/include/qt/QtWidgets/qtabbar.h \
  /usr/include/qt/QtWidgets/qtabwidget.h \
  /usr/include/qt/QtWidgets/qrubberband.h \
- /usr/include/qt/QtWidgets/qframe.h \
  /usr/include/qt/QtCore/qabstractitemmodel.h \
  /usr/include/qt/QtWidgets/QLabel /usr/include/qt/QtWidgets/qlabel.h \
  /usr/include/qt/QtWidgets/QMainWindow \
@@ -275,10 +323,9 @@ CMakeFiles/drfc_qt.dir/main.cpp.o: /home/georgy/drfc_qt/main.cpp \
  /usr/include/qt/QtWidgets/qlayoutitem.h \
  /usr/include/qt/QtWidgets/qboxlayout.h \
  /usr/include/qt/QtWidgets/qgridlayout.h \
- /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
  /usr/include/qt/QtWidgets/QApplication \
  /usr/include/qt/QtWidgets/qapplication.h \
  /usr/include/qt/QtCore/qcoreapplication.h \
- /usr/include/qt/QtCore/qcoreevent.h /usr/include/qt/QtCore/qeventloop.h \
+ /usr/include/qt/QtCore/qeventloop.h \
  /usr/include/qt/QtGui/qguiapplication.h \
  /usr/include/qt/QtGui/qinputmethod.h

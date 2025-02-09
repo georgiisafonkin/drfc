@@ -7,7 +7,7 @@
 #include <vector>
 
 DataTransmissionHandler::DataTransmissionHandler(QObject *parent)
-    : QObject{parent}, address(QHostAddress::LocalHost), port(8080)
+    : QThread{parent}, address(QHostAddress::LocalHost), port(8080)
 {
     sock = new QUdpSocket(this);
 
@@ -18,7 +18,6 @@ DataTransmissionHandler::DataTransmissionHandler(QObject *parent)
     }
 
     elapsedTimer = QElapsedTimer();
-    elapsedTimer.start();
 }
 
 
@@ -49,6 +48,7 @@ void DataTransmissionHandler::startDataTransmission() {
 }
 
 void DataTransmissionHandler::recieveData() {
+    elapsedTimer.start();
     while (true) {
         QByteArray datagram;
         datagram.resize(lengthUdpPack + 5);  // Adjust size as needed
@@ -57,7 +57,7 @@ void DataTransmissionHandler::recieveData() {
         qint64 bytesRead = sock->readDatagram(datagram.data(), datagram.size(), &address, &cl_port);
 
         if (bytesRead > 0) {
-            qDebug() << "Received data:" << datagram;
+            // qDebug() << "Received data:" << datagram;
             processReceivedData(datagram);
         }
         else {
@@ -71,6 +71,14 @@ void DataTransmissionHandler::recieveData() {
 }
 
 void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
+    //parse it to int16 array for chart drawer
+     std::vector<qint16> numbers;
+     for (int i = 3; i <= data.length() - 1; ++i) {
+         numbers.push_back(qint16(data[i] << 8 | data[i + 1]));
+    }
+    //signal-slot to gui for drawing
+    ChartDataReady(index, numbers);
+
     elapsedTimer.restart();
     static int prevNumPack = 0;
     int numPack = int(data[1] << 8 | data[2]);
@@ -119,3 +127,9 @@ void DataTransmissionHandler::processReceivedData() {
     }
     array.clear();
 }
+
+void DataTransmissionHandler::run() {
+    this->startDataTransmission();
+    this->recieveData();
+}
+

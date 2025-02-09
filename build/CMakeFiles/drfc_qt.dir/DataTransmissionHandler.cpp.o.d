@@ -232,7 +232,14 @@ CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o: \
  /usr/include/qt/QtCore/qset.h /usr/include/qt/QtCore/qcontiguouscache.h \
  /usr/include/qt/QtCore/qsharedpointer.h \
  /usr/include/qt/QtCore/qsharedpointer_impl.h \
- /usr/include/qt/QtNetwork/qhostaddress.h \
+ /usr/include/qt/QtNetwork/qhostaddress.h /usr/include/qt/QtCore/QThread \
+ /usr/include/qt/QtCore/qthread.h /usr/include/qt/QtCore/qdeadlinetimer.h \
+ /usr/include/qt/QtCore/qelapsedtimer.h /usr/include/c++/14.2.1/future \
+ /usr/include/c++/14.2.1/mutex /usr/include/c++/14.2.1/bits/std_mutex.h \
+ /usr/include/c++/14.2.1/bits/unique_lock.h \
+ /usr/include/c++/14.2.1/condition_variable \
+ /usr/include/c++/14.2.1/bits/atomic_futex.h \
+ /usr/include/c++/14.2.1/bits/std_thread.h \
  /usr/include/qt/QtNetwork/QHostAddress \
  /usr/include/qt/QtNetwork/qhostaddress.h \
  /usr/include/qt/QtNetwork/QUdpSocket \

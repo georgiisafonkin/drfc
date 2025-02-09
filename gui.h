@@ -1,6 +1,10 @@
 #ifndef GUI_H
 #define GUI_H
 
+#include "DataTransmissionWorker.h"
+#include "RealTimeChart.h"
+#include <QChart>
+#include <QChartView>
 #include <QComboBox>
 #include <QLabel>
 #include <QMainWindow>
@@ -23,6 +27,13 @@ private:
     QPushButton* selectButton;
     void refreshComPorts();
     void selectComPort();
+
+    DataTransmissionHandler* dth;
+
+    void updateCharts(int index, const std::vector<qint16>& numbers);
+    int pointNumber = 0;
+
+    std::vector<RealTimeChart*> realTimeCharts;
 signals:
 };
 

@@ -4,7 +4,8 @@
 #include <QObject>
 #include <QElapsedTimer>
 #include <qudpsocket.h>
-class DataTransmissionHandler : public QObject
+#include <QThread>
+class DataTransmissionHandler : public QThread
 {
     Q_OBJECT
 public:
@@ -28,7 +29,10 @@ private:
     void finishTransmission();
     int index = 0;
     QElapsedTimer elapsedTimer;
+protected:
+    void run() override;
 signals:
+    void ChartDataReady(int index, const std::vector<qint16>& numbers);
 };
 
 #endif // DATATRANSMISSIONHANDLER_H

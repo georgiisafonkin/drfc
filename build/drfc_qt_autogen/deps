@@ -4,6 +4,8 @@ drfc_qt_autogen/timestamp: \
 	/home/georgy/drfc_qt/DataTransmissionHandler.h \
 	/home/georgy/drfc_qt/DataTransmissionWorker.cpp \
 	/home/georgy/drfc_qt/DataTransmissionWorker.h \
+	/home/georgy/drfc_qt/RealTimeChart.cpp \
+	/home/georgy/drfc_qt/RealTimeChart.h \
 	/home/georgy/drfc_qt/build/CMakeFiles/3.31.2/CMakeCXXCompiler.cmake \
 	/home/georgy/drfc_qt/build/CMakeFiles/3.31.2/CMakeSystem.cmake \
 	/home/georgy/drfc_qt/build/drfc_qt_autogen/moc_predefs.h \
@@ -13,6 +15,8 @@ drfc_qt_autogen/timestamp: \
 	/lib/cmake/Qt5/Qt5Config.cmake \
 	/lib/cmake/Qt5/Qt5ConfigVersion.cmake \
 	/lib/cmake/Qt5/Qt5ModuleLocation.cmake \
+	/lib/cmake/Qt5Charts/Qt5ChartsConfig.cmake \
+	/lib/cmake/Qt5Charts/Qt5ChartsConfigVersion.cmake \
 	/lib/cmake/Qt5Core/Qt5CoreConfig.cmake \
 	/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
 	/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
@@ -254,6 +258,7 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/c++/14.2.1/ext/type_traits.h \
 	/usr/include/c++/14.2.1/format \
 	/usr/include/c++/14.2.1/functional \
+	/usr/include/c++/14.2.1/future \
 	/usr/include/c++/14.2.1/initializer_list \
 	/usr/include/c++/14.2.1/ios \
 	/usr/include/c++/14.2.1/iosfwd \
@@ -301,14 +306,36 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/linux/errno.h \
 	/usr/include/locale.h \
 	/usr/include/pthread.h \
+	/usr/include/qt/QtCharts/QAbstractAxis \
+	/usr/include/qt/QtCharts/QAbstractSeries \
+	/usr/include/qt/QtCharts/QChart \
+	/usr/include/qt/QtCharts/QChartGlobal \
+	/usr/include/qt/QtCharts/QChartView \
+	/usr/include/qt/QtCharts/QLegend \
+	/usr/include/qt/QtCharts/QLineSeries \
+	/usr/include/qt/QtCharts/QXYSeries \
+	/usr/include/qt/QtCharts/qabstractaxis.h \
+	/usr/include/qt/QtCharts/qabstractseries.h \
+	/usr/include/qt/QtCharts/qchart.h \
+	/usr/include/qt/QtCharts/qchartglobal.h \
+	/usr/include/qt/QtCharts/qchartview.h \
+	/usr/include/qt/QtCharts/qlegend.h \
+	/usr/include/qt/QtCharts/qlineseries.h \
+	/usr/include/qt/QtCharts/qxyseries.h \
 	/usr/include/qt/QtCore/QElapsedTimer \
+	/usr/include/qt/QtCore/QMargins \
 	/usr/include/qt/QtCore/QObject \
+	/usr/include/qt/QtCore/QThread \
+	/usr/include/qt/QtCore/QTimer \
+	/usr/include/qt/QtCore/QVariant \
+	/usr/include/qt/QtCore/QtGlobal \
 	/usr/include/qt/QtCore/qabstractitemmodel.h \
 	/usr/include/qt/QtCore/qalgorithms.h \
 	/usr/include/qt/QtCore/qarraydata.h \
 	/usr/include/qt/QtCore/qatomic.h \
 	/usr/include/qt/QtCore/qatomic_cxx11.h \
 	/usr/include/qt/QtCore/qbasicatomic.h \
+	/usr/include/qt/QtCore/qbasictimer.h \
 	/usr/include/qt/QtCore/qbytearray.h \
 	/usr/include/qt/QtCore/qbytearraylist.h \
 	/usr/include/qt/QtCore/qchar.h \
@@ -317,9 +344,13 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtCore/qcontainerfwd.h \
 	/usr/include/qt/QtCore/qcontainertools_impl.h \
 	/usr/include/qt/QtCore/qcontiguouscache.h \
+	/usr/include/qt/QtCore/qcoreevent.h \
 	/usr/include/qt/QtCore/qdatastream.h \
+	/usr/include/qt/QtCore/qdeadlinetimer.h \
 	/usr/include/qt/QtCore/qdebug.h \
 	/usr/include/qt/QtCore/qelapsedtimer.h \
+	/usr/include/qt/QtCore/qfile.h \
+	/usr/include/qt/QtCore/qfiledevice.h \
 	/usr/include/qt/QtCore/qflags.h \
 	/usr/include/qt/QtCore/qgenericatomic.h \
 	/usr/include/qt/QtCore/qglobal.h \
@@ -364,14 +395,21 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtCore/qsystemdetection.h \
 	/usr/include/qt/QtCore/qtcore-config.h \
 	/usr/include/qt/QtCore/qtextstream.h \
+	/usr/include/qt/QtCore/qthread.h \
+	/usr/include/qt/QtCore/qtimer.h \
 	/usr/include/qt/QtCore/qtypeinfo.h \
+	/usr/include/qt/QtCore/qurl.h \
 	/usr/include/qt/QtCore/qvariant.h \
 	/usr/include/qt/QtCore/qvarlengtharray.h \
 	/usr/include/qt/QtCore/qvector.h \
 	/usr/include/qt/QtCore/qversiontagging.h \
+	/usr/include/qt/QtGui/QBrush \
+	/usr/include/qt/QtGui/QFont \
+	/usr/include/qt/QtGui/QPen \
 	/usr/include/qt/QtGui/qbrush.h \
 	/usr/include/qt/QtGui/qcolor.h \
 	/usr/include/qt/QtGui/qcursor.h \
+	/usr/include/qt/QtGui/qevent.h \
 	/usr/include/qt/QtGui/qfont.h \
 	/usr/include/qt/QtGui/qfontinfo.h \
 	/usr/include/qt/QtGui/qfontmetrics.h \
@@ -380,17 +418,23 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtGui/qkeysequence.h \
 	/usr/include/qt/QtGui/qmatrix.h \
 	/usr/include/qt/QtGui/qpaintdevice.h \
+	/usr/include/qt/QtGui/qpainter.h \
+	/usr/include/qt/QtGui/qpainterpath.h \
 	/usr/include/qt/QtGui/qpalette.h \
+	/usr/include/qt/QtGui/qpen.h \
 	/usr/include/qt/QtGui/qpixelformat.h \
 	/usr/include/qt/QtGui/qpixmap.h \
 	/usr/include/qt/QtGui/qpolygon.h \
 	/usr/include/qt/QtGui/qregion.h \
 	/usr/include/qt/QtGui/qrgb.h \
 	/usr/include/qt/QtGui/qrgba64.h \
+	/usr/include/qt/QtGui/qtextoption.h \
 	/usr/include/qt/QtGui/qtgui-config.h \
 	/usr/include/qt/QtGui/qtguiglobal.h \
+	/usr/include/qt/QtGui/qtouchdevice.h \
 	/usr/include/qt/QtGui/qtransform.h \
 	/usr/include/qt/QtGui/qvalidator.h \
+	/usr/include/qt/QtGui/qvector2d.h \
 	/usr/include/qt/QtGui/qwindowdefs.h \
 	/usr/include/qt/QtNetwork/qabstractsocket.h \
 	/usr/include/qt/QtNetwork/qhostaddress.h \
@@ -398,6 +442,8 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtNetwork/qtnetworkglobal.h \
 	/usr/include/qt/QtNetwork/qudpsocket.h \
 	/usr/include/qt/QtWidgets/QComboBox \
+	/usr/include/qt/QtWidgets/QGraphicsView \
+	/usr/include/qt/QtWidgets/QGraphicsWidget \
 	/usr/include/qt/QtWidgets/QLabel \
 	/usr/include/qt/QtWidgets/QMainWindow \
 	/usr/include/qt/QtWidgets/QPushButton \
@@ -405,11 +451,17 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtWidgets/QWidget \
 	/usr/include/qt/QtWidgets/qabstractbutton.h \
 	/usr/include/qt/QtWidgets/qabstractitemdelegate.h \
+	/usr/include/qt/QtWidgets/qabstractscrollarea.h \
 	/usr/include/qt/QtWidgets/qabstractslider.h \
 	/usr/include/qt/QtWidgets/qabstractspinbox.h \
 	/usr/include/qt/QtWidgets/qboxlayout.h \
 	/usr/include/qt/QtWidgets/qcombobox.h \
 	/usr/include/qt/QtWidgets/qframe.h \
+	/usr/include/qt/QtWidgets/qgraphicsitem.h \
+	/usr/include/qt/QtWidgets/qgraphicslayoutitem.h \
+	/usr/include/qt/QtWidgets/qgraphicsscene.h \
+	/usr/include/qt/QtWidgets/qgraphicsview.h \
+	/usr/include/qt/QtWidgets/qgraphicswidget.h \
 	/usr/include/qt/QtWidgets/qgridlayout.h \
 	/usr/include/qt/QtWidgets/qlabel.h \
 	/usr/include/qt/QtWidgets/qlayout.h \
@@ -417,6 +469,7 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtWidgets/qmainwindow.h \
 	/usr/include/qt/QtWidgets/qpushbutton.h \
 	/usr/include/qt/QtWidgets/qrubberband.h \
+	/usr/include/qt/QtWidgets/qscrollarea.h \
 	/usr/include/qt/QtWidgets/qsizepolicy.h \
 	/usr/include/qt/QtWidgets/qslider.h \
 	/usr/include/qt/QtWidgets/qstyle.h \

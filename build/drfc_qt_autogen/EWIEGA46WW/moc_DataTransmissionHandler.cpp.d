@@ -192,6 +192,7 @@
   /usr/include/c++/14.2.1/ext/type_traits.h \
   /usr/include/c++/14.2.1/format \
   /usr/include/c++/14.2.1/functional \
+  /usr/include/c++/14.2.1/future \
   /usr/include/c++/14.2.1/initializer_list \
   /usr/include/c++/14.2.1/ios \
   /usr/include/c++/14.2.1/iosfwd \
@@ -241,6 +242,7 @@
   /usr/include/pthread.h \
   /usr/include/qt/QtCore/QElapsedTimer \
   /usr/include/qt/QtCore/QObject \
+  /usr/include/qt/QtCore/QThread \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/qt/QtCore/qatomic.h \
@@ -254,6 +256,7 @@
   /usr/include/qt/QtCore/qcontainerfwd.h \
   /usr/include/qt/QtCore/qcontainertools_impl.h \
   /usr/include/qt/QtCore/qcontiguouscache.h \
+  /usr/include/qt/QtCore/qdeadlinetimer.h \
   /usr/include/qt/QtCore/qdebug.h \
   /usr/include/qt/QtCore/qelapsedtimer.h \
   /usr/include/qt/QtCore/qflags.h \
@@ -294,6 +297,7 @@
   /usr/include/qt/QtCore/qsystemdetection.h \
   /usr/include/qt/QtCore/qtcore-config.h \
   /usr/include/qt/QtCore/qtextstream.h \
+  /usr/include/qt/QtCore/qthread.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
   /usr/include/qt/QtCore/qvariant.h \
   /usr/include/qt/QtCore/qvarlengtharray.h \

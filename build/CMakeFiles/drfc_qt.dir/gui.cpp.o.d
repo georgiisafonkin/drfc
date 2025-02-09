@@ -1,10 +1,10 @@
 CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/stdc-predef.h /home/georgy/drfc_qt/gui.h \
- /usr/include/qt/QtWidgets/QComboBox \
- /usr/include/qt/QtWidgets/qcombobox.h \
- /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
- /usr/include/qt/QtGui/qtguiglobal.h /usr/include/qt/QtCore/qglobal.h \
- /usr/include/c++/14.2.1/type_traits \
+ /home/georgy/drfc_qt/DataTransmissionWorker.h \
+ /home/georgy/drfc_qt/DataTransmissionHandler.h \
+ /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
+ /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
+ /usr/include/qt/QtCore/qglobal.h /usr/include/c++/14.2.1/type_traits \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -83,16 +83,11 @@ CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/c++/14.2.1/bits/atomic_lockfree_defines.h \
  /usr/include/qt/QtCore/qglobalstatic.h /usr/include/qt/QtCore/qnumeric.h \
  /usr/include/qt/QtCore/qversiontagging.h \
- /usr/include/qt/QtGui/qtgui-config.h \
- /usr/include/qt/QtWidgets/qtwidgets-config.h \
- /usr/include/qt/QtWidgets/qwidget.h /usr/include/qt/QtGui/qwindowdefs.h \
- /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
  /usr/include/qt/QtCore/qobjectdefs_impl.h \
- /usr/include/qt/QtCore/qobject.h /usr/include/qt/QtCore/qstring.h \
- /usr/include/qt/QtCore/qchar.h /usr/include/qt/QtCore/qbytearray.h \
- /usr/include/qt/QtCore/qrefcount.h /usr/include/qt/QtCore/qarraydata.h \
- /usr/include/string.h /usr/include/strings.h \
- /usr/include/c++/14.2.1/stdlib.h \
+ /usr/include/qt/QtCore/qstring.h /usr/include/qt/QtCore/qchar.h \
+ /usr/include/qt/QtCore/qbytearray.h /usr/include/qt/QtCore/qrefcount.h \
+ /usr/include/qt/QtCore/qarraydata.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/c++/14.2.1/stdlib.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
  /usr/include/c++/14.2.1/string \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
@@ -223,27 +218,90 @@ CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/c++/14.2.1/cstdint /usr/include/c++/14.2.1/limits \
  /usr/include/c++/14.2.1/ctime \
  /usr/include/c++/14.2.1/bits/parse_numbers.h \
- /usr/include/qt/QtCore/qmargins.h /usr/include/qt/QtGui/qpaintdevice.h \
- /usr/include/qt/QtCore/qrect.h /usr/include/qt/QtCore/qsize.h \
- /usr/include/qt/QtCore/qpoint.h /usr/include/qt/QtGui/qpalette.h \
- /usr/include/qt/QtGui/qcolor.h /usr/include/qt/QtGui/qrgb.h \
- /usr/include/qt/QtGui/qrgba64.h /usr/include/qt/QtGui/qbrush.h \
- /usr/include/qt/QtGui/qmatrix.h /usr/include/qt/QtGui/qpolygon.h \
- /usr/include/qt/QtGui/qregion.h /usr/include/qt/QtCore/qdatastream.h \
- /usr/include/qt/QtCore/qiodevice.h /usr/include/qt/QtCore/qline.h \
- /usr/include/qt/QtGui/qtransform.h /usr/include/qt/QtGui/qimage.h \
- /usr/include/qt/QtGui/qpixelformat.h /usr/include/qt/QtGui/qpixmap.h \
+ /usr/include/qt/QtCore/QElapsedTimer \
+ /usr/include/qt/QtCore/qelapsedtimer.h \
+ /usr/include/qt/QtNetwork/qudpsocket.h \
+ /usr/include/qt/QtNetwork/qtnetworkglobal.h \
+ /usr/include/qt/QtNetwork/qtnetwork-config.h \
+ /usr/include/qt/QtNetwork/qabstractsocket.h \
+ /usr/include/qt/QtCore/qiodevice.h /usr/include/qt/QtCore/qobject.h \
+ /usr/include/qt/QtCore/qdebug.h /usr/include/qt/QtCore/qhash.h \
+ /usr/include/qt/QtCore/qmap.h /usr/include/qt/QtCore/qtextstream.h \
+ /usr/include/qt/QtCore/qlocale.h /usr/include/qt/QtCore/qvariant.h \
+ /usr/include/c++/14.2.1/variant /usr/include/qt/QtCore/qshareddata.h \
+ /usr/include/qt/QtCore/qset.h /usr/include/qt/QtCore/qcontiguouscache.h \
  /usr/include/qt/QtCore/qsharedpointer.h \
- /usr/include/qt/QtCore/qshareddata.h /usr/include/qt/QtCore/qhash.h \
  /usr/include/qt/QtCore/qsharedpointer_impl.h \
- /usr/include/qt/QtGui/qfont.h /usr/include/qt/QtGui/qfontmetrics.h \
- /usr/include/qt/QtGui/qfontinfo.h \
- /usr/include/qt/QtWidgets/qsizepolicy.h /usr/include/qt/QtGui/qcursor.h \
- /usr/include/qt/QtGui/qkeysequence.h \
+ /usr/include/qt/QtNetwork/qhostaddress.h /usr/include/qt/QtCore/QThread \
+ /usr/include/qt/QtCore/qthread.h /usr/include/qt/QtCore/qdeadlinetimer.h \
+ /usr/include/qt/QtCore/qelapsedtimer.h /usr/include/c++/14.2.1/future \
+ /usr/include/c++/14.2.1/mutex /usr/include/c++/14.2.1/bits/std_mutex.h \
+ /usr/include/c++/14.2.1/bits/unique_lock.h \
+ /usr/include/c++/14.2.1/condition_variable \
+ /usr/include/c++/14.2.1/bits/atomic_futex.h \
+ /usr/include/c++/14.2.1/bits/std_thread.h \
+ /home/georgy/drfc_qt/RealTimeChart.h /usr/include/qt/QtCharts/QChart \
+ /usr/include/qt/QtCharts/qchart.h \
+ /usr/include/qt/QtCharts/QAbstractSeries \
+ /usr/include/qt/QtCharts/qabstractseries.h \
+ /usr/include/qt/QtCharts/QChartGlobal \
+ /usr/include/qt/QtCharts/qchartglobal.h /usr/include/qt/QtCore/QtGlobal \
+ /usr/include/qt/QtCore/qglobal.h /usr/include/qt/QtCharts/QAbstractAxis \
+ /usr/include/qt/QtCharts/qabstractaxis.h /usr/include/qt/QtGui/QPen \
+ /usr/include/qt/QtGui/qpen.h /usr/include/qt/QtGui/qtguiglobal.h \
+ /usr/include/qt/QtGui/qtgui-config.h /usr/include/qt/QtGui/qcolor.h \
+ /usr/include/qt/QtGui/qrgb.h /usr/include/qt/QtGui/qrgba64.h \
+ /usr/include/qt/QtGui/qbrush.h /usr/include/qt/QtCore/qpoint.h \
+ /usr/include/qt/QtGui/qmatrix.h /usr/include/qt/QtGui/qpolygon.h \
+ /usr/include/qt/QtCore/qrect.h /usr/include/qt/QtCore/qmargins.h \
+ /usr/include/qt/QtCore/qsize.h /usr/include/qt/QtGui/qregion.h \
+ /usr/include/qt/QtGui/qwindowdefs.h /usr/include/qt/QtCore/qdatastream.h \
+ /usr/include/qt/QtCore/qline.h /usr/include/qt/QtGui/qtransform.h \
+ /usr/include/qt/QtGui/qimage.h /usr/include/qt/QtGui/qpaintdevice.h \
+ /usr/include/qt/QtGui/qpixelformat.h /usr/include/qt/QtGui/qpixmap.h \
+ /usr/include/qt/QtGui/QFont /usr/include/qt/QtGui/qfont.h \
+ /usr/include/qt/QtCore/QVariant /usr/include/qt/QtCore/qvariant.h \
+ /usr/include/qt/QtCore/QObject /usr/include/qt/QtCharts/QLegend \
+ /usr/include/qt/QtCharts/qlegend.h \
+ /usr/include/qt/QtWidgets/QGraphicsWidget \
+ /usr/include/qt/QtWidgets/qgraphicswidget.h \
+ /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
+ /usr/include/qt/QtWidgets/qtwidgets-config.h \
+ /usr/include/qt/QtGui/qfont.h \
+ /usr/include/qt/QtWidgets/qgraphicslayoutitem.h \
+ /usr/include/qt/QtWidgets/qsizepolicy.h /usr/include/qt/QtGui/qevent.h \
+ /usr/include/qt/QtGui/qkeysequence.h /usr/include/qt/QtCore/qcoreevent.h \
+ /usr/include/qt/QtCore/qurl.h /usr/include/qt/QtCore/qfile.h \
+ /usr/include/qt/QtCore/qfiledevice.h /usr/include/qt/QtGui/qvector2d.h \
+ /usr/include/qt/QtGui/qtouchdevice.h \
+ /usr/include/qt/QtWidgets/qgraphicsitem.h \
+ /usr/include/qt/QtGui/qpainterpath.h /usr/include/qt/QtGui/qpalette.h \
+ /usr/include/qt/QtGui/QBrush /usr/include/qt/QtGui/qbrush.h \
+ /usr/include/qt/QtCore/QMargins /usr/include/qt/QtCore/qmargins.h \
+ /usr/include/qt/QtCharts/QChartView \
+ /usr/include/qt/QtCharts/qchartview.h /usr/include/qt/QtCharts/QChart \
+ /usr/include/qt/QtWidgets/QGraphicsView \
+ /usr/include/qt/QtWidgets/qgraphicsview.h \
+ /usr/include/qt/QtGui/qpainter.h /usr/include/qt/QtGui/qtextoption.h \
+ /usr/include/qt/QtGui/qpen.h /usr/include/qt/QtGui/qfontinfo.h \
+ /usr/include/qt/QtGui/qfontmetrics.h \
+ /usr/include/qt/QtWidgets/qscrollarea.h \
+ /usr/include/qt/QtWidgets/qabstractscrollarea.h \
+ /usr/include/qt/QtWidgets/qframe.h /usr/include/qt/QtWidgets/qwidget.h \
+ /usr/include/qt/QtGui/qcursor.h \
+ /usr/include/qt/QtWidgets/qgraphicsscene.h \
+ /usr/include/qt/QtCharts/QLineSeries \
+ /usr/include/qt/QtCharts/qlineseries.h \
+ /usr/include/qt/QtCharts/QXYSeries /usr/include/qt/QtCharts/qxyseries.h \
+ /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
+ /usr/include/qt/QtCore/QTimer /usr/include/qt/QtCore/qtimer.h \
+ /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCharts/qchart.h \
+ /usr/include/qt/QtCharts/qchartview.h \
+ /usr/include/qt/QtCharts/qlineseries.h \
+ /usr/include/qt/QtWidgets/QComboBox \
+ /usr/include/qt/QtWidgets/qcombobox.h \
  /usr/include/qt/QtWidgets/qabstractitemdelegate.h \
  /usr/include/qt/QtWidgets/qstyleoption.h \
- /usr/include/qt/QtCore/qlocale.h /usr/include/qt/QtCore/qvariant.h \
- /usr/include/qt/QtCore/qmap.h /usr/include/c++/14.2.1/variant \
  /usr/include/qt/QtWidgets/qabstractspinbox.h \
  /usr/include/qt/QtGui/qvalidator.h \
  /usr/include/qt/QtCore/qregularexpression.h \
@@ -252,7 +310,6 @@ CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/qt/QtWidgets/qstyle.h /usr/include/qt/QtWidgets/qtabbar.h \
  /usr/include/qt/QtWidgets/qtabwidget.h \
  /usr/include/qt/QtWidgets/qrubberband.h \
- /usr/include/qt/QtWidgets/qframe.h \
  /usr/include/qt/QtCore/qabstractitemmodel.h \
  /usr/include/qt/QtWidgets/QLabel /usr/include/qt/QtWidgets/qlabel.h \
  /usr/include/qt/QtWidgets/QMainWindow \
@@ -266,26 +323,6 @@ CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/qt/QtWidgets/qlayoutitem.h \
  /usr/include/qt/QtWidgets/qboxlayout.h \
  /usr/include/qt/QtWidgets/qgridlayout.h \
- /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
- /home/georgy/drfc_qt/DataTransmissionWorker.h \
- /home/georgy/drfc_qt/DataTransmissionHandler.h \
- /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
- /usr/include/qt/QtCore/QElapsedTimer \
- /usr/include/qt/QtCore/qelapsedtimer.h \
- /usr/include/qt/QtNetwork/qudpsocket.h \
- /usr/include/qt/QtNetwork/qtnetworkglobal.h \
- /usr/include/qt/QtNetwork/qtnetwork-config.h \
- /usr/include/qt/QtNetwork/qabstractsocket.h \
- /usr/include/qt/QtCore/qdebug.h /usr/include/qt/QtCore/qtextstream.h \
- /usr/include/qt/QtCore/qset.h /usr/include/qt/QtCore/qcontiguouscache.h \
- /usr/include/qt/QtNetwork/qhostaddress.h /usr/include/qt/QtCore/QThread \
- /usr/include/qt/QtCore/qthread.h /usr/include/qt/QtCore/qdeadlinetimer.h \
- /usr/include/qt/QtCore/qelapsedtimer.h /usr/include/c++/14.2.1/future \
- /usr/include/c++/14.2.1/mutex /usr/include/c++/14.2.1/bits/std_mutex.h \
- /usr/include/c++/14.2.1/bits/unique_lock.h \
- /usr/include/c++/14.2.1/condition_variable \
- /usr/include/c++/14.2.1/bits/atomic_futex.h \
- /usr/include/c++/14.2.1/bits/std_thread.h \
  /usr/include/qt/QtSerialPort/QSerialPortInfo \
  /usr/include/qt/QtSerialPort/qserialportinfo.h \
  /usr/include/qt/QtSerialPort/qserialportglobal.h \
