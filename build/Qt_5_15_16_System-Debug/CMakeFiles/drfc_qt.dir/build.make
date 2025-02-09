@@ -70,6 +70,7 @@ include CMakeFiles/drfc_qt.dir/progress.make
 include CMakeFiles/drfc_qt.dir/flags.make
 
 drfc_qt_autogen/timestamp: /usr/bin/moc
+drfc_qt_autogen/timestamp: /usr/bin/uic
 drfc_qt_autogen/timestamp: CMakeFiles/drfc_qt.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target drfc_qt"
 	/usr/bin/cmake -E cmake_autogen /home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/CMakeFiles/drfc_qt_autogen.dir/AutogenInfo.json Debug
@@ -120,11 +121,41 @@ CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/georgy/drfc_qt/DataTransmissionHandler.cpp -o CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.s
 
+CMakeFiles/drfc_qt.dir/gui.cpp.o: CMakeFiles/drfc_qt.dir/flags.make
+CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp
+CMakeFiles/drfc_qt.dir/gui.cpp.o: CMakeFiles/drfc_qt.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/drfc_qt.dir/gui.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/drfc_qt.dir/gui.cpp.o -MF CMakeFiles/drfc_qt.dir/gui.cpp.o.d -o CMakeFiles/drfc_qt.dir/gui.cpp.o -c /home/georgy/drfc_qt/gui.cpp
+
+CMakeFiles/drfc_qt.dir/gui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/drfc_qt.dir/gui.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/georgy/drfc_qt/gui.cpp > CMakeFiles/drfc_qt.dir/gui.cpp.i
+
+CMakeFiles/drfc_qt.dir/gui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/drfc_qt.dir/gui.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/georgy/drfc_qt/gui.cpp -o CMakeFiles/drfc_qt.dir/gui.cpp.s
+
+CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o: CMakeFiles/drfc_qt.dir/flags.make
+CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o: /home/georgy/drfc_qt/DataTransmissionWorker.cpp
+CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o: CMakeFiles/drfc_qt.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o -MF CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o.d -o CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o -c /home/georgy/drfc_qt/DataTransmissionWorker.cpp
+
+CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/georgy/drfc_qt/DataTransmissionWorker.cpp > CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.i
+
+CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/georgy/drfc_qt/DataTransmissionWorker.cpp -o CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.s
+
 # Object files for target drfc_qt
 drfc_qt_OBJECTS = \
 "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/drfc_qt.dir/main.cpp.o" \
-"CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o"
+"CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o" \
+"CMakeFiles/drfc_qt.dir/gui.cpp.o" \
+"CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o"
 
 # External object files for target drfc_qt
 drfc_qt_EXTERNAL_OBJECTS =
@@ -132,12 +163,17 @@ drfc_qt_EXTERNAL_OBJECTS =
 drfc_qt: CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o
 drfc_qt: CMakeFiles/drfc_qt.dir/main.cpp.o
 drfc_qt: CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o
+drfc_qt: CMakeFiles/drfc_qt.dir/gui.cpp.o
+drfc_qt: CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o
 drfc_qt: CMakeFiles/drfc_qt.dir/build.make
 drfc_qt: CMakeFiles/drfc_qt.dir/compiler_depend.ts
 drfc_qt: /usr/lib/libQt5Network.so.5.15.16
+drfc_qt: /usr/lib/libQt5Widgets.so.5.15.16
+drfc_qt: /usr/lib/libQt5SerialPort.so.5.15.16
+drfc_qt: /usr/lib/libQt5Gui.so.5.15.16
 drfc_qt: /usr/lib/libQt5Core.so.5.15.16
 drfc_qt: CMakeFiles/drfc_qt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable drfc_qt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable drfc_qt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drfc_qt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

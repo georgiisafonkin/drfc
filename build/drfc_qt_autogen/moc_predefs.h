@@ -18,6 +18,7 @@
 #define __FLT32_MIN_EXP__ (-125)
 #define __cpp_static_assert 201411L
 #define __BFLT16_MIN_10_EXP__ (-37)
+#define QT_GUI_LIB 1
 #define __ORDER_LITTLE_ENDIAN__ 1234
 #define __WCHAR_MAX__ 0x7fffffff
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_2 1
@@ -151,6 +152,7 @@
 #define __INT_FAST16_TYPE__ long int
 #define __MMX_WITH_SSE__ 1
 #define __LDBL_HAS_DENORM__ 1
+#define QT_WIDGETS_LIB 1
 #define __SEG_GS 1
 #define __BFLT16_EPSILON__ 7.81250000000000000000000000000000000e-3BF16
 #define __cplusplus 201703L
@@ -414,6 +416,7 @@
 #define __PIC__ 2
 #define __INT32_MAX__ 0x7fffffff
 #define __UINT_FAST32_TYPE__ long unsigned int
+#define QT_SERIALPORT_LIB 1
 #define __FLT16_MANT_DIG__ 11
 #define __FLT32X_NORM_MAX__ 1.79769313486231570814527423731704357e+308F32x
 #define __CHAR32_TYPE__ unsigned int

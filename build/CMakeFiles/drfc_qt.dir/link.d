@@ -17,6 +17,13 @@ drfc_qt: \
   /usr/lib/libssl.so.3 \
   /usr/lib32/libcrypto.so.3 \
   /usr/lib/libcrypto.so.3 \
+  /usr/lib32/libudev.so.1 \
+  /usr/lib/libudev.so.1 \
+  /usr/lib32/libGL.so.1 \
+  /usr/lib/libGL.so.1 \
+  /usr/lib/libpng16.so.16 \
+  /usr/lib/libharfbuzz.so.0 \
+  /usr/lib/libmd4c.so.0 \
   /usr/lib32/libsystemd.so.0 \
   /usr/lib/libsystemd.so.0 \
   /usr/lib/libdouble-conversion.so.3 \
@@ -45,6 +52,12 @@ drfc_qt: \
   /usr/lib/libgobject-2.0.so.0 \
   /usr/lib32/libcap.so.2 \
   /usr/lib/libcap.so.2 \
+  /usr/lib32/libGLdispatch.so.0 \
+  /usr/lib/libGLdispatch.so.0 \
+  /usr/lib32/libGLX.so.0 \
+  /usr/lib/libGLX.so.0 \
+  /usr/lib/libfreetype.so.6 \
+  /usr/lib/libgraphite2.so.3 \
   /usr/lib32/libicudata.so.75 \
   /usr/lib/libicudata.so.75 \
   /usr/lib/libpcre2-8.so.0 \
@@ -54,6 +67,12 @@ drfc_qt: \
   /usr/lib/libduktape.so.207 \
   /usr/lib32/libffi.so.8 \
   /usr/lib/libffi.so.8 \
+  /usr/lib32/libX11.so.6 \
+  /usr/lib/libX11.so.6 \
+  /usr/lib32/libbz2.so.1.0 \
+  /usr/lib/libbz2.so.1.0 \
+  /usr/lib32/libbrotlidec.so.1 \
+  /usr/lib/libbrotlidec.so.1 \
   /usr/lib32/libnghttp3.so.9 \
   /usr/lib/libnghttp3.so.9 \
   /usr/lib32/libnghttp2.so.14 \
@@ -64,15 +83,19 @@ drfc_qt: \
   /usr/lib/libssh2.so.1 \
   /usr/lib32/libpsl.so.5 \
   /usr/lib/libpsl.so.5 \
-  /usr/lib32/libbrotlidec.so.1 \
-  /usr/lib/libbrotlidec.so.1 \
   /usr/lib/libgmodule-2.0.so.0 \
   /usr/lib/libmount.so.1 \
-  /usr/lib32/libunistring.so.5 \
-  /usr/lib/libunistring.so.5 \
+  /usr/lib32/libxcb.so.1 \
+  /usr/lib/libxcb.so.1 \
   /usr/lib32/libbrotlicommon.so.1 \
   /usr/lib/libbrotlicommon.so.1 \
-  /usr/lib/libblkid.so.1
+  /usr/lib32/libunistring.so.5 \
+  /usr/lib/libunistring.so.5 \
+  /usr/lib/libblkid.so.1 \
+  /usr/lib32/libXau.so.6 \
+  /usr/lib/libXau.so.6 \
+  /usr/lib32/libXdmcp.so.6 \
+  /usr/lib/libXdmcp.so.6
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libm.so:
 
@@ -109,6 +132,20 @@ drfc_qt: \
 /usr/lib32/libcrypto.so.3:
 
 /usr/lib/libcrypto.so.3:
+
+/usr/lib32/libudev.so.1:
+
+/usr/lib/libudev.so.1:
+
+/usr/lib32/libGL.so.1:
+
+/usr/lib/libGL.so.1:
+
+/usr/lib/libpng16.so.16:
+
+/usr/lib/libharfbuzz.so.0:
+
+/usr/lib/libmd4c.so.0:
 
 /usr/lib32/libsystemd.so.0:
 
@@ -166,6 +203,18 @@ drfc_qt: \
 
 /usr/lib/libcap.so.2:
 
+/usr/lib32/libGLdispatch.so.0:
+
+/usr/lib/libGLdispatch.so.0:
+
+/usr/lib32/libGLX.so.0:
+
+/usr/lib/libGLX.so.0:
+
+/usr/lib/libfreetype.so.6:
+
+/usr/lib/libgraphite2.so.3:
+
 /usr/lib32/libicudata.so.75:
 
 /usr/lib/libicudata.so.75:
@@ -183,6 +232,18 @@ drfc_qt: \
 /usr/lib32/libffi.so.8:
 
 /usr/lib/libffi.so.8:
+
+/usr/lib32/libX11.so.6:
+
+/usr/lib/libX11.so.6:
+
+/usr/lib32/libbz2.so.1.0:
+
+/usr/lib/libbz2.so.1.0:
+
+/usr/lib32/libbrotlidec.so.1:
+
+/usr/lib/libbrotlidec.so.1:
 
 /usr/lib32/libnghttp3.so.9:
 
@@ -204,20 +265,28 @@ drfc_qt: \
 
 /usr/lib/libpsl.so.5:
 
-/usr/lib32/libbrotlidec.so.1:
-
-/usr/lib/libbrotlidec.so.1:
-
 /usr/lib/libgmodule-2.0.so.0:
 
 /usr/lib/libmount.so.1:
 
-/usr/lib32/libunistring.so.5:
+/usr/lib32/libxcb.so.1:
 
-/usr/lib/libunistring.so.5:
+/usr/lib/libxcb.so.1:
 
 /usr/lib32/libbrotlicommon.so.1:
 
 /usr/lib/libbrotlicommon.so.1:
 
+/usr/lib32/libunistring.so.5:
+
+/usr/lib/libunistring.so.5:
+
 /usr/lib/libblkid.so.1:
+
+/usr/lib32/libXau.so.6:
+
+/usr/lib/libXau.so.6:
+
+/usr/lib32/libXdmcp.so.6:
+
+/usr/lib/libXdmcp.so.6:

@@ -69,6 +69,7 @@ include CMakeFiles/drfc_qt_autogen.dir/progress.make
 CMakeFiles/drfc_qt_autogen: drfc_qt_autogen/timestamp
 
 drfc_qt_autogen/timestamp: /usr/bin/moc
+drfc_qt_autogen/timestamp: /usr/bin/uic
 drfc_qt_autogen/timestamp: CMakeFiles/drfc_qt_autogen.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/georgy/drfc_qt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target drfc_qt"
 	/usr/bin/cmake -E cmake_autogen /home/georgy/drfc_qt/build/CMakeFiles/drfc_qt_autogen.dir/AutogenInfo.json ""

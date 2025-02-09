@@ -2,9 +2,13 @@ drfc_qt_autogen/timestamp: \
 	/home/georgy/drfc_qt/CMakeLists.txt \
 	/home/georgy/drfc_qt/DataTransmissionHandler.cpp \
 	/home/georgy/drfc_qt/DataTransmissionHandler.h \
+	/home/georgy/drfc_qt/DataTransmissionWorker.cpp \
+	/home/georgy/drfc_qt/DataTransmissionWorker.h \
 	/home/georgy/drfc_qt/build/CMakeFiles/3.31.2/CMakeCXXCompiler.cmake \
 	/home/georgy/drfc_qt/build/CMakeFiles/3.31.2/CMakeSystem.cmake \
 	/home/georgy/drfc_qt/build/drfc_qt_autogen/moc_predefs.h \
+	/home/georgy/drfc_qt/gui.cpp \
+	/home/georgy/drfc_qt/gui.h \
 	/home/georgy/drfc_qt/main.cpp \
 	/lib/cmake/Qt5/Qt5Config.cmake \
 	/lib/cmake/Qt5/Qt5ConfigVersion.cmake \
@@ -14,11 +18,50 @@ drfc_qt_autogen/timestamp: \
 	/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
 	/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
 	/lib/cmake/Qt5Core/Qt5CoreMacros.cmake \
+	/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake \
+	/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake \
+	/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QGtk3ThemePlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QPdfPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QTsLibPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake \
+	/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake \
 	/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake \
 	/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake \
 	/lib/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake \
 	/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake \
 	/lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake \
+	/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake \
+	/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake \
+	/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake \
+	/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake \
+	/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake \
+	/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
 	/usr/include/asm/errno.h \
@@ -260,6 +303,7 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/pthread.h \
 	/usr/include/qt/QtCore/QElapsedTimer \
 	/usr/include/qt/QtCore/QObject \
+	/usr/include/qt/QtCore/qabstractitemmodel.h \
 	/usr/include/qt/QtCore/qalgorithms.h \
 	/usr/include/qt/QtCore/qarraydata.h \
 	/usr/include/qt/QtCore/qatomic.h \
@@ -273,6 +317,7 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtCore/qcontainerfwd.h \
 	/usr/include/qt/QtCore/qcontainertools_impl.h \
 	/usr/include/qt/QtCore/qcontiguouscache.h \
+	/usr/include/qt/QtCore/qdatastream.h \
 	/usr/include/qt/QtCore/qdebug.h \
 	/usr/include/qt/QtCore/qelapsedtimer.h \
 	/usr/include/qt/QtCore/qflags.h \
@@ -283,10 +328,12 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtCore/qhashfunctions.h \
 	/usr/include/qt/QtCore/qiodevice.h \
 	/usr/include/qt/QtCore/qiterator.h \
+	/usr/include/qt/QtCore/qline.h \
 	/usr/include/qt/QtCore/qlist.h \
 	/usr/include/qt/QtCore/qlocale.h \
 	/usr/include/qt/QtCore/qlogging.h \
 	/usr/include/qt/QtCore/qmap.h \
+	/usr/include/qt/QtCore/qmargins.h \
 	/usr/include/qt/QtCore/qmetatype.h \
 	/usr/include/qt/QtCore/qnamespace.h \
 	/usr/include/qt/QtCore/qnumeric.h \
@@ -295,14 +342,18 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtCore/qobjectdefs.h \
 	/usr/include/qt/QtCore/qobjectdefs_impl.h \
 	/usr/include/qt/QtCore/qpair.h \
+	/usr/include/qt/QtCore/qpoint.h \
 	/usr/include/qt/QtCore/qprocessordetection.h \
+	/usr/include/qt/QtCore/qrect.h \
 	/usr/include/qt/QtCore/qrefcount.h \
 	/usr/include/qt/QtCore/qregexp.h \
+	/usr/include/qt/QtCore/qregularexpression.h \
 	/usr/include/qt/QtCore/qscopedpointer.h \
 	/usr/include/qt/QtCore/qset.h \
 	/usr/include/qt/QtCore/qshareddata.h \
 	/usr/include/qt/QtCore/qsharedpointer.h \
 	/usr/include/qt/QtCore/qsharedpointer_impl.h \
+	/usr/include/qt/QtCore/qsize.h \
 	/usr/include/qt/QtCore/qstring.h \
 	/usr/include/qt/QtCore/qstringalgorithms.h \
 	/usr/include/qt/QtCore/qstringlist.h \
@@ -318,11 +369,63 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtCore/qvarlengtharray.h \
 	/usr/include/qt/QtCore/qvector.h \
 	/usr/include/qt/QtCore/qversiontagging.h \
+	/usr/include/qt/QtGui/qbrush.h \
+	/usr/include/qt/QtGui/qcolor.h \
+	/usr/include/qt/QtGui/qcursor.h \
+	/usr/include/qt/QtGui/qfont.h \
+	/usr/include/qt/QtGui/qfontinfo.h \
+	/usr/include/qt/QtGui/qfontmetrics.h \
+	/usr/include/qt/QtGui/qicon.h \
+	/usr/include/qt/QtGui/qimage.h \
+	/usr/include/qt/QtGui/qkeysequence.h \
+	/usr/include/qt/QtGui/qmatrix.h \
+	/usr/include/qt/QtGui/qpaintdevice.h \
+	/usr/include/qt/QtGui/qpalette.h \
+	/usr/include/qt/QtGui/qpixelformat.h \
+	/usr/include/qt/QtGui/qpixmap.h \
+	/usr/include/qt/QtGui/qpolygon.h \
+	/usr/include/qt/QtGui/qregion.h \
+	/usr/include/qt/QtGui/qrgb.h \
+	/usr/include/qt/QtGui/qrgba64.h \
+	/usr/include/qt/QtGui/qtgui-config.h \
+	/usr/include/qt/QtGui/qtguiglobal.h \
+	/usr/include/qt/QtGui/qtransform.h \
+	/usr/include/qt/QtGui/qvalidator.h \
+	/usr/include/qt/QtGui/qwindowdefs.h \
 	/usr/include/qt/QtNetwork/qabstractsocket.h \
 	/usr/include/qt/QtNetwork/qhostaddress.h \
 	/usr/include/qt/QtNetwork/qtnetwork-config.h \
 	/usr/include/qt/QtNetwork/qtnetworkglobal.h \
 	/usr/include/qt/QtNetwork/qudpsocket.h \
+	/usr/include/qt/QtWidgets/QComboBox \
+	/usr/include/qt/QtWidgets/QLabel \
+	/usr/include/qt/QtWidgets/QMainWindow \
+	/usr/include/qt/QtWidgets/QPushButton \
+	/usr/include/qt/QtWidgets/QVBoxLayout \
+	/usr/include/qt/QtWidgets/QWidget \
+	/usr/include/qt/QtWidgets/qabstractbutton.h \
+	/usr/include/qt/QtWidgets/qabstractitemdelegate.h \
+	/usr/include/qt/QtWidgets/qabstractslider.h \
+	/usr/include/qt/QtWidgets/qabstractspinbox.h \
+	/usr/include/qt/QtWidgets/qboxlayout.h \
+	/usr/include/qt/QtWidgets/qcombobox.h \
+	/usr/include/qt/QtWidgets/qframe.h \
+	/usr/include/qt/QtWidgets/qgridlayout.h \
+	/usr/include/qt/QtWidgets/qlabel.h \
+	/usr/include/qt/QtWidgets/qlayout.h \
+	/usr/include/qt/QtWidgets/qlayoutitem.h \
+	/usr/include/qt/QtWidgets/qmainwindow.h \
+	/usr/include/qt/QtWidgets/qpushbutton.h \
+	/usr/include/qt/QtWidgets/qrubberband.h \
+	/usr/include/qt/QtWidgets/qsizepolicy.h \
+	/usr/include/qt/QtWidgets/qslider.h \
+	/usr/include/qt/QtWidgets/qstyle.h \
+	/usr/include/qt/QtWidgets/qstyleoption.h \
+	/usr/include/qt/QtWidgets/qtabbar.h \
+	/usr/include/qt/QtWidgets/qtabwidget.h \
+	/usr/include/qt/QtWidgets/qtwidgets-config.h \
+	/usr/include/qt/QtWidgets/qtwidgetsglobal.h \
+	/usr/include/qt/QtWidgets/qwidget.h \
 	/usr/include/sched.h \
 	/usr/include/stdc-predef.h \
 	/usr/include/stdio.h \

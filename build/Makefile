@@ -224,6 +224,30 @@ DataTransmissionHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.s
 .PHONY : DataTransmissionHandler.cpp.s
 
+DataTransmissionWorker.o: DataTransmissionWorker.cpp.o
+.PHONY : DataTransmissionWorker.o
+
+# target to build an object file
+DataTransmissionWorker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o
+.PHONY : DataTransmissionWorker.cpp.o
+
+DataTransmissionWorker.i: DataTransmissionWorker.cpp.i
+.PHONY : DataTransmissionWorker.i
+
+# target to preprocess a source file
+DataTransmissionWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.i
+.PHONY : DataTransmissionWorker.cpp.i
+
+DataTransmissionWorker.s: DataTransmissionWorker.cpp.s
+.PHONY : DataTransmissionWorker.s
+
+# target to generate assembly for a file
+DataTransmissionWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.s
+.PHONY : DataTransmissionWorker.cpp.s
+
 drfc_qt_autogen/mocs_compilation.o: drfc_qt_autogen/mocs_compilation.cpp.o
 .PHONY : drfc_qt_autogen/mocs_compilation.o
 
@@ -247,6 +271,30 @@ drfc_qt_autogen/mocs_compilation.s: drfc_qt_autogen/mocs_compilation.cpp.s
 drfc_qt_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.s
 .PHONY : drfc_qt_autogen/mocs_compilation.cpp.s
+
+gui.o: gui.cpp.o
+.PHONY : gui.o
+
+# target to build an object file
+gui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/gui.cpp.o
+.PHONY : gui.cpp.o
+
+gui.i: gui.cpp.i
+.PHONY : gui.i
+
+# target to preprocess a source file
+gui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/gui.cpp.i
+.PHONY : gui.cpp.i
+
+gui.s: gui.cpp.s
+.PHONY : gui.s
+
+# target to generate assembly for a file
+gui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/gui.cpp.s
+.PHONY : gui.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -290,9 +338,15 @@ help:
 	@echo "... DataTransmissionHandler.o"
 	@echo "... DataTransmissionHandler.i"
 	@echo "... DataTransmissionHandler.s"
+	@echo "... DataTransmissionWorker.o"
+	@echo "... DataTransmissionWorker.i"
+	@echo "... DataTransmissionWorker.s"
 	@echo "... drfc_qt_autogen/mocs_compilation.o"
 	@echo "... drfc_qt_autogen/mocs_compilation.i"
 	@echo "... drfc_qt_autogen/mocs_compilation.s"
+	@echo "... gui.o"
+	@echo "... gui.i"
+	@echo "... gui.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

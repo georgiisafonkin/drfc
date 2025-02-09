@@ -1,13 +1,19 @@
 #include "DataTransmissionHandler.h"
-
-#include <QCoreApplication>
+#include "gui.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
-    DataTransmissionHandler* dth = new DataTransmissionHandler();
-    dth->startDataTransmission();
-    dth->recieveData();
+    QApplication a(argc, argv);
+    GUI gui;
+    gui.setWindowTitle("drfc");
+    gui.resize(400, 200);
+    gui.show();
+
+    // DataTransmissionHandler* dth = new DataTransmissionHandler();
+    // dth->startDataTransmission();
+    // dth->recieveData();
+
     // Set up code that uses the Qt event loop here.
     // Call a.quit() or a.exit() to quit the application.
     // A not very useful example would be including
