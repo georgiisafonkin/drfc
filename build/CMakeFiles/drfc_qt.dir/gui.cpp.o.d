@@ -240,6 +240,9 @@ CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/c++/14.2.1/condition_variable \
  /usr/include/c++/14.2.1/bits/atomic_futex.h \
  /usr/include/c++/14.2.1/bits/std_thread.h \
+ /usr/include/qt/QtSerialPort/QSerialPort \
+ /usr/include/qt/QtSerialPort/qserialport.h \
+ /usr/include/qt/QtSerialPort/qserialportglobal.h \
  /home/georgy/drfc_qt/RealTimeChart.h /usr/include/qt/QtCharts/QChart \
  /usr/include/qt/QtCharts/qchart.h \
  /usr/include/qt/QtCharts/QAbstractSeries \
@@ -322,8 +325,10 @@ CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/qt/QtWidgets/qlayout.h \
  /usr/include/qt/QtWidgets/qlayoutitem.h \
  /usr/include/qt/QtWidgets/qboxlayout.h \
- /usr/include/qt/QtWidgets/qgridlayout.h \
+ /usr/include/qt/QtWidgets/qgridlayout.h /usr/include/qt/QtCore/QProcess \
+ /usr/include/qt/QtCore/qprocess.h /usr/include/qt/QtWidgets/QMessageBox \
+ /usr/include/qt/QtWidgets/qmessagebox.h \
+ /usr/include/qt/QtWidgets/qdialog.h \
  /usr/include/qt/QtSerialPort/QSerialPortInfo \
  /usr/include/qt/QtSerialPort/qserialportinfo.h \
- /usr/include/qt/QtSerialPort/qserialportglobal.h \
  /usr/include/qt/QtCore/qdebug.h

@@ -9,6 +9,7 @@
 #include <QLabel>
 #include <QMainWindow>
 #include <QPushButton>
+#include <QSerialPort>
 #include <QVBoxLayout>
 #include <QWidget>
 
@@ -29,11 +30,10 @@ private:
     void selectComPort();
 
     DataTransmissionHandler* dth;
-
     void updateCharts(int index, const std::vector<qint16>& numbers);
-    int pointNumber = 0;
-
+    int pointNumber = 0; //may be removed
     std::vector<RealTimeChart*> realTimeCharts;
+
 signals:
 };
 

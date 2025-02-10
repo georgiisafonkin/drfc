@@ -308,6 +308,9 @@
   /usr/include/qt/QtNetwork/qtnetwork-config.h \
   /usr/include/qt/QtNetwork/qtnetworkglobal.h \
   /usr/include/qt/QtNetwork/qudpsocket.h \
+  /usr/include/qt/QtSerialPort/QSerialPort \
+  /usr/include/qt/QtSerialPort/qserialport.h \
+  /usr/include/qt/QtSerialPort/qserialportglobal.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \

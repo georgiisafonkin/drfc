@@ -378,6 +378,9 @@
   /usr/include/qt/QtNetwork/qtnetwork-config.h \
   /usr/include/qt/QtNetwork/qtnetworkglobal.h \
   /usr/include/qt/QtNetwork/qudpsocket.h \
+  /usr/include/qt/QtSerialPort/QSerialPort \
+  /usr/include/qt/QtSerialPort/qserialport.h \
+  /usr/include/qt/QtSerialPort/qserialportglobal.h \
   /usr/include/qt/QtWidgets/QComboBox \
   /usr/include/qt/QtWidgets/QGraphicsView \
   /usr/include/qt/QtWidgets/QGraphicsWidget \

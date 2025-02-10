@@ -239,4 +239,7 @@ CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o: \
  /usr/include/c++/14.2.1/bits/unique_lock.h \
  /usr/include/c++/14.2.1/condition_variable \
  /usr/include/c++/14.2.1/bits/atomic_futex.h \
- /usr/include/c++/14.2.1/bits/std_thread.h
+ /usr/include/c++/14.2.1/bits/std_thread.h \
+ /usr/include/qt/QtSerialPort/QSerialPort \
+ /usr/include/qt/QtSerialPort/qserialport.h \
+ /usr/include/qt/QtSerialPort/qserialportglobal.h

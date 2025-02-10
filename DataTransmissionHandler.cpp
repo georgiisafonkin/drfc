@@ -5,69 +5,79 @@
 #include <QFile>
 #include <QDataStream>
 #include <vector>
+#include <QProcess>
+#include <QNetworkDatagram>
 
 DataTransmissionHandler::DataTransmissionHandler(QObject *parent)
-    : QThread{parent}, address(QHostAddress::LocalHost), port(8080)
+    : QThread{parent}
 {
-    sock = new QUdpSocket(this);
-
-    if (!sock->bind(address, port)) {
-        qDebug() << "Socket bind error:" << sock->errorString();
-    } else {
-        qDebug() << "Socket binded to " << address.toString() << "on the port " << port;
-    }
-
     elapsedTimer = QElapsedTimer();
 }
 
 
 
 int *DataTransmissionHandler::createStartMessage() {
-    static int message[8];
+    static int message[10];
 
     // Start message creation
     message[0] = static_cast<int>(1000 * Ng) >> 8;
     message[1] = static_cast<int>(1000 * Ng) & 0xff;
 
-    message[2] = static_cast<int>(1000 * lineLength) >> 8;
-    message[3] = static_cast<int>(1000 * lineLength) & 0xff;
+    message[2] = static_cast<int>(lineLength) >> 8;
+    message[3] = static_cast<int>(lineLength) & 0xff;
 
-    message[4] = static_cast<int>(1000 * lengthUdpPack) >> 8;
-    message[5] = static_cast<int>(1000 * lengthUdpPack) & 0xff;
+    message[4] = static_cast<int>(lengthUdpPack) >> 8;
+    message[5] = static_cast<int>(lengthUdpPack) & 0xff;
 
-    message[6] = static_cast<int>(1000 * freqSendData) >> 8;
-    message[7] = static_cast<int>(1000 * freqSendData) & 0xff;
+    message[6] = static_cast<int>(freqSendData) >> 8;
+    message[7] = static_cast<int>(freqSendData) & 0xff;
+
+    message[8] = static_cast<int>(pulseWidth) >> 8;
+    message[9] = static_cast<int>(pulseWidth) & 0xff;
 
     return message;
 }
 
 void DataTransmissionHandler::startDataTransmission() {
     int* message = createStartMessage();
-    sock->writeDatagram(reinterpret_cast<const char*>(message), sizeof(int) * 8, address, cl_port);
+    sock->writeDatagram(reinterpret_cast<const char*>(message), sizeof(int) * 10, clAddress, clPort);
     qDebug() << "Start message sent to the card.";
 }
 
 void DataTransmissionHandler::recieveData() {
+    // qDebug() << "Recieved from port: " << chosenPort->readAll();
     elapsedTimer.start();
     while (true) {
+        if (chosenPort->isOpen()) {
+            qDebug() << "Recieved from port: " << chosenPort->readAll();
+        }
+
         QByteArray datagram;
         datagram.resize(lengthUdpPack + 5);  // Adjust size as needed
 
         // Receive the data from the socket
-        qint64 bytesRead = sock->readDatagram(datagram.data(), datagram.size(), &address, &cl_port);
+        qint64 bytesRead = sock->readDatagram(datagram.data(), datagram.size(), &clAddress, &clPort);
+        QNetworkDatagram* netDatagram = new QNetworkDatagram(sock->receiveDatagram(lengthUdpPack + 5));
+
+        qDebug() << "Network datagram: " << netDatagram->data();
 
         if (bytesRead > 0) {
             // qDebug() << "Received data:" << datagram;
             processReceivedData(datagram);
         }
         else {
-            if (elapsedTimer.elapsed() >= 3000) {
+            if (elapsedTimer.elapsed() >= 10) {
                 qDebug() << "Can't receive any packet. Shut down...";
                 processReceivedData();
                 break;
             }
         }
     }
+}
+
+void DataTransmissionHandler::setComPortName(const QString &newComPortName)
+{
+    comPortName = newComPortName;
 }
 
 void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
@@ -128,7 +138,52 @@ void DataTransmissionHandler::processReceivedData() {
     array.clear();
 }
 
+void DataTransmissionHandler::setStaticIP() {
+    QProcess process;
+    QString command = "netsh interface ip set address \"Ethernet\" static 192.168.1.42 255.255.255.0 192.168.1.1";
+    process.start("cmd.exe", {"/c", command});
+    process.waitForFinished();
+
+    QString error = process.readAllStandardError();
+
+    if (!error.isEmpty()) {
+        // QMessageBox::critical(this, "Error", "Failed to set static IP: " + error);
+    } else {
+        // QMessageBox::information(this, "Success", "Static IP successfully set to 192.168.1.42");
+    }
+}
+
+void DataTransmissionHandler::connectToComPort() {
+    qDebug() << "DataTransmissionHandler::connectToComPort()";
+
+    // QString portName = comPortCombo->currentData().toString();
+    chosenPort->setPortName(comPortName);
+    chosenPort->setBaudRate(QSerialPort::Baud9600);
+    chosenPort->setDataBits(QSerialPort::Data8);
+    chosenPort->setParity(QSerialPort::NoParity);
+    chosenPort->setStopBits(QSerialPort::OneStop);
+    chosenPort->setFlowControl(QSerialPort::NoFlowControl);
+
+    int err;
+    if (chosenPort->open(QIODevice::ReadWrite)) {
+        qDebug() << "Successfully connected to COM port: " + comPortName;
+        // chosenPort->close();
+    } else {
+        qDebug() << "Failed to connect to COM port: " + comPortName;
+        qDebug() << "Port Error: " << chosenPort->error();
+    }
+}
+
 void DataTransmissionHandler::run() {
+    this->sock = new QUdpSocket(this);
+    if (!sock->bind(myAddress, myPort)) {
+        qDebug() << "Socket bind error:" << sock->errorString();
+    } else {
+        qDebug() << "Socket binded to " << myAddress.toString() << "on the port " << myPort;
+    }
+    sock->open(QIODevice::ReadWrite);
+    this->chosenPort = new QSerialPort(this);
+    this->connectToComPort();
     this->startDataTransmission();
     this->recieveData();
 }

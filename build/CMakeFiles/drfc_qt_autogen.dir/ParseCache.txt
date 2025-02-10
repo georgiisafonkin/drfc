@@ -311,6 +311,9 @@
  mdp:/usr/include/qt/QtNetwork/qtnetwork-config.h
  mdp:/usr/include/qt/QtNetwork/qtnetworkglobal.h
  mdp:/usr/include/qt/QtNetwork/qudpsocket.h
+ mdp:/usr/include/qt/QtSerialPort/QSerialPort
+ mdp:/usr/include/qt/QtSerialPort/qserialport.h
+ mdp:/usr/include/qt/QtSerialPort/qserialportglobal.h
  mdp:/usr/include/sched.h
  mdp:/usr/include/stdc-predef.h
  mdp:/usr/include/stdio.h
@@ -1103,6 +1106,9 @@
  mdp:/usr/include/qt/QtNetwork/qtnetwork-config.h
  mdp:/usr/include/qt/QtNetwork/qtnetworkglobal.h
  mdp:/usr/include/qt/QtNetwork/qudpsocket.h
+ mdp:/usr/include/qt/QtSerialPort/QSerialPort
+ mdp:/usr/include/qt/QtSerialPort/qserialport.h
+ mdp:/usr/include/qt/QtSerialPort/qserialportglobal.h
  mdp:/usr/include/qt/QtWidgets/QComboBox
  mdp:/usr/include/qt/QtWidgets/QGraphicsView
  mdp:/usr/include/qt/QtWidgets/QGraphicsWidget

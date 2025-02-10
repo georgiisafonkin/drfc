@@ -243,6 +243,9 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/14.2.1/condition_variable \
  /usr/include/c++/14.2.1/bits/atomic_futex.h \
  /usr/include/c++/14.2.1/bits/std_thread.h \
+ /usr/include/qt/QtSerialPort/QSerialPort \
+ /usr/include/qt/QtSerialPort/qserialport.h \
+ /usr/include/qt/QtSerialPort/qserialportglobal.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/moc_RealTimeChart.cpp \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../RealTimeChart.h \
  /usr/include/qt/QtCharts/QChart /usr/include/qt/QtCharts/qchart.h \

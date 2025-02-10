@@ -240,10 +240,16 @@ CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o: \
  /usr/include/c++/14.2.1/condition_variable \
  /usr/include/c++/14.2.1/bits/atomic_futex.h \
  /usr/include/c++/14.2.1/bits/std_thread.h \
+ /usr/include/qt/QtSerialPort/QSerialPort \
+ /usr/include/qt/QtSerialPort/qserialport.h \
+ /usr/include/qt/QtSerialPort/qserialportglobal.h \
  /usr/include/qt/QtNetwork/QHostAddress \
  /usr/include/qt/QtNetwork/qhostaddress.h \
  /usr/include/qt/QtNetwork/QUdpSocket \
  /usr/include/qt/QtNetwork/qudpsocket.h /usr/include/qt/QtCore/QDebug \
  /usr/include/qt/QtCore/qdebug.h /usr/include/qt/QtCore/QFile \
  /usr/include/qt/QtCore/qfile.h /usr/include/qt/QtCore/qfiledevice.h \
- /usr/include/qt/QtCore/QDataStream /usr/include/qt/QtCore/qdatastream.h
+ /usr/include/qt/QtCore/QDataStream /usr/include/qt/QtCore/qdatastream.h \
+ /usr/include/qt/QtCore/QProcess /usr/include/qt/QtCore/qprocess.h \
+ /usr/include/qt/QtNetwork/QNetworkDatagram \
+ /usr/include/qt/QtNetwork/qnetworkdatagram.h

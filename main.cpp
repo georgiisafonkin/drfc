@@ -1,4 +1,3 @@
-#include "DataTransmissionHandler.h"
 #include "gui.h"
 #include <QApplication>
 
@@ -7,6 +6,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     qRegisterMetaType<std::vector<qint16>>("std::vector<qint16>");
+    qRegisterMetaType<QAbstractSocket::SocketError>("QAbstractSocket::SocketError");
 
     GUI gui;
     gui.setWindowTitle("drfc");

@@ -2,6 +2,8 @@
 
 #include "DataTransmissionWorker.h"
 
+#include <QProcess>
+#include <QMessageBox>
 #include <QSerialPortInfo>
 #include <qdebug.h>
 #include <vector>
@@ -51,7 +53,7 @@ void GUI::refreshComPorts() {
     // Get available COM ports
     const QList<QSerialPortInfo> ports = QSerialPortInfo::availablePorts();
     for (const QSerialPortInfo &port : ports) {
-        comPortCombo->addItem(port.portName());
+        comPortCombo->addItem(port.portName()) ;
     }
 }
 
@@ -59,12 +61,14 @@ void GUI::selectComPort() {
     QString selectedPort = comPortCombo->currentText();
     if (!selectedPort.isEmpty()) {
         qDebug() << "Selected COM Port:" << selectedPort;
+        dth->setComPortName(selectedPort);
         dth->start();
     } else {
         qDebug() << "No COM Port selected.";
     }
 }
 
+ //charts below
 void GUI::updateCharts(int index, const std::vector<qint16>& numbers) {
     qDebug() << "Updating chart at index:" << index << "with data size:" << numbers.size();
     for (auto value : numbers) {

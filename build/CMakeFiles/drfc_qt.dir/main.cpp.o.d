@@ -1,5 +1,6 @@
 CMakeFiles/drfc_qt.dir/main.cpp.o: /home/georgy/drfc_qt/main.cpp \
- /usr/include/stdc-predef.h \
+ /usr/include/stdc-predef.h /home/georgy/drfc_qt/gui.h \
+ /home/georgy/drfc_qt/DataTransmissionWorker.h \
  /home/georgy/drfc_qt/DataTransmissionHandler.h \
  /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
  /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
@@ -238,8 +239,10 @@ CMakeFiles/drfc_qt.dir/main.cpp.o: /home/georgy/drfc_qt/main.cpp \
  /usr/include/c++/14.2.1/bits/unique_lock.h \
  /usr/include/c++/14.2.1/condition_variable \
  /usr/include/c++/14.2.1/bits/atomic_futex.h \
- /usr/include/c++/14.2.1/bits/std_thread.h /home/georgy/drfc_qt/gui.h \
- /home/georgy/drfc_qt/DataTransmissionWorker.h \
+ /usr/include/c++/14.2.1/bits/std_thread.h \
+ /usr/include/qt/QtSerialPort/QSerialPort \
+ /usr/include/qt/QtSerialPort/qserialport.h \
+ /usr/include/qt/QtSerialPort/qserialportglobal.h \
  /home/georgy/drfc_qt/RealTimeChart.h /usr/include/qt/QtCharts/QChart \
  /usr/include/qt/QtCharts/qchart.h \
  /usr/include/qt/QtCharts/QAbstractSeries \
