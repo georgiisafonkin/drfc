@@ -48,8 +48,12 @@ void DataTransmissionHandler::recieveData() {
     // qDebug() << "Recieved from port: " << chosenPort->readAll();
     elapsedTimer.start();
     while (true) {
-        if (chosenPort->isOpen()) {
-            qDebug() << "Recieved from port: " << chosenPort->readAll();
+        while (true) {
+            if (chosenPort->waitForReadyRead(3000)) {
+                QByteArray datas = chosenPort->readLine();
+                qDebug() << "from port: " << datas;
+            }
+
         }
 
         QByteArray datagram;
@@ -57,10 +61,6 @@ void DataTransmissionHandler::recieveData() {
 
         // Receive the data from the socket
         qint64 bytesRead = sock->readDatagram(datagram.data(), datagram.size(), &clAddress, &clPort);
-        QNetworkDatagram* netDatagram = new QNetworkDatagram(sock->receiveDatagram(lengthUdpPack + 5));
-
-        qDebug() << "Network datagram: " << netDatagram->data();
-
         if (bytesRead > 0) {
             // qDebug() << "Received data:" << datagram;
             processReceivedData(datagram);
@@ -158,16 +158,14 @@ void DataTransmissionHandler::connectToComPort() {
 
     // QString portName = comPortCombo->currentData().toString();
     chosenPort->setPortName(comPortName);
-    chosenPort->setBaudRate(QSerialPort::Baud9600);
+    chosenPort->setBaudRate(QSerialPort::Baud115200, QSerialPort::AllDirections);
     chosenPort->setDataBits(QSerialPort::Data8);
     chosenPort->setParity(QSerialPort::NoParity);
     chosenPort->setStopBits(QSerialPort::OneStop);
     chosenPort->setFlowControl(QSerialPort::NoFlowControl);
 
-    int err;
     if (chosenPort->open(QIODevice::ReadWrite)) {
         qDebug() << "Successfully connected to COM port: " + comPortName;
-        // chosenPort->close();
     } else {
         qDebug() << "Failed to connect to COM port: " + comPortName;
         qDebug() << "Port Error: " << chosenPort->error();
