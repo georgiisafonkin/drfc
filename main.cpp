@@ -1,4 +1,5 @@
 #include "gui.h"
+#include <QAbstractSocket>
 #include <QApplication>
 
 int main(int argc, char *argv[])

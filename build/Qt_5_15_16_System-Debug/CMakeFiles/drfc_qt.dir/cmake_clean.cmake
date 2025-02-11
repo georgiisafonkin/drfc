@@ -5,8 +5,6 @@ file(REMOVE_RECURSE
   "drfc_qt_autogen"
   "CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o"
   "CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o.d"
-  "CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o"
-  "CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o.d"
   "CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.o"
   "CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.o.d"
   "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o"

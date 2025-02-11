@@ -20,7 +20,7 @@ add_executable(drfc_qt
   main.cpp
   DataTransmissionHandler.cpp
   gui.h gui.cpp
-  DataTransmissionWorker.h DataTransmissionWorker.cpp
+
   RealTimeChart.h RealTimeChart.cpp
 
 )

@@ -107,12 +107,6 @@
 			null
 		],
 		[
-			"/home/georgy/drfc_qt/DataTransmissionWorker.h",
-			"MU",
-			"EWIEGA46WW/moc_DataTransmissionWorker.cpp",
-			null
-		],
-		[
 			"/home/georgy/drfc_qt/RealTimeChart.h",
 			"MU",
 			"EWIEGA46WW/moc_RealTimeChart.cpp",
@@ -183,7 +177,6 @@
 	"SOURCES" : 
 	[
 		[ "/home/georgy/drfc_qt/DataTransmissionHandler.cpp", "MU", null ],
-		[ "/home/georgy/drfc_qt/DataTransmissionWorker.cpp", "MU", null ],
 		[ "/home/georgy/drfc_qt/RealTimeChart.cpp", "MU", null ],
 		[ "/home/georgy/drfc_qt/gui.cpp", "MU", null ],
 		[ "/home/georgy/drfc_qt/main.cpp", "MU", null ]

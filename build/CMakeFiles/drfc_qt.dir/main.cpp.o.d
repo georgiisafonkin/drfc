@@ -1,6 +1,5 @@
 CMakeFiles/drfc_qt.dir/main.cpp.o: /home/georgy/drfc_qt/main.cpp \
  /usr/include/stdc-predef.h /home/georgy/drfc_qt/gui.h \
- /home/georgy/drfc_qt/DataTransmissionWorker.h \
  /home/georgy/drfc_qt/DataTransmissionHandler.h \
  /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
  /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
@@ -326,6 +325,8 @@ CMakeFiles/drfc_qt.dir/main.cpp.o: /home/georgy/drfc_qt/main.cpp \
  /usr/include/qt/QtWidgets/qlayoutitem.h \
  /usr/include/qt/QtWidgets/qboxlayout.h \
  /usr/include/qt/QtWidgets/qgridlayout.h \
+ /usr/include/qt/QtNetwork/QAbstractSocket \
+ /usr/include/qt/QtNetwork/qabstractsocket.h \
  /usr/include/qt/QtWidgets/QApplication \
  /usr/include/qt/QtWidgets/qapplication.h \
  /usr/include/qt/QtCore/qcoreapplication.h \

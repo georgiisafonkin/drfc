@@ -307,7 +307,6 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtCharts/qlineseries.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/moc_gui.cpp \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../gui.h \
- /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../DataTransmissionWorker.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../DataTransmissionHandler.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../RealTimeChart.h \
  /usr/include/qt/QtWidgets/QComboBox \

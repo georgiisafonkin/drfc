@@ -1,7 +1,6 @@
 /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/moc_gui.cpp: /home/georgy/drfc_qt/gui.h \
   /home/georgy/drfc_qt/build/drfc_qt_autogen/moc_predefs.h \
   /home/georgy/drfc_qt/DataTransmissionHandler.h \
-  /home/georgy/drfc_qt/DataTransmissionWorker.h \
   /home/georgy/drfc_qt/RealTimeChart.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

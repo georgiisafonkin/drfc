@@ -1,6 +1,6 @@
 #include "gui.h"
 
-#include "DataTransmissionWorker.h"
+#include "DataTransmissionHandler.h"
 
 #include <QProcess>
 #include <QMessageBox>

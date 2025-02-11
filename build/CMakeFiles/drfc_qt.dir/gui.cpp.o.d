@@ -1,6 +1,5 @@
 CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/stdc-predef.h /home/georgy/drfc_qt/gui.h \
- /home/georgy/drfc_qt/DataTransmissionWorker.h \
  /home/georgy/drfc_qt/DataTransmissionHandler.h \
  /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
  /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \

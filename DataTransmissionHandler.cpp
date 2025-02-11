@@ -16,31 +16,41 @@ DataTransmissionHandler::DataTransmissionHandler(QObject *parent)
 
 
 
-int *DataTransmissionHandler::createStartMessage() {
-    static int message[10];
+QByteArray DataTransmissionHandler::createStartMessage() {
+    static QByteArray message;
 
     // Start message creation
-    message[0] = static_cast<int>(1000 * Ng) >> 8;
-    message[1] = static_cast<int>(1000 * Ng) & 0xff;
+    message.append(static_cast<qint16>(1000 * Ng) >> 8);
+    message.append(static_cast<qint16>(1000 * Ng) & 0xff);
+    // message[0] = static_cast<qint16>(1000 * Ng) >> 8;
+    // message[1] = static_cast<qint16>(1000 * Ng) & 0xff;
 
-    message[2] = static_cast<int>(lineLength) >> 8;
-    message[3] = static_cast<int>(lineLength) & 0xff;
+    message.append(static_cast<qint16>(lineLength) >> 8);
+    message.append(static_cast<qint16>(lineLength) & 0xff);
+    // message[2] = static_cast<qint16>(lineLength) >> 8;
+    // message[3] = static_cast<qint16>(lineLength) & 0xff;
 
-    message[4] = static_cast<int>(lengthUdpPack) >> 8;
-    message[5] = static_cast<int>(lengthUdpPack) & 0xff;
+    message.append(static_cast<qint16>(lengthUdpPack) >> 8);
+    message.append(static_cast<qint16>(lengthUdpPack) & 0xff);
+    // message[4] = static_cast<qint16>(lengthUdpPack) >> 8;
+    // message[5] = static_cast<qint16>(lengthUdpPack) & 0xff;
 
-    message[6] = static_cast<int>(freqSendData) >> 8;
-    message[7] = static_cast<int>(freqSendData) & 0xff;
+    message.append(static_cast<qint16>(freqSendData) >> 8);
+    message.append(static_cast<qint16>(freqSendData) & 0xff);
+    // message[6] = static_cast<qint16>(freqSendData) >> 8;
+    // message[7] = static_cast<qint16>(freqSendData) & 0xff;
 
-    message[8] = static_cast<int>(pulseWidth) >> 8;
-    message[9] = static_cast<int>(pulseWidth) & 0xff;
+    message.append(static_cast<qint16>(pulseWidth) >> 8);
+    message.append(static_cast<qint16>(pulseWidth) & 0xff);
+    // message[8] = static_cast<qint16>(pulseWidth) >> 8;
+    // message[9] = static_cast<qint16>(pulseWidth) & 0xff;
 
     return message;
 }
 
 void DataTransmissionHandler::startDataTransmission() {
-    int* message = createStartMessage();
-    sock->writeDatagram(reinterpret_cast<const char*>(message), sizeof(int) * 10, clAddress, clPort);
+    QByteArray message = createStartMessage();
+    sock->writeDatagram(message, message.size(), clAddress, clPort);
     qDebug() << "Start message sent to the card.";
 }
 
@@ -48,25 +58,26 @@ void DataTransmissionHandler::recieveData() {
     // qDebug() << "Recieved from port: " << chosenPort->readAll();
     elapsedTimer.start();
     while (true) {
-        while (true) {
-            if (chosenPort->waitForReadyRead(3000)) {
-                QByteArray datas = chosenPort->readLine();
-                qDebug() << "from port: " << datas;
-            }
-
-        }
+        // while (true) {
+        //     if (chosenPort->waitForReadyRead(1000)) {
+        //         QByteArray datas = chosenPort->readAll();
+        //         qDebug() << "from port: " << QString(datas);
+        //     }
+        // }
 
         QByteArray datagram;
         datagram.resize(lengthUdpPack + 5);  // Adjust size as needed
 
         // Receive the data from the socket
-        qint64 bytesRead = sock->readDatagram(datagram.data(), datagram.size(), &clAddress, &clPort);
-        if (bytesRead > 0) {
-            // qDebug() << "Received data:" << datagram;
-            processReceivedData(datagram);
+        QNetworkDatagram networkDatagram;
+        networkDatagram = sock->receiveDatagram(lengthUdpPack + 5);
+        // qint64 bytesRead = sock->readDatagram(datagram.data(), datagram.size(), &clAddress, &clPort);
+        if (networkDatagram.data().size() > 0) {
+            qDebug() << "Received data:" << networkDatagram.data();
+            processReceivedData(networkDatagram.data());
         }
         else {
-            if (elapsedTimer.elapsed() >= 10) {
+            if (elapsedTimer.elapsed() >= 10000) {
                 qDebug() << "Can't receive any packet. Shut down...";
                 processReceivedData();
                 break;

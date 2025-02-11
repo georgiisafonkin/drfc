@@ -36,7 +36,7 @@ private:
     void connectToComPort();
 
     std::vector<char> array;
-    int* createStartMessage();
+    QByteArray createStartMessage();
     void processReceivedData(const QByteArray &data);
     void processReceivedData();
     void finishTransmission();

@@ -1,7 +1,7 @@
 #ifndef GUI_H
 #define GUI_H
 
-#include "DataTransmissionWorker.h"
+#include "DataTransmissionHandler.h"
 #include "RealTimeChart.h"
 #include <QChart>
 #include <QChartView>

@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "drfc_qt_autogen/timestamp" "custom" "drfc_qt_autogen/deps"
   "/home/georgy/drfc_qt/DataTransmissionHandler.cpp" "CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o.d"
-  "/home/georgy/drfc_qt/DataTransmissionWorker.cpp" "CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/DataTransmissionWorker.cpp.o.d"
   "/home/georgy/drfc_qt/RealTimeChart.cpp" "CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.o.d"
   "/home/georgy/drfc_qt/build/drfc_qt_autogen/mocs_compilation.cpp" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o.d"
   "/home/georgy/drfc_qt/gui.cpp" "CMakeFiles/drfc_qt.dir/gui.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/gui.cpp.o.d"

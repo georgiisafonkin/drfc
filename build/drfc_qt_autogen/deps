@@ -2,8 +2,6 @@ drfc_qt_autogen/timestamp: \
 	/home/georgy/drfc_qt/CMakeLists.txt \
 	/home/georgy/drfc_qt/DataTransmissionHandler.cpp \
 	/home/georgy/drfc_qt/DataTransmissionHandler.h \
-	/home/georgy/drfc_qt/DataTransmissionWorker.cpp \
-	/home/georgy/drfc_qt/DataTransmissionWorker.h \
 	/home/georgy/drfc_qt/RealTimeChart.cpp \
 	/home/georgy/drfc_qt/RealTimeChart.h \
 	/home/georgy/drfc_qt/build/CMakeFiles/3.31.2/CMakeCXXCompiler.cmake \
