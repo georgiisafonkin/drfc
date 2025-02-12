@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_DataTransmissionHandler_t {
     QByteArrayData data[6];
-    char stringdata0[74];
+    char stringdata0[75];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,12 +36,12 @@ QT_MOC_LITERAL(0, 0, 23), // "DataTransmissionHandler"
 QT_MOC_LITERAL(1, 24, 14), // "ChartDataReady"
 QT_MOC_LITERAL(2, 39, 0), // ""
 QT_MOC_LITERAL(3, 40, 5), // "index"
-QT_MOC_LITERAL(4, 46, 19), // "std::vector<qint16>"
-QT_MOC_LITERAL(5, 66, 7) // "numbers"
+QT_MOC_LITERAL(4, 46, 20), // "std::vector<quint16>"
+QT_MOC_LITERAL(5, 67, 7) // "numbers"
 
     },
     "DataTransmissionHandler\0ChartDataReady\0"
-    "\0index\0std::vector<qint16>\0numbers"
+    "\0index\0std::vector<quint16>\0numbers"
 };
 #undef QT_MOC_LITERAL
 
@@ -73,13 +73,13 @@ void DataTransmissionHandler::qt_static_metacall(QObject *_o, QMetaObject::Call 
         auto *_t = static_cast<DataTransmissionHandler *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->ChartDataReady((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const std::vector<qint16>(*)>(_a[2]))); break;
+        case 0: _t->ChartDataReady((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const std::vector<quint16>(*)>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (DataTransmissionHandler::*)(int , const std::vector<qint16> & );
+            using _t = void (DataTransmissionHandler::*)(int , const std::vector<quint16> & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&DataTransmissionHandler::ChartDataReady)) {
                 *result = 0;
                 return;
@@ -129,7 +129,7 @@ int DataTransmissionHandler::qt_metacall(QMetaObject::Call _c, int _id, void **_
 }
 
 // SIGNAL 0
-void DataTransmissionHandler::ChartDataReady(int _t1, const std::vector<qint16> & _t2)
+void DataTransmissionHandler::ChartDataReady(int _t1, const std::vector<quint16> & _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

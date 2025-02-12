@@ -261,7 +261,9 @@
   /usr/include/qt/QtCore/QElapsedTimer \
   /usr/include/qt/QtCore/QMargins \
   /usr/include/qt/QtCore/QObject \
+  /usr/include/qt/QtCore/QRunnable \
   /usr/include/qt/QtCore/QThread \
+  /usr/include/qt/QtCore/QThreadPool \
   /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/QVariant \
   /usr/include/qt/QtCore/QtGlobal \
@@ -315,6 +317,7 @@
   /usr/include/qt/QtCore/qrefcount.h \
   /usr/include/qt/QtCore/qregexp.h \
   /usr/include/qt/QtCore/qregularexpression.h \
+  /usr/include/qt/QtCore/qrunnable.h \
   /usr/include/qt/QtCore/qscopedpointer.h \
   /usr/include/qt/QtCore/qset.h \
   /usr/include/qt/QtCore/qshareddata.h \
@@ -332,6 +335,7 @@
   /usr/include/qt/QtCore/qtcore-config.h \
   /usr/include/qt/QtCore/qtextstream.h \
   /usr/include/qt/QtCore/qthread.h \
+  /usr/include/qt/QtCore/qthreadpool.h \
   /usr/include/qt/QtCore/qtimer.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
   /usr/include/qt/QtCore/qurl.h \

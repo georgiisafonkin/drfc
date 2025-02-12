@@ -302,7 +302,8 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtCharts/QXYSeries /usr/include/qt/QtCharts/qxyseries.h \
  /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
  /usr/include/qt/QtCore/QTimer /usr/include/qt/QtCore/qtimer.h \
- /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCharts/qchart.h \
+ /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCore/QRunnable \
+ /usr/include/qt/QtCore/qrunnable.h /usr/include/qt/QtCharts/qchart.h \
  /usr/include/qt/QtCharts/qchartview.h \
  /usr/include/qt/QtCharts/qlineseries.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/moc_gui.cpp \
@@ -328,6 +329,8 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtWidgets/QPushButton \
  /usr/include/qt/QtWidgets/qpushbutton.h \
  /usr/include/qt/QtWidgets/qabstractbutton.h \
+ /usr/include/qt/QtCore/QThreadPool /usr/include/qt/QtCore/qthreadpool.h \
+ /usr/include/qt/QtCore/qthread.h /usr/include/qt/QtCore/qrunnable.h \
  /usr/include/qt/QtWidgets/QVBoxLayout \
  /usr/include/qt/QtWidgets/qboxlayout.h \
  /usr/include/qt/QtWidgets/qlayout.h \

@@ -257,6 +257,7 @@
   /usr/include/qt/QtCharts/qxyseries.h \
   /usr/include/qt/QtCore/QMargins \
   /usr/include/qt/QtCore/QObject \
+  /usr/include/qt/QtCore/QRunnable \
   /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/QVariant \
   /usr/include/qt/QtCore/QtGlobal \
@@ -303,6 +304,7 @@
   /usr/include/qt/QtCore/qrect.h \
   /usr/include/qt/QtCore/qrefcount.h \
   /usr/include/qt/QtCore/qregexp.h \
+  /usr/include/qt/QtCore/qrunnable.h \
   /usr/include/qt/QtCore/qscopedpointer.h \
   /usr/include/qt/QtCore/qset.h \
   /usr/include/qt/QtCore/qshareddata.h \

@@ -276,7 +276,8 @@ CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.o: \
  /usr/include/qt/QtCharts/QXYSeries /usr/include/qt/QtCharts/qxyseries.h \
  /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
  /usr/include/qt/QtCore/QTimer /usr/include/qt/QtCore/qtimer.h \
- /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCharts/qchart.h \
+ /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCore/QRunnable \
+ /usr/include/qt/QtCore/qrunnable.h /usr/include/qt/QtCharts/qchart.h \
  /usr/include/qt/QtCharts/qchartview.h \
  /usr/include/qt/QtCharts/qlineseries.h \
  /usr/include/qt/QtWidgets/QVBoxLayout \
