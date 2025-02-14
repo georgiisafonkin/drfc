@@ -21,7 +21,7 @@ private:
     float Ng = 1.46;
     int lineLength = 5000;
     int lengthUdpPack = 1024;
-    int freqSendData = 100;
+    int freqSendData = 1;
     int pulseWidth = 10;
 
     //for connection
@@ -35,17 +35,20 @@ private:
     void setStaticIP();
     void connectToComPort();
 
-    std::vector<char> array;
+    QByteArray* array = new QByteArray();
     QByteArray createStartMessage();
     void processReceivedData(const QByteArray &data);
     void processReceivedData();
     void finishTransmission();
-    int index = 0;
+    quint16 index = 0;
     QElapsedTimer elapsedTimer;
+
+    QList<quint16> prepareNumbers(QByteArray rawBytes);
 protected:
     void run() override;
 signals:
-    void ChartDataReady(int index, const std::vector<qint16>& numbers);
+    void ReflectogramDataReady(const QPair<quint16, QByteArray>& newPair);
+    void ChartDataReady(const QList<quint16>& numbers);
 };
 
 #endif // DATATRANSMISSIONHANDLER_H

@@ -22,6 +22,7 @@ add_executable(drfc_qt
   gui.h gui.cpp
 
   RealTimeChart.h RealTimeChart.cpp
+  FileWriter.h FileWriter.cpp
 
 )
 

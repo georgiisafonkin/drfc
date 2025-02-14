@@ -1,12 +1,12 @@
 #include "gui.h"
 
 #include "DataTransmissionHandler.h"
+#include "FileWriter.h"
 
 #include <QProcess>
 #include <QMessageBox>
 #include <QSerialPortInfo>
 #include <qdebug.h>
-#include <vector>
 
 GUI::GUI(QWidget *parent)
     : QMainWindow{parent}
@@ -14,43 +14,39 @@ GUI::GUI(QWidget *parent)
     //separeted thread for data transmission, processing
     dth = new DataTransmissionHandler();
 
-    // Central widget
+    fw = new FileWriter();
+
     QWidget *centralWidget = new QWidget(this);
     setCentralWidget(centralWidget);
 
-    // Layout
     layout = new QVBoxLayout(centralWidget);
 
-    // Label
     label = new QLabel("Select a COM Port:", this);
     layout->addWidget(label);
 
-    // ComboBox for COM ports
     comPortCombo = new QComboBox(this);
     layout->addWidget(comPortCombo);
 
-    // Refresh button
     refreshButton = new QPushButton("Refresh COM Ports", this);
     layout->addWidget(refreshButton);
     connect(refreshButton, &QPushButton::clicked, this, &GUI::refreshComPorts);
 
-    // Select button
     selectButton = new QPushButton("Select", this);
     layout->addWidget(selectButton);
     connect(selectButton, &QPushButton::clicked, this, &GUI::selectComPort);
 
-    // Populate COM ports on startup
+    realTimeChart->setMinimumHeight(720);
+    layout->addWidget(realTimeChart);
+
     refreshComPorts();
 
-    // Signal-slot for drawing charts in real-time
-    connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateCharts, Qt::QueuedConnection);
+    connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);
+    connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateChartsData, Qt::QueuedConnection);
 }
 
 void GUI::refreshComPorts() {
-    // Clear the ComboBox
     comPortCombo->clear();
 
-    // Get available COM ports
     const QList<QSerialPortInfo> ports = QSerialPortInfo::availablePorts();
     for (const QSerialPortInfo &port : ports) {
         comPortCombo->addItem(port.portName()) ;
@@ -61,27 +57,34 @@ void GUI::selectComPort() {
     QString selectedPort = comPortCombo->currentText();
     if (!selectedPort.isEmpty()) {
         qDebug() << "Selected COM Port:" << selectedPort;
+
+        fw->start();
+
         dth->setComPortName(selectedPort);
         dth->start();
+
+        plotCharts();
     } else {
         qDebug() << "No COM Port selected.";
     }
 }
 
  //charts below
-void GUI::updateCharts(int index, const std::vector<qint16>& numbers) {
-    qDebug() << "Updating chart at index:" << index << "with data size:" << numbers.size();
-    for (auto value : numbers) {
-        qDebug() << value;
-    }
-
-    if (index == realTimeCharts.size()) {
-        auto *newChart = new RealTimeChart();
-        realTimeCharts.push_back(newChart);
-        newChart->setMinimumHeight(300);
-        layout->addWidget(newChart);
-    }
-    realTimeCharts.at(index)->updateChart(numbers);
-
-    layout->update();
+void GUI::updateChartsData(const QList<quint16>& numbers) {
+    qDebug() << "GUI::updateChartsData()";
+    plotQueue.enqueue(numbers);
 }
+
+void GUI::plotCharts() {
+    qDebug() << "GUI::plotCharts()";
+    while (!QThread::currentThread()->isInterruptionRequested()) {
+        if (!plotQueue.empty()) {
+            realTimeChart->updateChart(plotQueue.dequeue());
+            // may be should do layout->update()
+        } else {
+            QThread::currentThread()->sleep(1000);
+        }
+    }
+}
+
+//TODO: connect signal-slot

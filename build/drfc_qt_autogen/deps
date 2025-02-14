@@ -2,6 +2,8 @@ drfc_qt_autogen/timestamp: \
 	/home/georgy/drfc_qt/CMakeLists.txt \
 	/home/georgy/drfc_qt/DataTransmissionHandler.cpp \
 	/home/georgy/drfc_qt/DataTransmissionHandler.h \
+	/home/georgy/drfc_qt/FileWriter.cpp \
+	/home/georgy/drfc_qt/FileWriter.h \
 	/home/georgy/drfc_qt/RealTimeChart.cpp \
 	/home/georgy/drfc_qt/RealTimeChart.h \
 	/home/georgy/drfc_qt/build/CMakeFiles/3.31.2/CMakeCXXCompiler.cmake \
@@ -323,6 +325,7 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtCore/QElapsedTimer \
 	/usr/include/qt/QtCore/QMargins \
 	/usr/include/qt/QtCore/QObject \
+	/usr/include/qt/QtCore/QQueue \
 	/usr/include/qt/QtCore/QRunnable \
 	/usr/include/qt/QtCore/QThread \
 	/usr/include/qt/QtCore/QThreadPool \
@@ -375,6 +378,7 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtCore/qpair.h \
 	/usr/include/qt/QtCore/qpoint.h \
 	/usr/include/qt/QtCore/qprocessordetection.h \
+	/usr/include/qt/QtCore/qqueue.h \
 	/usr/include/qt/QtCore/qrect.h \
 	/usr/include/qt/QtCore/qrefcount.h \
 	/usr/include/qt/QtCore/qregexp.h \

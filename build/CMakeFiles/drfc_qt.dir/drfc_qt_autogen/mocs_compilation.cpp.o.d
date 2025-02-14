@@ -246,6 +246,7 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtSerialPort/QSerialPort \
  /usr/include/qt/QtSerialPort/qserialport.h \
  /usr/include/qt/QtSerialPort/qserialportglobal.h \
+ /usr/include/qt/QtCore/QList /usr/include/qt/QtCore/qlist.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/moc_RealTimeChart.cpp \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../RealTimeChart.h \
  /usr/include/qt/QtCharts/QChart /usr/include/qt/QtCharts/qchart.h \
@@ -309,6 +310,8 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/moc_gui.cpp \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../gui.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../DataTransmissionHandler.h \
+ /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../FileWriter.h \
+ /usr/include/qt/QtCore/QQueue /usr/include/qt/QtCore/qqueue.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../RealTimeChart.h \
  /usr/include/qt/QtWidgets/QComboBox \
  /usr/include/qt/QtWidgets/qcombobox.h \

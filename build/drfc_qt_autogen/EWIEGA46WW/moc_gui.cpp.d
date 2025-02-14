@@ -1,6 +1,7 @@
 /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/moc_gui.cpp: /home/georgy/drfc_qt/gui.h \
   /home/georgy/drfc_qt/build/drfc_qt_autogen/moc_predefs.h \
   /home/georgy/drfc_qt/DataTransmissionHandler.h \
+  /home/georgy/drfc_qt/FileWriter.h \
   /home/georgy/drfc_qt/RealTimeChart.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -261,6 +262,7 @@
   /usr/include/qt/QtCore/QElapsedTimer \
   /usr/include/qt/QtCore/QMargins \
   /usr/include/qt/QtCore/QObject \
+  /usr/include/qt/QtCore/QQueue \
   /usr/include/qt/QtCore/QRunnable \
   /usr/include/qt/QtCore/QThread \
   /usr/include/qt/QtCore/QThreadPool \
@@ -313,6 +315,7 @@
   /usr/include/qt/QtCore/qpair.h \
   /usr/include/qt/QtCore/qpoint.h \
   /usr/include/qt/QtCore/qprocessordetection.h \
+  /usr/include/qt/QtCore/qqueue.h \
   /usr/include/qt/QtCore/qrect.h \
   /usr/include/qt/QtCore/qrefcount.h \
   /usr/include/qt/QtCore/qregexp.h \

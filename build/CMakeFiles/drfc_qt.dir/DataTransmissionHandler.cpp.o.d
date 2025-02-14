@@ -252,4 +252,5 @@ CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o: \
  /usr/include/qt/QtCore/QDataStream /usr/include/qt/QtCore/qdatastream.h \
  /usr/include/qt/QtCore/QProcess /usr/include/qt/QtCore/qprocess.h \
  /usr/include/qt/QtNetwork/QNetworkDatagram \
- /usr/include/qt/QtNetwork/qnetworkdatagram.h
+ /usr/include/qt/QtNetwork/qnetworkdatagram.h \
+ /usr/include/qt/QtCore/QPair /usr/include/qt/QtCore/qpair.h

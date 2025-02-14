@@ -224,6 +224,30 @@ DataTransmissionHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.s
 .PHONY : DataTransmissionHandler.cpp.s
 
+FileWriter.o: FileWriter.cpp.o
+.PHONY : FileWriter.o
+
+# target to build an object file
+FileWriter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter.cpp.o
+.PHONY : FileWriter.cpp.o
+
+FileWriter.i: FileWriter.cpp.i
+.PHONY : FileWriter.i
+
+# target to preprocess a source file
+FileWriter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter.cpp.i
+.PHONY : FileWriter.cpp.i
+
+FileWriter.s: FileWriter.cpp.s
+.PHONY : FileWriter.s
+
+# target to generate assembly for a file
+FileWriter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter.cpp.s
+.PHONY : FileWriter.cpp.s
+
 RealTimeChart.o: RealTimeChart.cpp.o
 .PHONY : RealTimeChart.o
 
@@ -338,6 +362,9 @@ help:
 	@echo "... DataTransmissionHandler.o"
 	@echo "... DataTransmissionHandler.i"
 	@echo "... DataTransmissionHandler.s"
+	@echo "... FileWriter.o"
+	@echo "... FileWriter.i"
+	@echo "... FileWriter.s"
 	@echo "... RealTimeChart.o"
 	@echo "... RealTimeChart.i"
 	@echo "... RealTimeChart.s"

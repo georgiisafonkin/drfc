@@ -2,6 +2,7 @@
 #define GUI_H
 
 #include "DataTransmissionHandler.h"
+#include "FileWriter.h"
 #include "RealTimeChart.h"
 #include <QChart>
 #include <QChartView>
@@ -9,7 +10,9 @@
 #include <QLabel>
 #include <QMainWindow>
 #include <QPushButton>
+#include <QQueue>
 #include <QSerialPort>
+#include <QThreadPool>
 #include <QVBoxLayout>
 #include <QWidget>
 
@@ -20,21 +23,30 @@ public:
     explicit GUI(QWidget *parent = nullptr);
 
 private:
+    //GUI stuff
     QWidget* centralWidget;
     QVBoxLayout* layout;
     QLabel* label;
     QComboBox* comPortCombo;
     QPushButton* refreshButton;
     QPushButton* selectButton;
+
+    //Buttons stuff
     void refreshComPorts();
     void selectComPort();
 
     DataTransmissionHandler* dth;
-    void updateCharts(int index, const std::vector<qint16>& numbers);
-    int pointNumber = 0; //may be removed
-    std::vector<RealTimeChart*> realTimeCharts;
+    FileWriter* fw;
 
+    //Charts, plotting stuff
+    QQueue<QList<quint16>> plotQueue;
+    void updateChartsData(const QList<quint16>& numbers); //add chart to plotQueue
+    void plotCharts();
+    RealTimeChart* realTimeChart = new RealTimeChart();
 signals:
 };
 
 #endif // GUI_H
+
+
+//TODO: after ternination of main (GUI) thread other thread must terminate too
