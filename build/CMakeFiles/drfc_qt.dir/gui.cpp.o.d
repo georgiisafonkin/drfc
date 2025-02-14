@@ -242,9 +242,15 @@ CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/qt/QtSerialPort/QSerialPort \
  /usr/include/qt/QtSerialPort/qserialport.h \
  /usr/include/qt/QtSerialPort/qserialportglobal.h \
- /home/georgy/drfc_qt/FileWriter.h /usr/include/qt/QtCore/QQueue \
- /usr/include/qt/QtCore/qqueue.h /home/georgy/drfc_qt/RealTimeChart.h \
- /usr/include/qt/QtCharts/QChart /usr/include/qt/QtCharts/qchart.h \
+ /home/georgy/drfc_qt/FileWriter.h /usr/include/qt/QtCore/QMutex \
+ /usr/include/qt/QtCore/qmutex.h /usr/include/qt/QtCore/qtsan_impl.h \
+ /usr/include/qt/QtCore/QQueue /usr/include/qt/QtCore/qqueue.h \
+ /usr/include/qt/QtCore/QWaitCondition \
+ /usr/include/qt/QtCore/qwaitcondition.h \
+ /usr/include/qt/QtCore/QDeadlineTimer \
+ /usr/include/qt/QtCore/qdeadlinetimer.h \
+ /home/georgy/drfc_qt/RealTimeChart.h /usr/include/qt/QtCharts/QChart \
+ /usr/include/qt/QtCharts/qchart.h \
  /usr/include/qt/QtCharts/QAbstractSeries \
  /usr/include/qt/QtCharts/qabstractseries.h \
  /usr/include/qt/QtCharts/QChartGlobal \

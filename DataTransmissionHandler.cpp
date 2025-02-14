@@ -46,7 +46,7 @@ void DataTransmissionHandler::startDataTransmission() {
 
 void DataTransmissionHandler::recieveData() {
     elapsedTimer.start();
-    while (true) {
+    while (!isInterruptionRequested()) {
         // while (true) {
         //     if (chosenPort->waitForReadyRead(1000)) {
         //         QByteArray datas = chosenPort->readAll();
@@ -86,9 +86,10 @@ void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
     // qDebug() << "numPack: " << numPack;
     if (numPack == 0) {
         if (index != 0) {
-            qDebug() << "signals from DataTranslationHandler";
-            ReflectogramDataReady(QPair<quint16, QByteArray>(index, *array));
+            QPair<quint16, QByteArray>* newPair = new QPair<quint16, QByteArray>(index, *array);
+            emit ReflectogramDataReady(*newPair);
             ChartDataReady(prepareNumbers(*array));
+            qDebug() << "DataTranslationHandler in Thread with TID " << QThread::currentThreadId() <<" emit signals";
             array->clear();
         }
         array->append(data.begin() + 5, lengthUdpPack);

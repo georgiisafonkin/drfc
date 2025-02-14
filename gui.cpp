@@ -12,9 +12,9 @@ GUI::GUI(QWidget *parent)
     : QMainWindow{parent}
 {
     //separeted thread for data transmission, processing
-    dth = new DataTransmissionHandler();
+    dth = new DataTransmissionHandler(this);
 
-    fw = new FileWriter();
+    fw = new FileWriter(this);
 
     QWidget *centralWidget = new QWidget(this);
     setCentralWidget(centralWidget);
@@ -40,7 +40,7 @@ GUI::GUI(QWidget *parent)
 
     refreshComPorts();
 
-    connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);
+    QObject::connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);
     connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateChartsData, Qt::QueuedConnection);
 }
 
@@ -63,7 +63,7 @@ void GUI::selectComPort() {
         dth->setComPortName(selectedPort);
         dth->start();
 
-        plotCharts();
+        // plotCharts();
     } else {
         qDebug() << "No COM Port selected.";
     }
@@ -71,7 +71,7 @@ void GUI::selectComPort() {
 
  //charts below
 void GUI::updateChartsData(const QList<quint16>& numbers) {
-    qDebug() << "GUI::updateChartsData()";
+    qDebug() << "GUI::updateChartsData() was invoked by Thread with TID: " << QThread::currentThreadId();
     plotQueue.enqueue(numbers);
 }
 
@@ -87,4 +87,15 @@ void GUI::plotCharts() {
     }
 }
 
-//TODO: connect signal-slot
+GUI::~GUI() {
+    dth->requestInterruption();
+    dth->quit();
+    dth->wait();
+
+    fw->queueNotEmpty->wakeOne();  // Ensure it wakes up if waiting
+    fw->requestInterruption();
+    fw->quit();
+    fw->wait();
+}
+
+//TODO: sync primitive like in a file writer

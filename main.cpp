@@ -6,17 +6,14 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    qRegisterMetaType<std::vector<qint16>>("std::vector<qint16>");
+    qRegisterMetaType<QList<qint16>>("std::vector<qint16>");
     qRegisterMetaType<QAbstractSocket::SocketError>("QAbstractSocket::SocketError");
+    qRegisterMetaType<QPair<quint16, QByteArray>>("QPair<quint16, QByteArray>");
 
     GUI gui;
     gui.setWindowTitle("drfc");
     gui.resize(400, 200);
     gui.show();
-
-    // DataTransmissionHandler* dth = new DataTransmissionHandler();
-    // dth->startDataTransmission();
-    // dth->recieveData();
 
     // Set up code that uses the Qt event loop here.
     // Call a.quit() or a.exit() to quit the application.
@@ -31,3 +28,8 @@ int main(int argc, char *argv[])
 
     return a.exec();
 }
+
+//TODO: fix (FileWriter must writes info to files, now it isn't)
+//TODO: fix (after termination of GUI thread other threads must be terminated too)
+//TODO: fix (GUI Thread must work smoothly without freezes, now it's not)
+//TODO: fix charts (now plot wrong)

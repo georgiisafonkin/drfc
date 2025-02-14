@@ -21,7 +21,7 @@ class GUI : public QMainWindow
     Q_OBJECT
 public:
     explicit GUI(QWidget *parent = nullptr);
-
+    ~GUI();
 private:
     //GUI stuff
     QWidget* centralWidget;

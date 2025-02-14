@@ -1,8 +1,7 @@
 CMakeFiles/drfc_qt.dir/FileWriter.cpp.o: \
  /home/georgy/drfc_qt/FileWriter.cpp /usr/include/stdc-predef.h \
- /home/georgy/drfc_qt/FileWriter.h /usr/include/qt/QtCore/QObject \
- /usr/include/qt/QtCore/qobject.h /usr/include/qt/QtCore/qobjectdefs.h \
- /usr/include/qt/QtCore/qnamespace.h /usr/include/qt/QtCore/qglobal.h \
+ /home/georgy/drfc_qt/FileWriter.h /usr/include/qt/QtCore/QMutex \
+ /usr/include/qt/QtCore/qmutex.h /usr/include/qt/QtCore/qglobal.h \
  /usr/include/c++/14.2.1/type_traits \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -82,15 +81,24 @@ CMakeFiles/drfc_qt.dir/FileWriter.cpp.o: \
  /usr/include/c++/14.2.1/bits/atomic_lockfree_defines.h \
  /usr/include/qt/QtCore/qglobalstatic.h /usr/include/qt/QtCore/qnumeric.h \
  /usr/include/qt/QtCore/qversiontagging.h \
+ /usr/include/qt/QtCore/qtsan_impl.h /usr/include/c++/14.2.1/chrono \
+ /usr/include/c++/14.2.1/bits/requires_hosted.h \
+ /usr/include/c++/14.2.1/bits/chrono.h /usr/include/c++/14.2.1/ratio \
+ /usr/include/c++/14.2.1/cstdint /usr/include/c++/14.2.1/limits \
+ /usr/include/c++/14.2.1/ctime /usr/include/time.h \
+ /usr/include/bits/time.h /usr/include/bits/timex.h \
+ /usr/include/bits/types/struct_tm.h \
+ /usr/include/bits/types/struct_itimerspec.h \
+ /usr/include/c++/14.2.1/bits/parse_numbers.h \
+ /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
+ /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
  /usr/include/qt/QtCore/qobjectdefs_impl.h \
  /usr/include/qt/QtCore/qstring.h /usr/include/qt/QtCore/qchar.h \
  /usr/include/qt/QtCore/qbytearray.h /usr/include/qt/QtCore/qrefcount.h \
  /usr/include/qt/QtCore/qarraydata.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/14.2.1/stdlib.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
- /usr/include/c++/14.2.1/string \
- /usr/include/c++/14.2.1/bits/requires_hosted.h \
- /usr/include/c++/14.2.1/bits/stringfwd.h \
+ /usr/include/c++/14.2.1/string /usr/include/c++/14.2.1/bits/stringfwd.h \
  /usr/include/c++/14.2.1/bits/memoryfwd.h \
  /usr/include/c++/14.2.1/bits/char_traits.h \
  /usr/include/c++/14.2.1/bits/postypes.h /usr/include/c++/14.2.1/cwchar \
@@ -144,9 +152,7 @@ CMakeFiles/drfc_qt.dir/FileWriter.cpp.o: \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
  /usr/include/bits/types/struct_sched_param.h /usr/include/bits/cpu-set.h \
- /usr/include/time.h /usr/include/bits/time.h /usr/include/bits/timex.h \
- /usr/include/bits/types/struct_tm.h \
- /usr/include/bits/types/struct_itimerspec.h /usr/include/bits/setjmp.h \
+ /usr/include/bits/setjmp.h \
  /usr/include/bits/types/struct___jmp_buf_tag.h \
  /usr/include/bits/pthread_stack_min-dynamic.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
@@ -212,20 +218,20 @@ CMakeFiles/drfc_qt.dir/FileWriter.cpp.o: \
  /usr/include/c++/14.2.1/map /usr/include/c++/14.2.1/bits/stl_tree.h \
  /usr/include/c++/14.2.1/bits/stl_map.h \
  /usr/include/c++/14.2.1/bits/stl_multimap.h \
- /usr/include/qt/QtCore/qobject_impl.h /usr/include/c++/14.2.1/chrono \
- /usr/include/c++/14.2.1/bits/chrono.h /usr/include/c++/14.2.1/ratio \
- /usr/include/c++/14.2.1/cstdint /usr/include/c++/14.2.1/limits \
- /usr/include/c++/14.2.1/ctime \
- /usr/include/c++/14.2.1/bits/parse_numbers.h \
- /usr/include/qt/QtCore/QQueue /usr/include/qt/QtCore/qqueue.h \
- /usr/include/qt/QtCore/QThread /usr/include/qt/QtCore/qthread.h \
- /usr/include/qt/QtCore/qobject.h /usr/include/qt/QtCore/qdeadlinetimer.h \
+ /usr/include/qt/QtCore/qobject_impl.h /usr/include/qt/QtCore/QQueue \
+ /usr/include/qt/QtCore/qqueue.h /usr/include/qt/QtCore/QThread \
+ /usr/include/qt/QtCore/qthread.h /usr/include/qt/QtCore/qobject.h \
+ /usr/include/qt/QtCore/qdeadlinetimer.h \
  /usr/include/qt/QtCore/qelapsedtimer.h /usr/include/c++/14.2.1/future \
  /usr/include/c++/14.2.1/mutex /usr/include/c++/14.2.1/bits/std_mutex.h \
  /usr/include/c++/14.2.1/bits/unique_lock.h \
  /usr/include/c++/14.2.1/condition_variable \
  /usr/include/c++/14.2.1/bits/atomic_futex.h \
  /usr/include/c++/14.2.1/bits/std_thread.h \
+ /usr/include/qt/QtCore/QWaitCondition \
+ /usr/include/qt/QtCore/qwaitcondition.h \
+ /usr/include/qt/QtCore/QDeadlineTimer \
+ /usr/include/qt/QtCore/qdeadlinetimer.h \
  /usr/include/qt/QtCore/QDataStream /usr/include/qt/QtCore/qdatastream.h \
  /usr/include/qt/QtCore/qiodevice.h /usr/include/qt/QtCore/QFile \
  /usr/include/qt/QtCore/qfile.h /usr/include/qt/QtCore/qfiledevice.h \

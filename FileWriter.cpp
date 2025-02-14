@@ -5,17 +5,31 @@
 #include <qdebug.h>
 
 FileWriter::FileWriter(QObject *parent)
-    : QThread{parent}
+    : QThread{parent}, writeQueue(new QQueue<QPair<quint16, QByteArray>>()),
+    queueMutex(new QMutex), queueNotEmpty(new QWaitCondition())
 {
-    writeQueue = new QQueue<QPair<quint16, QByteArray>>();
+    qDebug() << "FileWriter object was created in Thread with TID: " << QThread::currentThreadId();
 }
 
 void FileWriter::writeData() {
-    qDebug() << "FileWriter::writeData()";
+    qDebug() << "FileWriter::writeData() was invoked by thread with TID: " << QThread::currentThreadId();
     while (!QThread::currentThread()->isInterruptionRequested()) {
-        qDebug() << "FileWriter::writeData() in loop";
+        qDebug() << "FileWriter::writeData() enterd loop by thread with TID: " << QThread::currentThreadId();
+        QMutexLocker locker(queueMutex);
+
+        while (writeQueue->empty()) {
+            qDebug() << "empty writeQueue in thread with TID: " << QThread::currentThreadId();
+            if (QThread::currentThread()->isInterruptionRequested()) {
+                return;  // Exit thread safely
+            }
+            queueNotEmpty->wait(queueMutex);  // Wait until new data is available
+        }
+
         if (!writeQueue->empty()) {
+            qDebug() << "NOT empty writeQueue in thread with TID: " << QThread::currentThreadId();
             QPair queuePair = writeQueue->dequeue();
+
+            locker.unlock();
 
             quint16 index = queuePair.first;
             QByteArray reflectogram = queuePair.second;
@@ -30,23 +44,22 @@ void FileWriter::writeData() {
                 out.setByteOrder(QDataStream::BigEndian);
                 out.writeRawData(reflectogram.data(), reflectogram.size());
                 file.close();
-                qDebug() << "Reflectogram to write: " << reflectogram.data();
-                qDebug() << "wrote to file " << fileName << ".";
+                // qDebug() << "Reflectogram to write: " << reflectogram.data();
+                // qDebug() << "wrote to file " << fileName << ".";
             }
-        } else {
-            QThread::msleep(1000);
+            locker.relock();
         }
     }
 }
 
 void FileWriter::updateReflectogramData(QPair<quint16, QByteArray> newPair) {
-    qDebug() << "FileWriter::updateReflectogramData";
+    qDebug() << "FileWriter::updateReflectogramDatainvoked in Thread with TID: " << QThread::currentThreadId();
+    QMutexLocker locker(queueMutex);
     writeQueue->enqueue(newPair);
+    queueNotEmpty->wakeOne();
 }
 
 void FileWriter::run() {
-    qDebug() << "FileWriter::run()";
+    qDebug() << "FileWriter::run() invoked in Thread with TID: " << QThread::currentThreadId();
     writeData();
 }
-
-//TODO: connect signal-slot

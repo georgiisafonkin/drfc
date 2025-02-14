@@ -311,7 +311,12 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../gui.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../DataTransmissionHandler.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../FileWriter.h \
- /usr/include/qt/QtCore/QQueue /usr/include/qt/QtCore/qqueue.h \
+ /usr/include/qt/QtCore/QMutex /usr/include/qt/QtCore/qmutex.h \
+ /usr/include/qt/QtCore/qtsan_impl.h /usr/include/qt/QtCore/QQueue \
+ /usr/include/qt/QtCore/qqueue.h /usr/include/qt/QtCore/QWaitCondition \
+ /usr/include/qt/QtCore/qwaitcondition.h \
+ /usr/include/qt/QtCore/QDeadlineTimer \
+ /usr/include/qt/QtCore/qdeadlinetimer.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../RealTimeChart.h \
  /usr/include/qt/QtWidgets/QComboBox \
  /usr/include/qt/QtWidgets/qcombobox.h \

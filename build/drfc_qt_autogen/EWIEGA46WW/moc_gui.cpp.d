@@ -259,8 +259,10 @@
   /usr/include/qt/QtCharts/qlegend.h \
   /usr/include/qt/QtCharts/qlineseries.h \
   /usr/include/qt/QtCharts/qxyseries.h \
+  /usr/include/qt/QtCore/QDeadlineTimer \
   /usr/include/qt/QtCore/QElapsedTimer \
   /usr/include/qt/QtCore/QMargins \
+  /usr/include/qt/QtCore/QMutex \
   /usr/include/qt/QtCore/QObject \
   /usr/include/qt/QtCore/QQueue \
   /usr/include/qt/QtCore/QRunnable \
@@ -268,6 +270,7 @@
   /usr/include/qt/QtCore/QThreadPool \
   /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/QVariant \
+  /usr/include/qt/QtCore/QWaitCondition \
   /usr/include/qt/QtCore/QtGlobal \
   /usr/include/qt/QtCore/qabstractitemmodel.h \
   /usr/include/qt/QtCore/qalgorithms.h \
@@ -306,6 +309,7 @@
   /usr/include/qt/QtCore/qmap.h \
   /usr/include/qt/QtCore/qmargins.h \
   /usr/include/qt/QtCore/qmetatype.h \
+  /usr/include/qt/QtCore/qmutex.h \
   /usr/include/qt/QtCore/qnamespace.h \
   /usr/include/qt/QtCore/qnumeric.h \
   /usr/include/qt/QtCore/qobject.h \
@@ -340,12 +344,14 @@
   /usr/include/qt/QtCore/qthread.h \
   /usr/include/qt/QtCore/qthreadpool.h \
   /usr/include/qt/QtCore/qtimer.h \
+  /usr/include/qt/QtCore/qtsan_impl.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
   /usr/include/qt/QtCore/qurl.h \
   /usr/include/qt/QtCore/qvariant.h \
   /usr/include/qt/QtCore/qvarlengtharray.h \
   /usr/include/qt/QtCore/qvector.h \
   /usr/include/qt/QtCore/qversiontagging.h \
+  /usr/include/qt/QtCore/qwaitcondition.h \
   /usr/include/qt/QtGui/QBrush \
   /usr/include/qt/QtGui/QFont \
   /usr/include/qt/QtGui/QPen \
