@@ -19,7 +19,7 @@ DataTransmissionHandler::DataTransmissionHandler(QObject *parent)
 QByteArray DataTransmissionHandler::createStartMessage() {
     static QByteArray message;
 
-    // Start message creation
+    // Start message creation MSB -> LSB //в тз сказано LSB -> MSB, но если так сделать ломается всё
     message.append(static_cast<qint16>(1000 * Ng) >> 8);
     message.append(static_cast<qint16>(1000 * Ng) & 0xff);
 
@@ -88,7 +88,7 @@ void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
         if (index != 0) {
             QPair<quint16, QByteArray>* newPair = new QPair<quint16, QByteArray>(index, *array);
             emit ReflectogramDataReady(*newPair);
-            ChartDataReady(prepareNumbers(*array));
+            emit ChartDataReady(prepareNumbers(*array));
             qDebug() << "DataTranslationHandler in Thread with TID " << QThread::currentThreadId() <<" emit signals";
             array->clear();
         }
@@ -147,12 +147,16 @@ QList<quint16> DataTransmissionHandler::prepareNumbers(QByteArray rawBytes) {
     QList<quint16> numbers = QList<quint16>();
 
     quint32 i = 0;
-    while (i < rawBytes.size()) {
-        numbers.push_back(quint16(rawBytes[i] << 8 | rawBytes[i + 1]));
+    while (i < rawBytes.size() - 1) {
+        quint16 highByte = static_cast<quint8>(rawBytes[i]);      // Приводим к беззнаковому
+        quint16 lowByte = static_cast<quint8>(rawBytes[i + 1]);   // Приводим к беззнаковому
+
+        quint16 number = (highByte << 8) | lowByte; // Big-endian порядок
+        qDebug() << number;
+        numbers.push_back(number);
+
         i += 2;
     }
-
-    //TODO: check if it returns correct and not corrupted when func stack is cleared
     return numbers;
 }
 
