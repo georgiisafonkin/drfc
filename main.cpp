@@ -29,7 +29,8 @@ int main(int argc, char *argv[])
     return a.exec();
 }
 
-//TODO: fix (FileWriter must writes info to files, now it isn't)
+//TODO: fix (FileWriter must writes info to files, now it isn't) + CHANGE plotCharts() method MUST NOT BE BLOCKED, GUI IS
+// MAIN THREAD, SO IF HE IS SLEEPING SIGNALS NOT RECEIVED BY OTHER THREADS
 //TODO: fix (after termination of GUI thread other threads must be terminated too)
 //TODO: fix (GUI Thread must work smoothly without freezes, now it's not)
 //TODO: fix charts (now plot wrong)

@@ -22,6 +22,7 @@ class GUI : public QMainWindow
 public:
     explicit GUI(QWidget *parent = nullptr);
     ~GUI();
+    QWaitCondition* queueNotEmpty;
 private:
     //GUI stuff
     QWidget* centralWidget;
@@ -39,10 +40,11 @@ private:
     FileWriter* fw;
 
     //Charts, plotting stuff
-    QQueue<QList<quint16>> plotQueue;
+    QQueue<QList<quint16>>* plotQueue;
     void updateChartsData(const QList<quint16>& numbers); //add chart to plotQueue
     void plotCharts();
     RealTimeChart* realTimeChart = new RealTimeChart();
+    QMutex* queueMutex;
 signals:
 };
 

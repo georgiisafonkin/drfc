@@ -9,7 +9,7 @@
 #include <qdebug.h>
 
 GUI::GUI(QWidget *parent)
-    : QMainWindow{parent}
+    : QMainWindow{parent}, plotQueue(new QQueue<QList<quint16>>()), queueNotEmpty(new QWaitCondition()), queueMutex(new QMutex())
 {
     //separeted thread for data transmission, processing
     dth = new DataTransmissionHandler(this);
@@ -63,7 +63,7 @@ void GUI::selectComPort() {
         dth->setComPortName(selectedPort);
         dth->start();
 
-        // plotCharts();
+        plotCharts();
     } else {
         qDebug() << "No COM Port selected.";
     }
@@ -72,19 +72,25 @@ void GUI::selectComPort() {
  //charts below
 void GUI::updateChartsData(const QList<quint16>& numbers) {
     qDebug() << "GUI::updateChartsData() was invoked by Thread with TID: " << QThread::currentThreadId();
-    plotQueue.enqueue(numbers);
+    // QMutexLocker locker(queueMutex);
+    plotQueue->enqueue(numbers);
+    plotCharts();
+    // QMetaObject::invokeMethod(this, "plotCharts", Qt::QueuedConnection);
+    // queueNotEmpty->wakeOne();
 }
 
 void GUI::plotCharts() {
     qDebug() << "GUI::plotCharts()";
-    while (!QThread::currentThread()->isInterruptionRequested()) {
-        if (!plotQueue.empty()) {
-            realTimeChart->updateChart(plotQueue.dequeue());
-            // may be should do layout->update()
-        } else {
-            QThread::currentThread()->sleep(1000);
-        }
-    }
+    // QMutexLocker locker(queueMutex);
+
+    if (plotQueue->empty()) return;
+
+    QList<quint16> plotData = plotQueue->dequeue();
+
+    // locker.unlock();
+
+    realTimeChart->updateChart(plotData);
+    layout->update();
 }
 
 GUI::~GUI() {

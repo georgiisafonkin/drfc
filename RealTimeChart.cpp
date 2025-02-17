@@ -34,6 +34,10 @@ void RealTimeChart::updateChart(const QList<quint16>& numbers) {
         ++i;
     }
 
-    chart->createDefaultAxes();
+    chart->axes(Qt::Horizontal).first()->setRange(0, numbers.size());
+    chart->axes(Qt::Vertical).first()->setRange(0, maxVertVal);
+
+    chartView->repaint();
     chart->update();
+    layout()->update();
 }
