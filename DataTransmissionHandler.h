@@ -21,7 +21,7 @@ private:
     float Ng = 1.46;
     int lineLength = 5000;
     int lengthUdpPack = 1024;
-    int freqSendData = 1;
+    int freqSendData = 100;
     int pulseWidth = 10;
 
     //for connection

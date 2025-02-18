@@ -6,7 +6,7 @@ RealTimeChart::RealTimeChart(QWidget *parent)
     : QWidget{parent}
 {
     qDebug() << "new RealTimeChart was created.";
-    series = new QtCharts::QLineSeries;
+    series = new QtCharts::QLineSeries();
     chart = new QtCharts::QChart();
     chart->addSeries(series);
     chart->createDefaultAxes();
@@ -23,21 +23,24 @@ RealTimeChart::RealTimeChart(QWidget *parent)
 }
 
 void RealTimeChart::updateChart(const QList<quint16>& numbers) {
-    series->clear();
+    QVector<QPointF> points;
+    points.reserve(numbers.size());
 
     quint16 maxVertVal = 0;
 
-    quint32 i = 0;
-    while (i < numbers.size()) {
+    for (int i = 0; i < numbers.size(); ++i) {
         maxVertVal = qMax(maxVertVal, numbers.at(i));
-        series->append(i, numbers.at(i));
-        ++i;
+        points.append(QPointF(i, numbers.at(i)));
     }
 
-    chart->axes(Qt::Horizontal).first()->setRange(0, numbers.size());
-    chart->axes(Qt::Vertical).first()->setRange(0, maxVertVal);
+    // Обновляем график одной операцией
+    series->replace(points);
 
-    chartView->repaint();
-    chart->update();
-    layout()->update();
+    // Обновляем оси (делаем через безопасные проверки)
+    if (!chart->axes(Qt::Horizontal).isEmpty()) {
+        chart->axes(Qt::Horizontal).first()->setRange(0, numbers.size());
+    }
+    if (!chart->axes(Qt::Vertical).isEmpty()) {
+        chart->axes(Qt::Vertical).first()->setRange(0, maxVertVal);
+    }
 }

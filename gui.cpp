@@ -9,7 +9,9 @@
 #include <qdebug.h>
 
 GUI::GUI(QWidget *parent)
-    : QMainWindow{parent}, plotQueue(new QQueue<QList<quint16>>()), queueNotEmpty(new QWaitCondition()), queueMutex(new QMutex())
+    : QMainWindow{parent}, plotQueue(new QQueue<QList<quint16>>()),
+    queueNotEmpty(new QWaitCondition()),
+    queueMutex(new QMutex()), plotTimer(new QTimer(this))
 {
     //separeted thread for data transmission, processing
     dth = new DataTransmissionHandler(this);
@@ -42,6 +44,9 @@ GUI::GUI(QWidget *parent)
 
     QObject::connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);
     connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateChartsData, Qt::QueuedConnection);
+
+    connect(plotTimer, &QTimer::timeout, this, &GUI::plotCharts);
+    plotTimer->start(100); // 1 second
 }
 
 void GUI::refreshComPorts() {
@@ -74,7 +79,7 @@ void GUI::updateChartsData(const QList<quint16>& numbers) {
     qDebug() << "GUI::updateChartsData() was invoked by Thread with TID: " << QThread::currentThreadId();
     // QMutexLocker locker(queueMutex);
     plotQueue->enqueue(numbers);
-    plotCharts();
+    // plotCharts();
     // QMetaObject::invokeMethod(this, "plotCharts", Qt::QueuedConnection);
     // queueNotEmpty->wakeOne();
 }
@@ -90,7 +95,7 @@ void GUI::plotCharts() {
     // locker.unlock();
 
     realTimeChart->updateChart(plotData);
-    layout->update();
+    // layout->update();
 }
 
 GUI::~GUI() {

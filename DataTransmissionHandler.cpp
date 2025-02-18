@@ -152,7 +152,7 @@ QList<quint16> DataTransmissionHandler::prepareNumbers(QByteArray rawBytes) {
         quint16 lowByte = static_cast<quint8>(rawBytes[i + 1]);   // Приводим к беззнаковому
 
         quint16 number = (highByte << 8) | lowByte; // Big-endian порядок
-        qDebug() << number;
+        // qDebug() << number;
         numbers.push_back(number);
 
         i += 2;

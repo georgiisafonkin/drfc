@@ -30,5 +30,7 @@ int main(int argc, char *argv[])
 }
 
 //TODO: fix charts (now plot wrong)
-//TODO: fix (after termination of GUI thread other threads must be terminated too)
+//TODO: fix (after termination of GUI thread other threads must be terminated immediately)
 //TODO: fix (GUI Thread must work smoothly without freezes, now it's not)
+
+//Packets may be lost???!!!??

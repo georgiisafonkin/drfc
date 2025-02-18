@@ -45,6 +45,7 @@ private:
     void plotCharts();
     RealTimeChart* realTimeChart = new RealTimeChart();
     QMutex* queueMutex;
+    QTimer* plotTimer;
 signals:
 };
 
