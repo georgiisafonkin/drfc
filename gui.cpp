@@ -11,7 +11,8 @@
 GUI::GUI(QWidget *parent)
     : QMainWindow{parent}, plotQueue(new QQueue<QList<quint16>>()),
     queueNotEmpty(new QWaitCondition()),
-    queueMutex(new QMutex()), plotTimer(new QTimer(this))
+    queueMutex(new QMutex()), plotTimer(new QTimer(this)),
+    menuBar(new MenuBar(new QMenuBar()))
 {
     //separeted thread for data transmission, processing
     dth = new DataTransmissionHandler(this);
@@ -40,13 +41,15 @@ GUI::GUI(QWidget *parent)
     realTimeChart->setMinimumHeight(720);
     layout->addWidget(realTimeChart);
 
+    layout->addWidget(menuBar);
+
     refreshComPorts();
 
-    QObject::connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);
+    connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);
     connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateChartsData, Qt::QueuedConnection);
 
     connect(plotTimer, &QTimer::timeout, this, &GUI::plotCharts);
-    plotTimer->start(100); // 1 second
+    plotTimer->start(1000); //41ms for 24fps charts
 }
 
 void GUI::refreshComPorts() {
@@ -76,7 +79,7 @@ void GUI::selectComPort() {
 
  //charts below
 void GUI::updateChartsData(const QList<quint16>& numbers) {
-    qDebug() << "GUI::updateChartsData() was invoked by Thread with TID: " << QThread::currentThreadId();
+    // qDebug() << "GUI::updateChartsData() was invoked by Thread with TID: " << QThread::currentThreadId();
     // QMutexLocker locker(queueMutex);
     plotQueue->enqueue(numbers);
     // plotCharts();
@@ -109,4 +112,3 @@ GUI::~GUI() {
     fw->wait();
 }
 
-//TODO: sync primitive like in a file writer

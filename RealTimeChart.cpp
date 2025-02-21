@@ -33,10 +33,8 @@ void RealTimeChart::updateChart(const QList<quint16>& numbers) {
         points.append(QPointF(i, numbers.at(i)));
     }
 
-    // Обновляем график одной операцией
     series->replace(points);
 
-    // Обновляем оси (делаем через безопасные проверки)
     if (!chart->axes(Qt::Horizontal).isEmpty()) {
         chart->axes(Qt::Horizontal).first()->setRange(0, numbers.size());
     }

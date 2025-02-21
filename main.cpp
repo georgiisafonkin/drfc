@@ -29,8 +29,12 @@ int main(int argc, char *argv[])
     return a.exec();
 }
 
-//TODO: fix charts (now plot wrong)
-//TODO: fix (after termination of GUI thread other threads must be terminated immediately)
-//TODO: fix (GUI Thread must work smoothly without freezes, now it's not)
+//TODO: find out the reason for the jumps when drawing charts
+//TODO: 24 or 30 FPS
 
 //Packets may be lost???!!!??
+
+//TODO: посмотреть по ethernet-трафику сколько приходит пакетов, то что ничего не теряется
+//Осталось проверить с генератором. На плате без генератора потерь нет
+
+//Переместить menuBar наверх

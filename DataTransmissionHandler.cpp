@@ -61,7 +61,7 @@ void DataTransmissionHandler::recieveData() {
         QNetworkDatagram networkDatagram;
         networkDatagram = sock->receiveDatagram(lengthUdpPack + 5);
         if (networkDatagram.data().size() > 0) {
-            // qDebug() << "Received data:" << networkDatagram.data();
+            qDebug() << "Received data size: " << networkDatagram.data().size();
             processReceivedData(networkDatagram.data());
         }
         else {
@@ -83,13 +83,14 @@ void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
     elapsedTimer.restart();
     static int prevNumPack = 0;
     int numPack = int(data[1] << 8 | data[2]);
-    // qDebug() << "numPack: " << numPack;
+    qDebug() << "numPack: " << numPack;
     if (numPack == 0) {
         if (index != 0) {
             QPair<quint16, QByteArray>* newPair = new QPair<quint16, QByteArray>(index, *array);
             emit ReflectogramDataReady(*newPair);
             emit ChartDataReady(prepareNumbers(*array));
-            qDebug() << "DataTranslationHandler in Thread with TID " << QThread::currentThreadId() <<" emit signals";
+            // qDebug() << "DataTranslationHandler in Thread with TID " << QThread::currentThreadId() <<" emit signals";
+            qDebug() << "Reflectogram received";
             array->clear();
         }
         array->append(data.begin() + 5, lengthUdpPack);

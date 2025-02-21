@@ -4,6 +4,7 @@
 #include "DataTransmissionHandler.h"
 #include "FileWriter.h"
 #include "RealTimeChart.h"
+#include "src/MenuBar/MenuBar.h"
 #include <QChart>
 #include <QChartView>
 #include <QComboBox>
@@ -31,7 +32,7 @@ private:
     QComboBox* comPortCombo;
     QPushButton* refreshButton;
     QPushButton* selectButton;
-
+    MenuBar* menuBar;
     //Buttons stuff
     void refreshComPorts();
     void selectComPort();

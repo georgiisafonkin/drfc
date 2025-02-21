@@ -23,6 +23,7 @@ add_executable(drfc_qt
 
   RealTimeChart.h RealTimeChart.cpp
   FileWriter.h FileWriter.cpp
+  src/MenuBar/MenuBar.h src/MenuBar/MenuBar.cpp
 
 )
 
