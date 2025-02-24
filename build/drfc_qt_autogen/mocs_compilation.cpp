@@ -2,3 +2,4 @@
 #include "EWIEGA46WW/moc_DataTransmissionHandler.cpp"
 #include "EWIEGA46WW/moc_RealTimeChart.cpp"
 #include "EWIEGA46WW/moc_gui.cpp"
+#include "F2AE5E6UAT/moc_MenuBar.cpp"

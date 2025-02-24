@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/drfc_qt_autogen/mocs_compilation.cpp" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o.d"
   "/home/georgy/drfc_qt/gui.cpp" "CMakeFiles/drfc_qt.dir/gui.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/gui.cpp.o.d"
   "/home/georgy/drfc_qt/main.cpp" "CMakeFiles/drfc_qt.dir/main.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/main.cpp.o.d"
+  "/home/georgy/drfc_qt/src/MenuBar/MenuBar.cpp" "CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.o.d"
   "" "drfc_qt" "gcc" "CMakeFiles/drfc_qt.dir/link.d"
   )
 

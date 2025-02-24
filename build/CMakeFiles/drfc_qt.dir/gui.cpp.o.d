@@ -308,14 +308,21 @@ CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/qt/QtCore/qrunnable.h /usr/include/qt/QtCharts/qchart.h \
  /usr/include/qt/QtCharts/qchartview.h \
  /usr/include/qt/QtCharts/qlineseries.h \
- /usr/include/qt/QtWidgets/QComboBox \
+ /home/georgy/drfc_qt/src/MenuBar/MenuBar.h \
+ /usr/include/qt/QtWidgets/QMenuBar /usr/include/qt/QtWidgets/qmenubar.h \
+ /usr/include/qt/QtWidgets/qmenu.h /usr/include/qt/QtGui/qicon.h \
+ /usr/include/qt/QtWidgets/qaction.h \
+ /usr/include/qt/QtWidgets/qactiongroup.h \
+ /usr/include/qt/QtWidgets/QMessageBox \
+ /usr/include/qt/QtWidgets/qmessagebox.h \
+ /usr/include/qt/QtWidgets/qdialog.h /usr/include/qt/QtWidgets/QComboBox \
  /usr/include/qt/QtWidgets/qcombobox.h \
  /usr/include/qt/QtWidgets/qabstractitemdelegate.h \
  /usr/include/qt/QtWidgets/qstyleoption.h \
  /usr/include/qt/QtWidgets/qabstractspinbox.h \
  /usr/include/qt/QtGui/qvalidator.h \
  /usr/include/qt/QtCore/qregularexpression.h \
- /usr/include/qt/QtGui/qicon.h /usr/include/qt/QtWidgets/qslider.h \
+ /usr/include/qt/QtWidgets/qslider.h \
  /usr/include/qt/QtWidgets/qabstractslider.h \
  /usr/include/qt/QtWidgets/qstyle.h /usr/include/qt/QtWidgets/qtabbar.h \
  /usr/include/qt/QtWidgets/qtabwidget.h \
@@ -335,9 +342,7 @@ CMakeFiles/drfc_qt.dir/gui.cpp.o: /home/georgy/drfc_qt/gui.cpp \
  /usr/include/qt/QtWidgets/qlayoutitem.h \
  /usr/include/qt/QtWidgets/qboxlayout.h \
  /usr/include/qt/QtWidgets/qgridlayout.h /usr/include/qt/QtCore/QProcess \
- /usr/include/qt/QtCore/qprocess.h /usr/include/qt/QtWidgets/QMessageBox \
- /usr/include/qt/QtWidgets/qmessagebox.h \
- /usr/include/qt/QtWidgets/qdialog.h \
+ /usr/include/qt/QtCore/qprocess.h \
  /usr/include/qt/QtSerialPort/QSerialPortInfo \
  /usr/include/qt/QtSerialPort/qserialportinfo.h \
  /usr/include/qt/QtCore/qdebug.h

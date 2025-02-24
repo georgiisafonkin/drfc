@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/drfc_qt.dir/gui.cpp.o.d"
   "CMakeFiles/drfc_qt.dir/main.cpp.o"
   "CMakeFiles/drfc_qt.dir/main.cpp.o.d"
+  "CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.o"
+  "CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.o.d"
   "drfc_qt"
   "drfc_qt.pdb"
   "drfc_qt_autogen/mocs_compilation.cpp"

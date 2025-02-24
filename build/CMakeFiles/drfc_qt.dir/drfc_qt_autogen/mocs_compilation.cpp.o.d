@@ -318,14 +318,21 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtCore/QDeadlineTimer \
  /usr/include/qt/QtCore/qdeadlinetimer.h \
  /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../RealTimeChart.h \
- /usr/include/qt/QtWidgets/QComboBox \
+ /home/georgy/drfc_qt/build/drfc_qt_autogen/EWIEGA46WW/../../../src/MenuBar/MenuBar.h \
+ /usr/include/qt/QtWidgets/QMenuBar /usr/include/qt/QtWidgets/qmenubar.h \
+ /usr/include/qt/QtWidgets/qmenu.h /usr/include/qt/QtGui/qicon.h \
+ /usr/include/qt/QtWidgets/qaction.h \
+ /usr/include/qt/QtWidgets/qactiongroup.h \
+ /usr/include/qt/QtWidgets/QMessageBox \
+ /usr/include/qt/QtWidgets/qmessagebox.h \
+ /usr/include/qt/QtWidgets/qdialog.h /usr/include/qt/QtWidgets/QComboBox \
  /usr/include/qt/QtWidgets/qcombobox.h \
  /usr/include/qt/QtWidgets/qabstractitemdelegate.h \
  /usr/include/qt/QtWidgets/qstyleoption.h \
  /usr/include/qt/QtWidgets/qabstractspinbox.h \
  /usr/include/qt/QtGui/qvalidator.h \
  /usr/include/qt/QtCore/qregularexpression.h \
- /usr/include/qt/QtGui/qicon.h /usr/include/qt/QtWidgets/qslider.h \
+ /usr/include/qt/QtWidgets/qslider.h \
  /usr/include/qt/QtWidgets/qabstractslider.h \
  /usr/include/qt/QtWidgets/qstyle.h /usr/include/qt/QtWidgets/qtabbar.h \
  /usr/include/qt/QtWidgets/qtabwidget.h \
@@ -344,4 +351,6 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtWidgets/qlayout.h \
  /usr/include/qt/QtWidgets/qlayoutitem.h \
  /usr/include/qt/QtWidgets/qboxlayout.h \
- /usr/include/qt/QtWidgets/qgridlayout.h
+ /usr/include/qt/QtWidgets/qgridlayout.h \
+ /home/georgy/drfc_qt/build/drfc_qt_autogen/F2AE5E6UAT/moc_MenuBar.cpp \
+ /home/georgy/drfc_qt/build/drfc_qt_autogen/F2AE5E6UAT/../../../src/MenuBar/MenuBar.h

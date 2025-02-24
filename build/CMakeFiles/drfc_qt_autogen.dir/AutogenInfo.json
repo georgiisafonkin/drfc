@@ -97,28 +97,7 @@
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "/home/georgy/drfc_qt/build/drfc_qt_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "drfc_qt_autogen/timestamp",
-	"HEADERS" : 
-	[
-		[
-			"/home/georgy/drfc_qt/DataTransmissionHandler.h",
-			"MU",
-			"EWIEGA46WW/moc_DataTransmissionHandler.cpp",
-			null
-		],
-		[
-			"/home/georgy/drfc_qt/FileWriter.h",
-			"MU",
-			"EWIEGA46WW/moc_FileWriter.cpp",
-			null
-		],
-		[
-			"/home/georgy/drfc_qt/RealTimeChart.h",
-			"MU",
-			"EWIEGA46WW/moc_RealTimeChart.cpp",
-			null
-		],
-		[ "/home/georgy/drfc_qt/gui.h", "MU", "EWIEGA46WW/moc_gui.cpp", null ]
-	],
+	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/georgy/drfc_qt/build/drfc_qt_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/georgy/drfc_qt/build/drfc_qt_autogen/mocs_compilation.cpp",
@@ -180,14 +159,7 @@
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
 	"SETTINGS_FILE" : "/home/georgy/drfc_qt/build/CMakeFiles/drfc_qt_autogen.dir/AutogenUsed.txt",
-	"SOURCES" : 
-	[
-		[ "/home/georgy/drfc_qt/DataTransmissionHandler.cpp", "MU", null ],
-		[ "/home/georgy/drfc_qt/FileWriter.cpp", "MU", null ],
-		[ "/home/georgy/drfc_qt/RealTimeChart.cpp", "MU", null ],
-		[ "/home/georgy/drfc_qt/gui.cpp", "MU", null ],
-		[ "/home/georgy/drfc_qt/main.cpp", "MU", null ]
-	],
+	"SOURCES" : [],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : [],

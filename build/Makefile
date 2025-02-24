@@ -200,78 +200,6 @@ drfc_qt_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt_autogen.dir/build.make CMakeFiles/drfc_qt_autogen.dir/build
 .PHONY : drfc_qt_autogen/fast
 
-DataTransmissionHandler.o: DataTransmissionHandler.cpp.o
-.PHONY : DataTransmissionHandler.o
-
-# target to build an object file
-DataTransmissionHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o
-.PHONY : DataTransmissionHandler.cpp.o
-
-DataTransmissionHandler.i: DataTransmissionHandler.cpp.i
-.PHONY : DataTransmissionHandler.i
-
-# target to preprocess a source file
-DataTransmissionHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.i
-.PHONY : DataTransmissionHandler.cpp.i
-
-DataTransmissionHandler.s: DataTransmissionHandler.cpp.s
-.PHONY : DataTransmissionHandler.s
-
-# target to generate assembly for a file
-DataTransmissionHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.s
-.PHONY : DataTransmissionHandler.cpp.s
-
-FileWriter.o: FileWriter.cpp.o
-.PHONY : FileWriter.o
-
-# target to build an object file
-FileWriter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter.cpp.o
-.PHONY : FileWriter.cpp.o
-
-FileWriter.i: FileWriter.cpp.i
-.PHONY : FileWriter.i
-
-# target to preprocess a source file
-FileWriter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter.cpp.i
-.PHONY : FileWriter.cpp.i
-
-FileWriter.s: FileWriter.cpp.s
-.PHONY : FileWriter.s
-
-# target to generate assembly for a file
-FileWriter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter.cpp.s
-.PHONY : FileWriter.cpp.s
-
-RealTimeChart.o: RealTimeChart.cpp.o
-.PHONY : RealTimeChart.o
-
-# target to build an object file
-RealTimeChart.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.o
-.PHONY : RealTimeChart.cpp.o
-
-RealTimeChart.i: RealTimeChart.cpp.i
-.PHONY : RealTimeChart.i
-
-# target to preprocess a source file
-RealTimeChart.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.i
-.PHONY : RealTimeChart.cpp.i
-
-RealTimeChart.s: RealTimeChart.cpp.s
-.PHONY : RealTimeChart.s
-
-# target to generate assembly for a file
-RealTimeChart.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.s
-.PHONY : RealTimeChart.cpp.s
-
 drfc_qt_autogen/mocs_compilation.o: drfc_qt_autogen/mocs_compilation.cpp.o
 .PHONY : drfc_qt_autogen/mocs_compilation.o
 
@@ -296,54 +224,6 @@ drfc_qt_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.s
 .PHONY : drfc_qt_autogen/mocs_compilation.cpp.s
 
-gui.o: gui.cpp.o
-.PHONY : gui.o
-
-# target to build an object file
-gui.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/gui.cpp.o
-.PHONY : gui.cpp.o
-
-gui.i: gui.cpp.i
-.PHONY : gui.i
-
-# target to preprocess a source file
-gui.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/gui.cpp.i
-.PHONY : gui.cpp.i
-
-gui.s: gui.cpp.s
-.PHONY : gui.s
-
-# target to generate assembly for a file
-gui.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/gui.cpp.s
-.PHONY : gui.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -359,24 +239,9 @@ help:
 	@echo "... drfc_qt_autogen"
 	@echo "... drfc_qt_autogen_timestamp_deps"
 	@echo "... drfc_qt"
-	@echo "... DataTransmissionHandler.o"
-	@echo "... DataTransmissionHandler.i"
-	@echo "... DataTransmissionHandler.s"
-	@echo "... FileWriter.o"
-	@echo "... FileWriter.i"
-	@echo "... FileWriter.s"
-	@echo "... RealTimeChart.o"
-	@echo "... RealTimeChart.i"
-	@echo "... RealTimeChart.s"
 	@echo "... drfc_qt_autogen/mocs_compilation.o"
 	@echo "... drfc_qt_autogen/mocs_compilation.i"
 	@echo "... drfc_qt_autogen/mocs_compilation.s"
-	@echo "... gui.o"
-	@echo "... gui.i"
-	@echo "... gui.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

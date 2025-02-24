@@ -344,6 +344,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/MenuBar/MenuBar.o: src/MenuBar/MenuBar.cpp.o
+.PHONY : src/MenuBar/MenuBar.o
+
+# target to build an object file
+src/MenuBar/MenuBar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.o
+.PHONY : src/MenuBar/MenuBar.cpp.o
+
+src/MenuBar/MenuBar.i: src/MenuBar/MenuBar.cpp.i
+.PHONY : src/MenuBar/MenuBar.i
+
+# target to preprocess a source file
+src/MenuBar/MenuBar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.i
+.PHONY : src/MenuBar/MenuBar.cpp.i
+
+src/MenuBar/MenuBar.s: src/MenuBar/MenuBar.cpp.s
+.PHONY : src/MenuBar/MenuBar.s
+
+# target to generate assembly for a file
+src/MenuBar/MenuBar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.s
+.PHONY : src/MenuBar/MenuBar.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -377,6 +401,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/MenuBar/MenuBar.o"
+	@echo "... src/MenuBar/MenuBar.i"
+	@echo "... src/MenuBar/MenuBar.s"
 .PHONY : help
 
 

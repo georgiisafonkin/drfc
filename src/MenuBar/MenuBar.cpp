@@ -12,5 +12,3 @@ MenuBar::MenuBar(QWidget* parent) : QMenuBar(parent) {
     helpMenu->addAction(aboutAction);
     connect(aboutAction, &QAction::triggered, this, &MenuBar::showAboutDialog);
 }
-
-

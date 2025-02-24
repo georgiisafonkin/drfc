@@ -118,7 +118,13 @@
 			"EWIEGA46WW/moc_RealTimeChart.cpp",
 			null
 		],
-		[ "/home/georgy/drfc_qt/gui.h", "MU", "EWIEGA46WW/moc_gui.cpp", null ]
+		[ "/home/georgy/drfc_qt/gui.h", "MU", "EWIEGA46WW/moc_gui.cpp", null ],
+		[
+			"/home/georgy/drfc_qt/src/MenuBar/MenuBar.h",
+			"MU",
+			"F2AE5E6UAT/moc_MenuBar.cpp",
+			null
+		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/drfc_qt_autogen/include",
@@ -186,7 +192,8 @@
 		[ "/home/georgy/drfc_qt/FileWriter.cpp", "MU", null ],
 		[ "/home/georgy/drfc_qt/RealTimeChart.cpp", "MU", null ],
 		[ "/home/georgy/drfc_qt/gui.cpp", "MU", null ],
-		[ "/home/georgy/drfc_qt/main.cpp", "MU", null ]
+		[ "/home/georgy/drfc_qt/main.cpp", "MU", null ],
+		[ "/home/georgy/drfc_qt/src/MenuBar/MenuBar.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
