@@ -316,7 +316,22 @@ CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o: \
  /usr/include/qt/QtWidgets/qactiongroup.h \
  /usr/include/qt/QtWidgets/QMessageBox \
  /usr/include/qt/QtWidgets/qmessagebox.h \
- /usr/include/qt/QtWidgets/qdialog.h /usr/include/qt/QtWidgets/QComboBox \
+ /usr/include/qt/QtWidgets/qdialog.h \
+ /home/georgy/drfc_qt/src/GUI/../LabeledLineEdit/LabeledLineEdit.h \
+ /usr/include/qt/QtWidgets/QLabel /usr/include/qt/QtWidgets/qlabel.h \
+ /usr/include/qt/QtWidgets/QLineEdit \
+ /usr/include/qt/QtWidgets/qlineedit.h \
+ /usr/include/qt/QtGui/qtextcursor.h /usr/include/qt/QtGui/qtextformat.h \
+ /usr/include/qt/QtWidgets/QVBoxLayout \
+ /usr/include/qt/QtWidgets/qboxlayout.h \
+ /usr/include/qt/QtWidgets/qlayout.h \
+ /usr/include/qt/QtWidgets/qlayoutitem.h \
+ /usr/include/qt/QtWidgets/qboxlayout.h \
+ /usr/include/qt/QtWidgets/qgridlayout.h \
+ /usr/include/qt/QtWidgets/QFormLayout \
+ /usr/include/qt/QtWidgets/qformlayout.h \
+ /usr/include/qt/QtWidgets/QLayout /usr/include/qt/QtWidgets/qlayout.h \
+ /usr/include/qt/QtWidgets/QComboBox \
  /usr/include/qt/QtWidgets/qcombobox.h \
  /usr/include/qt/QtWidgets/qabstractitemdelegate.h \
  /usr/include/qt/QtWidgets/qstyleoption.h \
@@ -329,7 +344,6 @@ CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o: \
  /usr/include/qt/QtWidgets/qtabwidget.h \
  /usr/include/qt/QtWidgets/qrubberband.h \
  /usr/include/qt/QtCore/qabstractitemmodel.h \
- /usr/include/qt/QtWidgets/QLabel /usr/include/qt/QtWidgets/qlabel.h \
  /usr/include/qt/QtWidgets/QMainWindow \
  /usr/include/qt/QtWidgets/qmainwindow.h \
  /usr/include/qt/QtWidgets/QPushButton \
@@ -337,13 +351,7 @@ CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o: \
  /usr/include/qt/QtWidgets/qabstractbutton.h \
  /usr/include/qt/QtCore/QThreadPool /usr/include/qt/QtCore/qthreadpool.h \
  /usr/include/qt/QtCore/qthread.h /usr/include/qt/QtCore/qrunnable.h \
- /usr/include/qt/QtWidgets/QVBoxLayout \
- /usr/include/qt/QtWidgets/qboxlayout.h \
- /usr/include/qt/QtWidgets/qlayout.h \
- /usr/include/qt/QtWidgets/qlayoutitem.h \
- /usr/include/qt/QtWidgets/qboxlayout.h \
- /usr/include/qt/QtWidgets/qgridlayout.h /usr/include/qt/QtCore/QProcess \
- /usr/include/qt/QtCore/qprocess.h \
+ /usr/include/qt/QtCore/QProcess /usr/include/qt/QtCore/qprocess.h \
  /usr/include/qt/QtSerialPort/QSerialPortInfo \
  /usr/include/qt/QtSerialPort/qserialportinfo.h \
  /usr/include/qt/QtCore/qdebug.h

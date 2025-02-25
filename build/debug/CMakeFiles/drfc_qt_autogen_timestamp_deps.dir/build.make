@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/georgy/drfc_qt/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/georgy/drfc_qt/build/debug
+CMAKE_BINARY_DIR = /home/georgy/drfc_qt/src/build/debug
 
 # Utility rule file for drfc_qt_autogen_timestamp_deps.
 
@@ -81,6 +81,6 @@ CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/depend:
-	cd /home/georgy/drfc_qt/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/georgy/drfc_qt/src /home/georgy/drfc_qt/src /home/georgy/drfc_qt/build/debug /home/georgy/drfc_qt/build/debug /home/georgy/drfc_qt/build/debug/CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/georgy/drfc_qt/src/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/georgy/drfc_qt/src /home/georgy/drfc_qt/src /home/georgy/drfc_qt/src/build/debug /home/georgy/drfc_qt/src/build/debug /home/georgy/drfc_qt/src/build/debug/CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/depend
 

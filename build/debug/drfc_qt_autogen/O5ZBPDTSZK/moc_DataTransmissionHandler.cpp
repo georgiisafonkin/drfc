@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../src/DataTransmissionHandler/DataTransmissionHandler.h"
+#include "../../../../DataTransmissionHandler/DataTransmissionHandler.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #include <QtCore/QList>

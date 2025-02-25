@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/drfc_qt.dir/FileWriter/FileWriter.cpp.o.d"
   "CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o"
   "CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o.d"
+  "CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o"
+  "CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o.d"
   "CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o"
   "CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o.d"
   "CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.o"

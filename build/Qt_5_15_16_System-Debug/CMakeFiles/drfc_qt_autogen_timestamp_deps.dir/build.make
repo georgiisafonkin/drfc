@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/georgy/drfc_qt
+CMAKE_SOURCE_DIR = /home/georgy/drfc_qt/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug
+CMAKE_BINARY_DIR = /home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug
 
 # Utility rule file for drfc_qt_autogen_timestamp_deps.
 
@@ -81,6 +81,6 @@ CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/depend:
-	cd /home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/georgy/drfc_qt /home/georgy/drfc_qt /home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug /home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug /home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/georgy/drfc_qt/src /home/georgy/drfc_qt/src /home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug /home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug /home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug/CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/drfc_qt_autogen_timestamp_deps.dir/depend
 

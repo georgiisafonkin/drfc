@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/georgy/drfc_qt/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/georgy/drfc_qt/build/debug
+CMAKE_BINARY_DIR = /home/georgy/drfc_qt/src/build/debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgy/drfc_qt/build/debug/CMakeFiles /home/georgy/drfc_qt/build/debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgy/drfc_qt/src/build/debug/CMakeFiles /home/georgy/drfc_qt/src/build/debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgy/drfc_qt/build/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgy/drfc_qt/src/build/debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -272,6 +272,30 @@ GUI/gui.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/GUI/gui.cpp.s
 .PHONY : GUI/gui.cpp.s
 
+LabeledLineEdit/LabeledLineEdit.o: LabeledLineEdit/LabeledLineEdit.cpp.o
+.PHONY : LabeledLineEdit/LabeledLineEdit.o
+
+# target to build an object file
+LabeledLineEdit/LabeledLineEdit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o
+.PHONY : LabeledLineEdit/LabeledLineEdit.cpp.o
+
+LabeledLineEdit/LabeledLineEdit.i: LabeledLineEdit/LabeledLineEdit.cpp.i
+.PHONY : LabeledLineEdit/LabeledLineEdit.i
+
+# target to preprocess a source file
+LabeledLineEdit/LabeledLineEdit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.i
+.PHONY : LabeledLineEdit/LabeledLineEdit.cpp.i
+
+LabeledLineEdit/LabeledLineEdit.s: LabeledLineEdit/LabeledLineEdit.cpp.s
+.PHONY : LabeledLineEdit/LabeledLineEdit.s
+
+# target to generate assembly for a file
+LabeledLineEdit/LabeledLineEdit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.s
+.PHONY : LabeledLineEdit/LabeledLineEdit.cpp.s
+
 MenuBar/MenuBar.o: MenuBar/MenuBar.cpp.o
 .PHONY : MenuBar/MenuBar.o
 
@@ -392,6 +416,9 @@ help:
 	@echo "... GUI/gui.o"
 	@echo "... GUI/gui.i"
 	@echo "... GUI/gui.s"
+	@echo "... LabeledLineEdit/LabeledLineEdit.o"
+	@echo "... LabeledLineEdit/LabeledLineEdit.i"
+	@echo "... LabeledLineEdit/LabeledLineEdit.s"
 	@echo "... MenuBar/MenuBar.o"
 	@echo "... MenuBar/MenuBar.i"
 	@echo "... MenuBar/MenuBar.s"

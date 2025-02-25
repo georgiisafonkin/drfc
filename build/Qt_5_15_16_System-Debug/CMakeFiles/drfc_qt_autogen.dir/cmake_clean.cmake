@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drfc_qt_autogen"
+  "drfc_qt_autogen/include/ui_mainwindow.h"
   "drfc_qt_autogen/mocs_compilation.cpp"
   "drfc_qt_autogen/timestamp"
 )

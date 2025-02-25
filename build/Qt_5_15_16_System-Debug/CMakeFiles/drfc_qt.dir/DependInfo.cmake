@@ -9,13 +9,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "drfc_qt_autogen/timestamp" "custom" "drfc_qt_autogen/deps"
-  "/home/georgy/drfc_qt/DataTransmissionHandler.cpp" "CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o.d"
-  "/home/georgy/drfc_qt/FileWriter.cpp" "CMakeFiles/drfc_qt.dir/FileWriter.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/FileWriter.cpp.o.d"
-  "/home/georgy/drfc_qt/RealTimeChart.cpp" "CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.o.d"
-  "/home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/drfc_qt_autogen/mocs_compilation.cpp" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o.d"
-  "/home/georgy/drfc_qt/gui.cpp" "CMakeFiles/drfc_qt.dir/gui.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/gui.cpp.o.d"
-  "/home/georgy/drfc_qt/main.cpp" "CMakeFiles/drfc_qt.dir/main.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/main.cpp.o.d"
-  "/home/georgy/drfc_qt/src/MenuBar/MenuBar.cpp" "CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.o.d"
+  "/home/georgy/drfc_qt/src/DataTransmissionHandler/DataTransmissionHandler.cpp" "CMakeFiles/drfc_qt.dir/DataTransmissionHandler/DataTransmissionHandler.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/DataTransmissionHandler/DataTransmissionHandler.cpp.o.d"
+  "/home/georgy/drfc_qt/src/FileWriter/FileWriter.cpp" "CMakeFiles/drfc_qt.dir/FileWriter/FileWriter.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/FileWriter/FileWriter.cpp.o.d"
+  "/home/georgy/drfc_qt/src/GUI/gui.cpp" "CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o.d"
+  "/home/georgy/drfc_qt/src/LabeledLineEdit/LabeledLineEdit.cpp" "CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o.d"
+  "/home/georgy/drfc_qt/src/MenuBar/MenuBar.cpp" "CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o.d"
+  "/home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.cpp" "CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.o.d"
+  "/home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug/drfc_qt_autogen/mocs_compilation.cpp" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o.d"
+  "/home/georgy/drfc_qt/src/main.cpp" "CMakeFiles/drfc_qt.dir/main.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/main.cpp.o.d"
   "" "drfc_qt" "gcc" "CMakeFiles/drfc_qt.dir/link.d"
   )
 

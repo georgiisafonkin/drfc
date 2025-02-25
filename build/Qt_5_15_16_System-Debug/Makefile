@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/georgy/drfc_qt
+CMAKE_SOURCE_DIR = /home/georgy/drfc_qt/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug
+CMAKE_BINARY_DIR = /home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/CMakeFiles /home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug/CMakeFiles /home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgy/drfc_qt/build/Qt_5_15_16_System-Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -200,77 +200,149 @@ drfc_qt_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt_autogen.dir/build.make CMakeFiles/drfc_qt_autogen.dir/build
 .PHONY : drfc_qt_autogen/fast
 
-DataTransmissionHandler.o: DataTransmissionHandler.cpp.o
-.PHONY : DataTransmissionHandler.o
+DataTransmissionHandler/DataTransmissionHandler.o: DataTransmissionHandler/DataTransmissionHandler.cpp.o
+.PHONY : DataTransmissionHandler/DataTransmissionHandler.o
 
 # target to build an object file
-DataTransmissionHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.o
-.PHONY : DataTransmissionHandler.cpp.o
+DataTransmissionHandler/DataTransmissionHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler/DataTransmissionHandler.cpp.o
+.PHONY : DataTransmissionHandler/DataTransmissionHandler.cpp.o
 
-DataTransmissionHandler.i: DataTransmissionHandler.cpp.i
-.PHONY : DataTransmissionHandler.i
+DataTransmissionHandler/DataTransmissionHandler.i: DataTransmissionHandler/DataTransmissionHandler.cpp.i
+.PHONY : DataTransmissionHandler/DataTransmissionHandler.i
 
 # target to preprocess a source file
-DataTransmissionHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.i
-.PHONY : DataTransmissionHandler.cpp.i
+DataTransmissionHandler/DataTransmissionHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler/DataTransmissionHandler.cpp.i
+.PHONY : DataTransmissionHandler/DataTransmissionHandler.cpp.i
 
-DataTransmissionHandler.s: DataTransmissionHandler.cpp.s
-.PHONY : DataTransmissionHandler.s
+DataTransmissionHandler/DataTransmissionHandler.s: DataTransmissionHandler/DataTransmissionHandler.cpp.s
+.PHONY : DataTransmissionHandler/DataTransmissionHandler.s
 
 # target to generate assembly for a file
-DataTransmissionHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler.cpp.s
-.PHONY : DataTransmissionHandler.cpp.s
+DataTransmissionHandler/DataTransmissionHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/DataTransmissionHandler/DataTransmissionHandler.cpp.s
+.PHONY : DataTransmissionHandler/DataTransmissionHandler.cpp.s
 
-FileWriter.o: FileWriter.cpp.o
-.PHONY : FileWriter.o
+FileWriter/FileWriter.o: FileWriter/FileWriter.cpp.o
+.PHONY : FileWriter/FileWriter.o
 
 # target to build an object file
-FileWriter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter.cpp.o
-.PHONY : FileWriter.cpp.o
+FileWriter/FileWriter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter/FileWriter.cpp.o
+.PHONY : FileWriter/FileWriter.cpp.o
 
-FileWriter.i: FileWriter.cpp.i
-.PHONY : FileWriter.i
+FileWriter/FileWriter.i: FileWriter/FileWriter.cpp.i
+.PHONY : FileWriter/FileWriter.i
 
 # target to preprocess a source file
-FileWriter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter.cpp.i
-.PHONY : FileWriter.cpp.i
+FileWriter/FileWriter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter/FileWriter.cpp.i
+.PHONY : FileWriter/FileWriter.cpp.i
 
-FileWriter.s: FileWriter.cpp.s
-.PHONY : FileWriter.s
+FileWriter/FileWriter.s: FileWriter/FileWriter.cpp.s
+.PHONY : FileWriter/FileWriter.s
 
 # target to generate assembly for a file
-FileWriter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter.cpp.s
-.PHONY : FileWriter.cpp.s
+FileWriter/FileWriter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/FileWriter/FileWriter.cpp.s
+.PHONY : FileWriter/FileWriter.cpp.s
 
-RealTimeChart.o: RealTimeChart.cpp.o
-.PHONY : RealTimeChart.o
+GUI/gui.o: GUI/gui.cpp.o
+.PHONY : GUI/gui.o
 
 # target to build an object file
-RealTimeChart.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.o
-.PHONY : RealTimeChart.cpp.o
+GUI/gui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o
+.PHONY : GUI/gui.cpp.o
 
-RealTimeChart.i: RealTimeChart.cpp.i
-.PHONY : RealTimeChart.i
+GUI/gui.i: GUI/gui.cpp.i
+.PHONY : GUI/gui.i
 
 # target to preprocess a source file
-RealTimeChart.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.i
-.PHONY : RealTimeChart.cpp.i
+GUI/gui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/GUI/gui.cpp.i
+.PHONY : GUI/gui.cpp.i
 
-RealTimeChart.s: RealTimeChart.cpp.s
-.PHONY : RealTimeChart.s
+GUI/gui.s: GUI/gui.cpp.s
+.PHONY : GUI/gui.s
 
 # target to generate assembly for a file
-RealTimeChart.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart.cpp.s
-.PHONY : RealTimeChart.cpp.s
+GUI/gui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/GUI/gui.cpp.s
+.PHONY : GUI/gui.cpp.s
+
+LabeledLineEdit/LabeledLineEdit.o: LabeledLineEdit/LabeledLineEdit.cpp.o
+.PHONY : LabeledLineEdit/LabeledLineEdit.o
+
+# target to build an object file
+LabeledLineEdit/LabeledLineEdit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o
+.PHONY : LabeledLineEdit/LabeledLineEdit.cpp.o
+
+LabeledLineEdit/LabeledLineEdit.i: LabeledLineEdit/LabeledLineEdit.cpp.i
+.PHONY : LabeledLineEdit/LabeledLineEdit.i
+
+# target to preprocess a source file
+LabeledLineEdit/LabeledLineEdit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.i
+.PHONY : LabeledLineEdit/LabeledLineEdit.cpp.i
+
+LabeledLineEdit/LabeledLineEdit.s: LabeledLineEdit/LabeledLineEdit.cpp.s
+.PHONY : LabeledLineEdit/LabeledLineEdit.s
+
+# target to generate assembly for a file
+LabeledLineEdit/LabeledLineEdit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.s
+.PHONY : LabeledLineEdit/LabeledLineEdit.cpp.s
+
+MenuBar/MenuBar.o: MenuBar/MenuBar.cpp.o
+.PHONY : MenuBar/MenuBar.o
+
+# target to build an object file
+MenuBar/MenuBar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o
+.PHONY : MenuBar/MenuBar.cpp.o
+
+MenuBar/MenuBar.i: MenuBar/MenuBar.cpp.i
+.PHONY : MenuBar/MenuBar.i
+
+# target to preprocess a source file
+MenuBar/MenuBar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.i
+.PHONY : MenuBar/MenuBar.cpp.i
+
+MenuBar/MenuBar.s: MenuBar/MenuBar.cpp.s
+.PHONY : MenuBar/MenuBar.s
+
+# target to generate assembly for a file
+MenuBar/MenuBar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.s
+.PHONY : MenuBar/MenuBar.cpp.s
+
+RealTimeChart/RealTimeChart.o: RealTimeChart/RealTimeChart.cpp.o
+.PHONY : RealTimeChart/RealTimeChart.o
+
+# target to build an object file
+RealTimeChart/RealTimeChart.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.o
+.PHONY : RealTimeChart/RealTimeChart.cpp.o
+
+RealTimeChart/RealTimeChart.i: RealTimeChart/RealTimeChart.cpp.i
+.PHONY : RealTimeChart/RealTimeChart.i
+
+# target to preprocess a source file
+RealTimeChart/RealTimeChart.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.i
+.PHONY : RealTimeChart/RealTimeChart.cpp.i
+
+RealTimeChart/RealTimeChart.s: RealTimeChart/RealTimeChart.cpp.s
+.PHONY : RealTimeChart/RealTimeChart.s
+
+# target to generate assembly for a file
+RealTimeChart/RealTimeChart.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.s
+.PHONY : RealTimeChart/RealTimeChart.cpp.s
 
 drfc_qt_autogen/mocs_compilation.o: drfc_qt_autogen/mocs_compilation.cpp.o
 .PHONY : drfc_qt_autogen/mocs_compilation.o
@@ -296,30 +368,6 @@ drfc_qt_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.s
 .PHONY : drfc_qt_autogen/mocs_compilation.cpp.s
 
-gui.o: gui.cpp.o
-.PHONY : gui.o
-
-# target to build an object file
-gui.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/gui.cpp.o
-.PHONY : gui.cpp.o
-
-gui.i: gui.cpp.i
-.PHONY : gui.i
-
-# target to preprocess a source file
-gui.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/gui.cpp.i
-.PHONY : gui.cpp.i
-
-gui.s: gui.cpp.s
-.PHONY : gui.s
-
-# target to generate assembly for a file
-gui.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/gui.cpp.s
-.PHONY : gui.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -344,30 +392,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/MenuBar/MenuBar.o: src/MenuBar/MenuBar.cpp.o
-.PHONY : src/MenuBar/MenuBar.o
-
-# target to build an object file
-src/MenuBar/MenuBar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.o
-.PHONY : src/MenuBar/MenuBar.cpp.o
-
-src/MenuBar/MenuBar.i: src/MenuBar/MenuBar.cpp.i
-.PHONY : src/MenuBar/MenuBar.i
-
-# target to preprocess a source file
-src/MenuBar/MenuBar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.i
-.PHONY : src/MenuBar/MenuBar.cpp.i
-
-src/MenuBar/MenuBar.s: src/MenuBar/MenuBar.cpp.s
-.PHONY : src/MenuBar/MenuBar.s
-
-# target to generate assembly for a file
-src/MenuBar/MenuBar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/src/MenuBar/MenuBar.cpp.s
-.PHONY : src/MenuBar/MenuBar.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -383,27 +407,30 @@ help:
 	@echo "... drfc_qt_autogen"
 	@echo "... drfc_qt_autogen_timestamp_deps"
 	@echo "... drfc_qt"
-	@echo "... DataTransmissionHandler.o"
-	@echo "... DataTransmissionHandler.i"
-	@echo "... DataTransmissionHandler.s"
-	@echo "... FileWriter.o"
-	@echo "... FileWriter.i"
-	@echo "... FileWriter.s"
-	@echo "... RealTimeChart.o"
-	@echo "... RealTimeChart.i"
-	@echo "... RealTimeChart.s"
+	@echo "... DataTransmissionHandler/DataTransmissionHandler.o"
+	@echo "... DataTransmissionHandler/DataTransmissionHandler.i"
+	@echo "... DataTransmissionHandler/DataTransmissionHandler.s"
+	@echo "... FileWriter/FileWriter.o"
+	@echo "... FileWriter/FileWriter.i"
+	@echo "... FileWriter/FileWriter.s"
+	@echo "... GUI/gui.o"
+	@echo "... GUI/gui.i"
+	@echo "... GUI/gui.s"
+	@echo "... LabeledLineEdit/LabeledLineEdit.o"
+	@echo "... LabeledLineEdit/LabeledLineEdit.i"
+	@echo "... LabeledLineEdit/LabeledLineEdit.s"
+	@echo "... MenuBar/MenuBar.o"
+	@echo "... MenuBar/MenuBar.i"
+	@echo "... MenuBar/MenuBar.s"
+	@echo "... RealTimeChart/RealTimeChart.o"
+	@echo "... RealTimeChart/RealTimeChart.i"
+	@echo "... RealTimeChart/RealTimeChart.s"
 	@echo "... drfc_qt_autogen/mocs_compilation.o"
 	@echo "... drfc_qt_autogen/mocs_compilation.i"
 	@echo "... drfc_qt_autogen/mocs_compilation.s"
-	@echo "... gui.o"
-	@echo "... gui.i"
-	@echo "... gui.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/MenuBar/MenuBar.o"
-	@echo "... src/MenuBar/MenuBar.i"
-	@echo "... src/MenuBar/MenuBar.s"
 .PHONY : help
 
 

@@ -1,7 +1,8 @@
-/home/georgy/drfc_qt/build/debug/drfc_qt_autogen/2LCCYRVYXB/moc_gui.cpp: /home/georgy/drfc_qt/src/GUI/gui.h \
-  /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/moc_predefs.h \
+/home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/2LCCYRVYXB/moc_gui.cpp: /home/georgy/drfc_qt/src/GUI/gui.h \
+  /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/moc_predefs.h \
   /home/georgy/drfc_qt/src/DataTransmissionHandler/DataTransmissionHandler.h \
   /home/georgy/drfc_qt/src/FileWriter/FileWriter.h \
+  /home/georgy/drfc_qt/src/LabeledLineEdit/LabeledLineEdit.h \
   /home/georgy/drfc_qt/src/MenuBar/MenuBar.h \
   /home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.h \
   /usr/include/asm-generic/errno-base.h \
@@ -378,6 +379,8 @@
   /usr/include/qt/QtGui/qregion.h \
   /usr/include/qt/QtGui/qrgb.h \
   /usr/include/qt/QtGui/qrgba64.h \
+  /usr/include/qt/QtGui/qtextcursor.h \
+  /usr/include/qt/QtGui/qtextformat.h \
   /usr/include/qt/QtGui/qtextoption.h \
   /usr/include/qt/QtGui/qtgui-config.h \
   /usr/include/qt/QtGui/qtguiglobal.h \
@@ -395,9 +398,12 @@
   /usr/include/qt/QtSerialPort/qserialport.h \
   /usr/include/qt/QtSerialPort/qserialportglobal.h \
   /usr/include/qt/QtWidgets/QComboBox \
+  /usr/include/qt/QtWidgets/QFormLayout \
   /usr/include/qt/QtWidgets/QGraphicsView \
   /usr/include/qt/QtWidgets/QGraphicsWidget \
   /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/QLayout \
+  /usr/include/qt/QtWidgets/QLineEdit \
   /usr/include/qt/QtWidgets/QMainWindow \
   /usr/include/qt/QtWidgets/QMenuBar \
   /usr/include/qt/QtWidgets/QMessageBox \
@@ -414,6 +420,7 @@
   /usr/include/qt/QtWidgets/qboxlayout.h \
   /usr/include/qt/QtWidgets/qcombobox.h \
   /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtWidgets/qformlayout.h \
   /usr/include/qt/QtWidgets/qframe.h \
   /usr/include/qt/QtWidgets/qgraphicsitem.h \
   /usr/include/qt/QtWidgets/qgraphicslayoutitem.h \
@@ -424,6 +431,7 @@
   /usr/include/qt/QtWidgets/qlabel.h \
   /usr/include/qt/QtWidgets/qlayout.h \
   /usr/include/qt/QtWidgets/qlayoutitem.h \
+  /usr/include/qt/QtWidgets/qlineedit.h \
   /usr/include/qt/QtWidgets/qmainwindow.h \
   /usr/include/qt/QtWidgets/qmenu.h \
   /usr/include/qt/QtWidgets/qmenubar.h \
