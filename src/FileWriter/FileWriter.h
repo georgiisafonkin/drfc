@@ -11,10 +11,10 @@ class FileWriter : public QThread
 {
 public:
     explicit FileWriter(QObject *parent = nullptr);
-    void updateReflectogramData(QPair<quint16, QByteArray>);
+    void updateReflectogramData(QPair<qint16, QByteArray>);
     QWaitCondition* queueNotEmpty;
 private:
-    QQueue<QPair<quint16, QByteArray>>* writeQueue;
+    QQueue<QPair<qint16, QByteArray>>* writeQueue;
     QMutex* queueMutex;
     void writeData();
 protected:

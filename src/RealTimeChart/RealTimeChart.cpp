@@ -22,14 +22,16 @@ RealTimeChart::RealTimeChart(QWidget *parent)
     setLayout(layout);
 }
 
-void RealTimeChart::updateChart(const QList<quint16>& numbers) {
+void RealTimeChart::updateChart(const QList<qint16>& numbers) {
     QVector<QPointF> points;
     points.reserve(numbers.size());
 
-    quint16 maxVertVal = 0;
+    qint16 maxVertVal = 0;
+    qint16 minVertVal = 0;
 
     for (int i = 0; i < numbers.size(); ++i) {
         maxVertVal = qMax(maxVertVal, numbers.at(i));
+        minVertVal = qMin(minVertVal, numbers.at(i));
         points.append(QPointF(i, numbers.at(i)));
     }
 
@@ -39,6 +41,11 @@ void RealTimeChart::updateChart(const QList<quint16>& numbers) {
         chart->axes(Qt::Horizontal).first()->setRange(0, numbers.size());
     }
     if (!chart->axes(Qt::Vertical).isEmpty()) {
-        chart->axes(Qt::Vertical).first()->setRange(0, maxVertVal);
+        chart->axes(Qt::Vertical).first()->setRange(minVertVal, maxVertVal);
     }
+}
+
+QChartView *RealTimeChart::getChartView() const
+{
+    return chartView;
 }

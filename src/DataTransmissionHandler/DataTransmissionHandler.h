@@ -20,9 +20,9 @@ private:
     //constants for start message
     float Ng = 1.46;
     int lineLength = 5000;
-    int lengthUdpPack = 1024;
+    int lengthUdpPack = 5000;
     int freqSendData = 100;
-    int pulseWidth = 10; //TODO: 100 nanoseconds
+    int pulseWidth = 100; //TODO: 100 nanoseconds
 
     //for connection
     QUdpSocket* sock;
@@ -43,12 +43,12 @@ private:
     quint16 index = 0;
     QElapsedTimer elapsedTimer;
 
-    QList<quint16> prepareNumbers(QByteArray rawBytes);
+    QList<qint16> prepareNumbers(QByteArray rawBytes);
 protected:
     void run() override;
 signals:
-    void ReflectogramDataReady(const QPair<quint16, QByteArray>& newPair);
-    void ChartDataReady(const QList<quint16>& numbers);
+    void ReflectogramDataReady(const QPair<qint16, QByteArray>& newPair);
+    void ChartDataReady(const QList<qint16>& numbers);
 };
 
 #endif // DATATRANSMISSIONHANDLER_H

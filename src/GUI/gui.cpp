@@ -1,51 +1,32 @@
 #include "gui.h"
 
-#include "../DataTransmissionHandler/DataTransmissionHandler.h"
-#include "../FileWriter/FileWriter.h"
-
 #include <QProcess>
 #include <QMessageBox>
 #include <QSerialPortInfo>
 #include <qdebug.h>
+#include <QLineEdit>
 
 GUI::GUI(QWidget *parent)
-    : QMainWindow{parent}, plotQueue(new QQueue<QList<quint16>>()),
-    queueNotEmpty(new QWaitCondition()),
-    queueMutex(new QMutex()), plotTimer(new QTimer(this)),
-    menuBar(new MenuBar(this))
+    : QMainWindow{parent}, uiDAS(new Ui::MainWindow()),
+    plotQueue(new QQueue<QList<qint16>>()), queueNotEmpty(new QWaitCondition()),
+    queueMutex(new QMutex()), plotTimer(new QTimer(this))
 {
+
+    uiDAS->setupUi(this);
+    uiDAS->setReflGV(realTimeChart->getChartView());
+
+    connect(uiDAS->refreshPortsButton, &QPushButton::clicked, this, &GUI::refreshComPorts);
+
+    connect(uiDAS->choosePortButtom, &QPushButton::clicked, this, &GUI::selectComPort);
+
+    connect(uiDAS->startButton, &QPushButton::clicked, this, &GUI::startReflRead);
+
+    connect(uiDAS->stopButton, &QPushButton::clicked, this, &GUI::stopReflRead);
+
     //separeted thread for data transmission, processing
     dth = new DataTransmissionHandler(this);
 
     fw = new FileWriter(this);
-
-    QWidget *centralWidget = new QWidget(this);
-    setCentralWidget(centralWidget);
-    resize(1280, 720);
-    // this->setFixedSize(1280, 720);  // Фиксированный размер
-
-
-    layout = new QVBoxLayout(centralWidget);
-
-    label = new QLabel("Select a COM Port:", this);
-    layout->addWidget(label);
-
-    comPortCombo = new QComboBox(this);
-    layout->addWidget(comPortCombo);
-
-    refreshButton = new QPushButton("Refresh COM Ports", this);
-    layout->addWidget(refreshButton);
-    connect(refreshButton, &QPushButton::clicked, this, &GUI::refreshComPorts);
-
-    selectButton = new QPushButton("Select", this);
-    layout->addWidget(selectButton);
-    connect(selectButton, &QPushButton::clicked, this, &GUI::selectComPort);
-
-    // realTimeChart->setMinimumHeight(720);
-    layout->addWidget(realTimeChart);
-
-    // layout->addWidget(menuBar);
-    this->setMenuBar(menuBar);
 
     refreshComPorts();
 
@@ -53,37 +34,50 @@ GUI::GUI(QWidget *parent)
     connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateChartsData, Qt::QueuedConnection);
 
     connect(plotTimer, &QTimer::timeout, this, &GUI::plotCharts);
-    plotTimer->start(1000); //41ms for 24fps charts
+    plotTimer->start(10); //41ms for 24fps charts
 
 }
 
 void GUI::refreshComPorts() {
-    comPortCombo->clear();
+    uiDAS->comPortsComboBox->clear();
 
     const QList<QSerialPortInfo> ports = QSerialPortInfo::availablePorts();
     for (const QSerialPortInfo &port : ports) {
-        comPortCombo->addItem(port.portName()) ;
+        uiDAS->comPortsComboBox->addItem(port.portName()) ;
     }
 }
 
+void GUI::startReflRead() {
+    fw->start();
+
+    dth->start();
+
+    plotCharts();
+}
+
+void GUI::stopReflRead() {
+    fw->requestInterruption();
+    dth->requestInterruption();
+}
+
 void GUI::selectComPort() {
-    QString selectedPort = comPortCombo->currentText();
+    QString selectedPort = uiDAS->comPortsComboBox->currentText();
     if (!selectedPort.isEmpty()) {
         qDebug() << "Selected COM Port:" << selectedPort;
 
-        fw->start();
+        // fw->start();
 
         dth->setComPortName(selectedPort);
-        dth->start();
+        // dth->start();
 
-        plotCharts();
+        // plotCharts();
     } else {
         qDebug() << "No COM Port selected.";
     }
 }
 
  //charts below
-void GUI::updateChartsData(const QList<quint16>& numbers) {
+void GUI::updateChartsData(const QList<qint16>& numbers) {
     // qDebug() << "GUI::updateChartsData() was invoked by Thread with TID: " << QThread::currentThreadId();
     // QMutexLocker locker(queueMutex);
     plotQueue->enqueue(numbers);
@@ -98,7 +92,7 @@ void GUI::plotCharts() {
 
     if (plotQueue->empty()) return;
 
-    QList<quint16> plotData = plotQueue->dequeue();
+    QList<qint16> plotData = plotQueue->dequeue();
 
     // locker.unlock();
 
@@ -118,8 +112,7 @@ GUI::~GUI() {
 }
 
 
-//TODO: HBOXLayout for port settings, start/stop button, parameteres settings
-//TODO: HBoxLayout for Reflectogram and waterfall graphics
-//TODO: VBoxLayout for other layouts
+//TODO: GUI класс содержит сгенерированный Ui::MainWindow, надо подвязать RealTimeChart к graphicsView и сигналы
+//правильно связать
 
 

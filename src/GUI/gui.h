@@ -4,7 +4,7 @@
 #include "../DataTransmissionHandler/DataTransmissionHandler.h"
 #include "../FileWriter/FileWriter.h"
 #include "../RealTimeChart/RealTimeChart.h"
-#include "../MenuBar/MenuBar.h"
+#include "../mainWindowDAS/mainWindowDAS.h"
 #include <QChart>
 #include <QChartView>
 #include <QComboBox>
@@ -26,23 +26,37 @@ public:
     QWaitCondition* queueNotEmpty;
 private:
     //GUI stuff
-    QWidget* centralWidget;
-    QVBoxLayout* layout;
-    QLabel* label;
-    QComboBox* comPortCombo;
-    QPushButton* refreshButton;
-    QPushButton* selectButton;
-    MenuBar* menuBar;
+    Ui::MainWindow* uiDAS;
+
+    // QWidget* centralWidget;
+    // QHBoxLayout* settingsHBLayout;
+    // QVBoxLayout* portSettingsVBLayout;
+    // QVBoxLayout* startStopButtonsVBLayout;
+    // QPushButton* startButton;
+    // QPushButton* stopButton;
+    // QVBoxLayout* parameterSettingsVBLayout;
+    // LabeledLineEdit* freqSendDataLineEdit;
+    // LabeledLineEdit* lineLengthLineEdit;
+    // LabeledLineEdit* pulseWidthLineEdit;
+    // QHBoxLayout* chartsHBLayout;
+    // QVBoxLayout* mainLayout;
+    // QLabel* chooseComPortLabel;
+    // QComboBox* comPortCombo;
+    // QPushButton* refreshButton;
+    // QPushButton* selectButton;
+    // MenuBar* menuBar;
     //Buttons stuff
     void refreshComPorts();
     void selectComPort();
+    void startReflRead();
+    void stopReflRead();
 
     DataTransmissionHandler* dth;
     FileWriter* fw;
 
     //Charts, plotting stuff
-    QQueue<QList<quint16>>* plotQueue;
-    void updateChartsData(const QList<quint16>& numbers); //add chart to plotQueue
+    QQueue<QList<qint16>>* plotQueue;
+    void updateChartsData(const QList<qint16>& numbers); //add chart to plotQueue
     void plotCharts();
     RealTimeChart* realTimeChart = new RealTimeChart();
     QMutex* queueMutex;

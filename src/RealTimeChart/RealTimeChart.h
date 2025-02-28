@@ -19,14 +19,16 @@ class RealTimeChart : public QWidget
     Q_OBJECT
 public:
     explicit RealTimeChart(QWidget *parent = nullptr);
-    void updateChart(const QList<quint16>& numbers);
+    void updateChart(const QList<qint16>& numbers);
+    QChartView *getChartView() const;
+
 private:
     QChart* chart;
     QLineSeries* series;
     QChartView* chartView;
     int curChartIndex;
     int counter = 0;
-    std::vector<quint16> numbers;
+    std::vector<qint16> numbers;
 signals:
 };
 

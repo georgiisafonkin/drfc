@@ -5,7 +5,7 @@
 #include <qdebug.h>
 
 FileWriter::FileWriter(QObject *parent)
-    : QThread{parent}, writeQueue(new QQueue<QPair<quint16, QByteArray>>()),
+    : QThread{parent}, writeQueue(new QQueue<QPair<qint16, QByteArray>>()),
     queueMutex(new QMutex), queueNotEmpty(new QWaitCondition())
 {
     // qDebug() << "FileWriter object was created in Thread with TID: " << QThread::currentThreadId();
@@ -31,7 +31,7 @@ void FileWriter::writeData() {
 
             locker.unlock();
 
-            quint16 index = queuePair.first;
+            qint16 index = queuePair.first;
             QByteArray reflectogram = queuePair.second;
 
             QString fileName = QString("reflectogram_%1.bin").arg(index);
@@ -50,9 +50,10 @@ void FileWriter::writeData() {
             locker.relock();
         }
     }
+    qDebug() << "FW exit the loop";
 }
 
-void FileWriter::updateReflectogramData(QPair<quint16, QByteArray> newPair) {
+void FileWriter::updateReflectogramData(QPair<qint16, QByteArray> newPair) {
     // qDebug() << "FileWriter::updateReflectogramData invoked in Thread with TID: " << QThread::currentThreadId();
     QMutexLocker locker(queueMutex);
     writeQueue->enqueue(newPair);
