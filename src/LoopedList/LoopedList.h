@@ -9,6 +9,14 @@ class LoopedList {
 public:
     explicit LoopedList(int capacity) : capacity(capacity) {}
 
+    using iterator = typename QList<T>::iterator; //зачем typename???
+    using const_iterator = typename QList<T>::const_iterator;
+
+    iterator begin() { return data.begin(); }
+    iterator end() { return data.end(); }
+    const_iterator begin() const { return data.begin(); }
+    const_iterator end() const { return data.end(); }
+
     void prepend(const T& value) {
         if (data.size() == capacity) {
             data.pop_back(); // Удаляем последний элемент, если достигли предела

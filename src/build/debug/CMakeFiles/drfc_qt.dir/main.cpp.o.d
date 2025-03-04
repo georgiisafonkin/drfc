@@ -349,12 +349,7 @@ CMakeFiles/drfc_qt.dir/main.cpp.o: /home/georgy/drfc_qt/src/main.cpp \
  /usr/include/qt/QtWidgets/QPushButton \
  /usr/include/qt/QtWidgets/qpushbutton.h \
  /usr/include/qt/QtWidgets/QVBoxLayout /usr/include/qt/QtWidgets/QWidget \
- /usr/include/qt/QtWidgets/QComboBox /usr/include/qt/QtWidgets/QLabel \
- /usr/include/qt/QtWidgets/QMainWindow \
- /usr/include/qt/QtWidgets/QPushButton /usr/include/qt/QtCore/QThreadPool \
- /usr/include/qt/QtCore/qthreadpool.h /usr/include/qt/QtCore/qthread.h \
- /usr/include/qt/QtCore/qrunnable.h /usr/include/qt/QtWidgets/QVBoxLayout \
- /home/georgy/drfc_qt/src/LoopedList/LoopedList.h \
+ /home/georgy/drfc_qt/src/GUI/../LoopedList/LoopedList.h \
  /usr/include/qt/QtCore/QVector /usr/include/qt/QtCore/qvector.h \
  /usr/include/c++/14.2.1/iostream /usr/include/c++/14.2.1/ostream \
  /usr/include/c++/14.2.1/ios /usr/include/c++/14.2.1/bits/basic_ios.h \
@@ -367,6 +362,12 @@ CMakeFiles/drfc_qt.dir/main.cpp.o: /home/georgy/drfc_qt/src/main.cpp \
  /usr/include/c++/14.2.1/bits/basic_ios.tcc \
  /usr/include/c++/14.2.1/bits/ostream.tcc /usr/include/c++/14.2.1/istream \
  /usr/include/c++/14.2.1/bits/istream.tcc \
+ /usr/include/qt/QtWidgets/QComboBox /usr/include/qt/QtWidgets/QLabel \
+ /usr/include/qt/QtWidgets/QMainWindow \
+ /usr/include/qt/QtWidgets/QPushButton /usr/include/qt/QtCore/QThreadPool \
+ /usr/include/qt/QtCore/qthreadpool.h /usr/include/qt/QtCore/qthread.h \
+ /usr/include/qt/QtCore/qrunnable.h /usr/include/qt/QtWidgets/QVBoxLayout \
+ /home/georgy/drfc_qt/src/LoopedList/LoopedList.h \
  /home/georgy/drfc_qt/src/mainWindowDAS/mainWindowDAS.h \
  /usr/include/qt/QtNetwork/QAbstractSocket \
  /usr/include/qt/QtNetwork/qabstractsocket.h \

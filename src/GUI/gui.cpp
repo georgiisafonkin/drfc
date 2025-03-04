@@ -9,6 +9,7 @@
 GUI::GUI(QWidget *parent)
     : QMainWindow{parent}, uiDAS(new Ui::MainWindow()),
     plotQueue(new QQueue<QList<qint16>>()),
+    reflsLoopedList(new LoopedList<QList<qint16>>(reflsListSize)),
     queueNotEmpty(new QWaitCondition()), queueMutex(new QMutex()), plotTimer(new QTimer(this))
 {
 
@@ -31,7 +32,7 @@ GUI::GUI(QWidget *parent)
     refreshComPorts();
 
     connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);
-    connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateReflList, Qt::QueuedConnection);
+    connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateReflsLoopedList, Qt::QueuedConnection);
     connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateChartsData, Qt::QueuedConnection);
 
     connect(plotTimer, &QTimer::timeout, this, &GUI::plotCharts);
@@ -78,8 +79,8 @@ void GUI::selectComPort() {
 }
 
  //charts below
-void GUI::updateReflList(const QList<qint16>& numbers) {
-    reflsList->prepend(numbers);
+void GUI::updateReflsLoopedList(const QList<qint16>& numbers) {
+    reflsLoopedList->prepend(numbers);
 }
 
 

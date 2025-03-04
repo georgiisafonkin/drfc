@@ -350,6 +350,19 @@ CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o: \
  /usr/include/qt/QtWidgets/QPushButton \
  /usr/include/qt/QtWidgets/qpushbutton.h \
  /usr/include/qt/QtWidgets/QVBoxLayout /usr/include/qt/QtWidgets/QWidget \
+ /home/georgy/drfc_qt/src/GUI/../LoopedList/LoopedList.h \
+ /usr/include/qt/QtCore/QVector /usr/include/qt/QtCore/qvector.h \
+ /usr/include/c++/14.2.1/iostream /usr/include/c++/14.2.1/ostream \
+ /usr/include/c++/14.2.1/ios /usr/include/c++/14.2.1/bits/basic_ios.h \
+ /usr/include/c++/14.2.1/bits/locale_facets.h \
+ /usr/include/c++/14.2.1/cwctype /usr/include/wctype.h \
+ /usr/include/bits/wctype-wchar.h \
+ /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/include/c++/14.2.1/bits/locale_facets.tcc \
+ /usr/include/c++/14.2.1/bits/basic_ios.tcc \
+ /usr/include/c++/14.2.1/bits/ostream.tcc /usr/include/c++/14.2.1/istream \
+ /usr/include/c++/14.2.1/bits/istream.tcc \
  /usr/include/qt/QtWidgets/QComboBox /usr/include/qt/QtWidgets/QLabel \
  /usr/include/qt/QtWidgets/QMainWindow \
  /usr/include/qt/QtWidgets/QPushButton /usr/include/qt/QtCore/QThreadPool \

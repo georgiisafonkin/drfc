@@ -5,6 +5,7 @@
 #include "../FileWriter/FileWriter.h"
 #include "../RealTimeChart/RealTimeChart.h"
 #include "../mainWindowDAS/mainWindowDAS.h"
+#include "../LoopedList/LoopedList.h"
 #include <QChart>
 #include <QChartView>
 #include <QComboBox>
@@ -28,23 +29,6 @@ private:
     //GUI stuff
     Ui::MainWindow* uiDAS;
 
-    // QWidget* centralWidget;
-    // QHBoxLayout* settingsHBLayout;
-    // QVBoxLayout* portSettingsVBLayout;
-    // QVBoxLayout* startStopButtonsVBLayout;
-    // QPushButton* startButton;
-    // QPushButton* stopButton;
-    // QVBoxLayout* parameterSettingsVBLayout;
-    // LabeledLineEdit* freqSendDataLineEdit;
-    // LabeledLineEdit* lineLengthLineEdit;
-    // LabeledLineEdit* pulseWidthLineEdit;
-    // QHBoxLayout* chartsHBLayout;
-    // QVBoxLayout* mainLayout;
-    // QLabel* chooseComPortLabel;
-    // QComboBox* comPortCombo;
-    // QPushButton* refreshButton;
-    // QPushButton* selectButton;
-    // MenuBar* menuBar;
     //Buttons stuff
     void refreshComPorts();
     void selectComPort();
@@ -57,9 +41,9 @@ private:
     //Charts, plotting stuff
     QQueue<QList<qint16>>* plotQueue;
     qint32 reflsListSize = 200;
-    QList<QList<qint16>>* reflsList;
+    LoopedList<QList<qint16>>* reflsLoopedList;
     void updateChartsData(const QList<qint16>& numbers); //add chart to plotQueue
-    void updateReflList(const QList<qint16>& numbers); //refl to waterfall list
+    void updateReflsLoopedList(const QList<qint16>& numbers); //refl to waterfall list
     void plotCharts();
     RealTimeChart* realTimeChart = new RealTimeChart();
     QMutex* queueMutex;

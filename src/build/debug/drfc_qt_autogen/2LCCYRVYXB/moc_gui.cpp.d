@@ -2,6 +2,7 @@
   /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/moc_predefs.h \
   /home/georgy/drfc_qt/src/DataTransmissionHandler/DataTransmissionHandler.h \
   /home/georgy/drfc_qt/src/FileWriter/FileWriter.h \
+  /home/georgy/drfc_qt/src/LoopedList/LoopedList.h \
   /home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.h \
   /home/georgy/drfc_qt/src/mainWindowDAS/mainWindowDAS.h \
   /usr/include/asm-generic/errno-base.h \
@@ -102,6 +103,7 @@
   /usr/include/c++/14.2.1/bits/hash_bytes.h \
   /usr/include/c++/14.2.1/bits/invoke.h \
   /usr/include/c++/14.2.1/bits/ios_base.h \
+  /usr/include/c++/14.2.1/bits/istream.tcc \
   /usr/include/c++/14.2.1/bits/iterator_concepts.h \
   /usr/include/c++/14.2.1/bits/list.tcc \
   /usr/include/c++/14.2.1/bits/locale_classes.h \
@@ -200,6 +202,8 @@
   /usr/include/c++/14.2.1/initializer_list \
   /usr/include/c++/14.2.1/ios \
   /usr/include/c++/14.2.1/iosfwd \
+  /usr/include/c++/14.2.1/iostream \
+  /usr/include/c++/14.2.1/istream \
   /usr/include/c++/14.2.1/iterator \
   /usr/include/c++/14.2.1/limits \
   /usr/include/c++/14.2.1/list \
@@ -271,6 +275,7 @@
   /usr/include/qt/QtCore/QThreadPool \
   /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/QVariant \
+  /usr/include/qt/QtCore/QVector \
   /usr/include/qt/QtCore/QWaitCondition \
   /usr/include/qt/QtCore/QtGlobal \
   /usr/include/qt/QtCore/qabstractitemmodel.h \
