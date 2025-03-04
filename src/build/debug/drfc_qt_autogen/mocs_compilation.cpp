@@ -4,3 +4,4 @@
 #include "AX466XHGUV/moc_LabeledLineEdit.cpp"
 #include "XD6G3YPSO6/moc_MenuBar.cpp"
 #include "73CGNLUYYY/moc_RealTimeChart.cpp"
+#include "PCUUY5HOZF/moc_RealTimeWaterfall.cpp"

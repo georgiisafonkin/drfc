@@ -14,8 +14,6 @@ DataTransmissionHandler::DataTransmissionHandler(QObject *parent)
     elapsedTimer = QElapsedTimer();
 }
 
-
-
 QByteArray DataTransmissionHandler::createStartMessage() {
     static QByteArray message;
 

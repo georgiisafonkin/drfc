@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o.d"
   "CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.o"
   "CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.o.d"
+  "CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o"
+  "CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o.d"
   "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/drfc_qt.dir/main.cpp.o"

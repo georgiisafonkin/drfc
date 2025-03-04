@@ -8,8 +8,8 @@
 
 GUI::GUI(QWidget *parent)
     : QMainWindow{parent}, uiDAS(new Ui::MainWindow()),
-    plotQueue(new QQueue<QList<qint16>>()), queueNotEmpty(new QWaitCondition()),
-    queueMutex(new QMutex()), plotTimer(new QTimer(this))
+    plotQueue(new QQueue<QList<qint16>>()),
+    queueNotEmpty(new QWaitCondition()), queueMutex(new QMutex()), plotTimer(new QTimer(this))
 {
 
     uiDAS->setupUi(this);
@@ -31,6 +31,7 @@ GUI::GUI(QWidget *parent)
     refreshComPorts();
 
     connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);
+    connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateReflList, Qt::QueuedConnection);
     connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateChartsData, Qt::QueuedConnection);
 
     connect(plotTimer, &QTimer::timeout, this, &GUI::plotCharts);
@@ -77,27 +78,23 @@ void GUI::selectComPort() {
 }
 
  //charts below
+void GUI::updateReflList(const QList<qint16>& numbers) {
+    reflsList->prepend(numbers);
+}
+
+
 void GUI::updateChartsData(const QList<qint16>& numbers) {
-    // qDebug() << "GUI::updateChartsData() was invoked by Thread with TID: " << QThread::currentThreadId();
-    // QMutexLocker locker(queueMutex);
     plotQueue->enqueue(numbers);
-    // plotCharts();
-    // QMetaObject::invokeMethod(this, "plotCharts", Qt::QueuedConnection);
-    // queueNotEmpty->wakeOne();
 }
 
 void GUI::plotCharts() {
-    qDebug() << "GUI::plotCharts()";
-    // QMutexLocker locker(queueMutex);
+    // qDebug() << "GUI::plotCharts()";
 
     if (plotQueue->empty()) return;
 
     QList<qint16> plotData = plotQueue->dequeue();
 
-    // locker.unlock();
-
     realTimeChart->updateChart(plotData);
-    // layout->update();
 }
 
 GUI::~GUI() {
@@ -115,4 +112,5 @@ GUI::~GUI() {
 //TODO: GUI класс содержит сгенерированный Ui::MainWindow, надо подвязать RealTimeChart к graphicsView и сигналы
 //правильно связать
 
+//TODO: свой циклический список на основе QVarLengthArray
 

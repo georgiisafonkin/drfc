@@ -28,6 +28,7 @@ add_executable(drfc_qt
   mainWindowDAS/mainWindowDAS.h
   mainwindow.ui
   RealTimeWaterfall/RealTimeWaterfall.h RealTimeWaterfall/RealTimeWaterfall.cpp
+  LoopedList/LoopedList.h
 
 )
 

@@ -124,6 +124,12 @@
 			null
 		],
 		[
+			"/home/georgy/drfc_qt/src/LoopedList/LoopedList.h",
+			"MU",
+			"7WFMQCBH2K/moc_LoopedList.cpp",
+			null
+		],
+		[
 			"/home/georgy/drfc_qt/src/MenuBar/MenuBar.h",
 			"MU",
 			"XD6G3YPSO6/moc_MenuBar.cpp",
@@ -133,6 +139,12 @@
 			"/home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.h",
 			"MU",
 			"73CGNLUYYY/moc_RealTimeChart.cpp",
+			null
+		],
+		[
+			"/home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.h",
+			"MU",
+			"PCUUY5HOZF/moc_RealTimeWaterfall.cpp",
 			null
 		],
 		[
@@ -220,6 +232,11 @@
 		[ "/home/georgy/drfc_qt/src/MenuBar/MenuBar.cpp", "MU", null ],
 		[
 			"/home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.cpp",
 			"MU",
 			null
 		],

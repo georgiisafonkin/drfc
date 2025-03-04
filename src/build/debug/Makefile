@@ -344,6 +344,30 @@ RealTimeChart/RealTimeChart.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.s
 .PHONY : RealTimeChart/RealTimeChart.cpp.s
 
+RealTimeWaterfall/RealTimeWaterfall.o: RealTimeWaterfall/RealTimeWaterfall.cpp.o
+.PHONY : RealTimeWaterfall/RealTimeWaterfall.o
+
+# target to build an object file
+RealTimeWaterfall/RealTimeWaterfall.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o
+.PHONY : RealTimeWaterfall/RealTimeWaterfall.cpp.o
+
+RealTimeWaterfall/RealTimeWaterfall.i: RealTimeWaterfall/RealTimeWaterfall.cpp.i
+.PHONY : RealTimeWaterfall/RealTimeWaterfall.i
+
+# target to preprocess a source file
+RealTimeWaterfall/RealTimeWaterfall.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.i
+.PHONY : RealTimeWaterfall/RealTimeWaterfall.cpp.i
+
+RealTimeWaterfall/RealTimeWaterfall.s: RealTimeWaterfall/RealTimeWaterfall.cpp.s
+.PHONY : RealTimeWaterfall/RealTimeWaterfall.s
+
+# target to generate assembly for a file
+RealTimeWaterfall/RealTimeWaterfall.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.s
+.PHONY : RealTimeWaterfall/RealTimeWaterfall.cpp.s
+
 drfc_qt_autogen/mocs_compilation.o: drfc_qt_autogen/mocs_compilation.cpp.o
 .PHONY : drfc_qt_autogen/mocs_compilation.o
 
@@ -425,6 +449,9 @@ help:
 	@echo "... RealTimeChart/RealTimeChart.o"
 	@echo "... RealTimeChart/RealTimeChart.i"
 	@echo "... RealTimeChart/RealTimeChart.s"
+	@echo "... RealTimeWaterfall/RealTimeWaterfall.o"
+	@echo "... RealTimeWaterfall/RealTimeWaterfall.i"
+	@echo "... RealTimeWaterfall/RealTimeWaterfall.s"
 	@echo "... drfc_qt_autogen/mocs_compilation.o"
 	@echo "... drfc_qt_autogen/mocs_compilation.i"
 	@echo "... drfc_qt_autogen/mocs_compilation.s"

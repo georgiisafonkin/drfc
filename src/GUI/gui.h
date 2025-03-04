@@ -56,7 +56,10 @@ private:
 
     //Charts, plotting stuff
     QQueue<QList<qint16>>* plotQueue;
+    qint32 reflsListSize = 200;
+    QList<QList<qint16>>* reflsList;
     void updateChartsData(const QList<qint16>& numbers); //add chart to plotQueue
+    void updateReflList(const QList<qint16>& numbers); //refl to waterfall list
     void plotCharts();
     RealTimeChart* realTimeChart = new RealTimeChart();
     QMutex* queueMutex;

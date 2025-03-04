@@ -1,4 +1,5 @@
 #include "GUI/gui.h"
+#include "LoopedList/LoopedList.h"
 #include "mainWindowDAS/mainWindowDAS.h"
 #include <QAbstractSocket>
 #include <QApplication>
@@ -11,15 +12,35 @@ int main(int argc, char *argv[])
     qRegisterMetaType<QAbstractSocket::SocketError>("QAbstractSocket::SocketError");
     qRegisterMetaType<QPair<qint16, QByteArray>>("QPair<qint16, QByteArray>");
 
+    LoopedList<QList<qint32>>* ll = new LoopedList<QList<qint32>>(4);
+    QList<qint32> l1 = {1, 2};
+    QList<qint32> l2 = {3, 4};
+    QList<qint32> l3 = {5, 6};
+    QList<qint32> l4 = {7, 8};
+    QList<qint32> l5 = {9, 10};
 
-    GUI gui;
-    gui.setWindowTitle("drfc");
-    gui.show();
+    ll->prepend(l1);
+    ll->prepend(l2);
+    ll->prepend(l3);
+    ll->prepend(l4);
+    for (int i = 0; i < ll->getSize(); ++i) {
+        qDebug() << "List " << i;
+        for (int j = 0; j < ll->getData().at(i).size(); ++j) {
+            qDebug() << ll->getData().at(i).at(j);
+        }
+    }
+    ll->prepend(l5);
+    for (int i = 0; i < ll->getSize(); ++i) {
+        qDebug() << "List " << i;
+        for (int j = 0; j < ll->getData().at(i).size(); ++j) {
+            qDebug() << ll->getData().at(i).at(j);
+        }
+    }
 
-    // QMainWindow* uiMainWindow = new QMainWindow();
-    // Ui::MainWindow DASUi;
-    // DASUi.setupUi(uiMainWindow);
-    // uiMainWindow->show();
+
+    // GUI gui;
+    // gui.setWindowTitle("drfc");
+    // gui.show();
 
     // Set up code that uses the Qt event loop here.
     // Call a.quit() or a.exit() to quit the application.

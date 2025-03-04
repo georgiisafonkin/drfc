@@ -8,10 +8,13 @@ drfc_qt_autogen/timestamp: \
 	/home/georgy/drfc_qt/src/GUI/gui.h \
 	/home/georgy/drfc_qt/src/LabeledLineEdit/LabeledLineEdit.cpp \
 	/home/georgy/drfc_qt/src/LabeledLineEdit/LabeledLineEdit.h \
+	/home/georgy/drfc_qt/src/LoopedList/LoopedList.h \
 	/home/georgy/drfc_qt/src/MenuBar/MenuBar.cpp \
 	/home/georgy/drfc_qt/src/MenuBar/MenuBar.h \
 	/home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.cpp \
 	/home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.h \
+	/home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.cpp \
+	/home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.h \
 	/home/georgy/drfc_qt/src/build/debug/CMakeFiles/3.31.2/CMakeCXXCompiler.cmake \
 	/home/georgy/drfc_qt/src/build/debug/CMakeFiles/3.31.2/CMakeSystem.cmake \
 	/home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/moc_predefs.h \
