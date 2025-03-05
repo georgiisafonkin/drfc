@@ -1,7 +1,7 @@
 CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/mocs_compilation.cpp \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/O5ZBPDTSZK/moc_DataTransmissionHandler.cpp \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/O5ZBPDTSZK/moc_DataTransmissionHandler.cpp \
  /usr/include/c++/14.2.1/memory /usr/include/c++/14.2.1/bits/memoryfwd.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -104,7 +104,7 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/14.2.1/backward/auto_ptr.h \
  /usr/include/c++/14.2.1/pstl/glue_memory_defs.h \
  /usr/include/c++/14.2.1/pstl/execution_defs.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/O5ZBPDTSZK/../../../../DataTransmissionHandler/DataTransmissionHandler.h \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/O5ZBPDTSZK/../../../../src/DataTransmissionHandler/DataTransmissionHandler.h \
  /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
  /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
  /usr/include/qt/QtCore/qglobal.h /usr/include/c++/14.2.1/cstddef \
@@ -247,17 +247,17 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtSerialPort/qserialport.h \
  /usr/include/qt/QtSerialPort/qserialportglobal.h \
  /usr/include/qt/QtCore/QList /usr/include/qt/QtCore/qlist.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/2LCCYRVYXB/moc_gui.cpp \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../GUI/gui.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../GUI/../DataTransmissionHandler/DataTransmissionHandler.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../GUI/../FileWriter/FileWriter.h \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/2LCCYRVYXB/moc_gui.cpp \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../src/GUI/gui.h \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../src/GUI/../DataTransmissionHandler/DataTransmissionHandler.h \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../src/GUI/../FileWriter/FileWriter.h \
  /usr/include/qt/QtCore/QMutex /usr/include/qt/QtCore/qmutex.h \
  /usr/include/qt/QtCore/qtsan_impl.h /usr/include/qt/QtCore/QQueue \
  /usr/include/qt/QtCore/qqueue.h /usr/include/qt/QtCore/QWaitCondition \
  /usr/include/qt/QtCore/qwaitcondition.h \
  /usr/include/qt/QtCore/QDeadlineTimer \
  /usr/include/qt/QtCore/qdeadlinetimer.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../GUI/../RealTimeChart/RealTimeChart.h \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../src/GUI/../RealTimeChart/RealTimeChart.h \
  /usr/include/qt/QtCharts/QChart /usr/include/qt/QtCharts/qchart.h \
  /usr/include/qt/QtCharts/QAbstractSeries \
  /usr/include/qt/QtCharts/qabstractseries.h \
@@ -316,28 +316,18 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtCore/qrunnable.h /usr/include/qt/QtCharts/qchart.h \
  /usr/include/qt/QtCharts/qchartview.h \
  /usr/include/qt/QtCharts/qlineseries.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../GUI/../MenuBar/MenuBar.h \
- /usr/include/qt/QtWidgets/QMenuBar /usr/include/qt/QtWidgets/qmenubar.h \
- /usr/include/qt/QtWidgets/qmenu.h /usr/include/qt/QtGui/qicon.h \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../src/GUI/../mainWindowDAS/mainWindowDAS.h \
+ /usr/include/qt/QtWidgets/QAction /usr/include/qt/QtWidgets/qaction.h \
+ /usr/include/qt/QtGui/qicon.h /usr/include/qt/QtWidgets/qactiongroup.h \
  /usr/include/qt/QtWidgets/qaction.h \
- /usr/include/qt/QtWidgets/qactiongroup.h \
- /usr/include/qt/QtWidgets/QMessageBox \
- /usr/include/qt/QtWidgets/qmessagebox.h \
- /usr/include/qt/QtWidgets/qdialog.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../GUI/../LabeledLineEdit/LabeledLineEdit.h \
- /usr/include/qt/QtWidgets/QLabel /usr/include/qt/QtWidgets/qlabel.h \
- /usr/include/qt/QtWidgets/QLineEdit \
- /usr/include/qt/QtWidgets/qlineedit.h \
- /usr/include/qt/QtGui/qtextcursor.h /usr/include/qt/QtGui/qtextformat.h \
- /usr/include/qt/QtWidgets/QVBoxLayout \
- /usr/include/qt/QtWidgets/qboxlayout.h \
- /usr/include/qt/QtWidgets/qlayout.h \
- /usr/include/qt/QtWidgets/qlayoutitem.h \
- /usr/include/qt/QtWidgets/qboxlayout.h \
- /usr/include/qt/QtWidgets/qgridlayout.h \
- /usr/include/qt/QtWidgets/QFormLayout \
- /usr/include/qt/QtWidgets/qformlayout.h \
- /usr/include/qt/QtWidgets/QLayout /usr/include/qt/QtWidgets/qlayout.h \
+ /usr/include/qt/QtWidgets/QApplication \
+ /usr/include/qt/QtWidgets/qapplication.h \
+ /usr/include/qt/QtCore/qcoreapplication.h \
+ /usr/include/qt/QtCore/qeventloop.h \
+ /usr/include/qt/QtGui/qguiapplication.h \
+ /usr/include/qt/QtGui/qinputmethod.h /usr/include/qt/QtWidgets/QCheckBox \
+ /usr/include/qt/QtWidgets/qcheckbox.h \
+ /usr/include/qt/QtWidgets/qabstractbutton.h \
  /usr/include/qt/QtWidgets/QComboBox \
  /usr/include/qt/QtWidgets/qcombobox.h \
  /usr/include/qt/QtWidgets/qabstractitemdelegate.h \
@@ -351,16 +341,50 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtWidgets/qtabwidget.h \
  /usr/include/qt/QtWidgets/qrubberband.h \
  /usr/include/qt/QtCore/qabstractitemmodel.h \
+ /usr/include/qt/QtWidgets/QHBoxLayout \
+ /usr/include/qt/QtWidgets/qboxlayout.h \
+ /usr/include/qt/QtWidgets/qlayout.h \
+ /usr/include/qt/QtWidgets/qlayoutitem.h \
+ /usr/include/qt/QtWidgets/qboxlayout.h \
+ /usr/include/qt/QtWidgets/qgridlayout.h /usr/include/qt/QtWidgets/QLabel \
+ /usr/include/qt/QtWidgets/qlabel.h /usr/include/qt/QtWidgets/QLineEdit \
+ /usr/include/qt/QtWidgets/qlineedit.h \
+ /usr/include/qt/QtGui/qtextcursor.h /usr/include/qt/QtGui/qtextformat.h \
  /usr/include/qt/QtWidgets/QMainWindow \
- /usr/include/qt/QtWidgets/qmainwindow.h \
+ /usr/include/qt/QtWidgets/qmainwindow.h /usr/include/qt/QtWidgets/QMenu \
+ /usr/include/qt/QtWidgets/qmenu.h /usr/include/qt/QtWidgets/QMenuBar \
+ /usr/include/qt/QtWidgets/qmenubar.h /usr/include/qt/QtWidgets/qmenu.h \
  /usr/include/qt/QtWidgets/QPushButton \
  /usr/include/qt/QtWidgets/qpushbutton.h \
- /usr/include/qt/QtWidgets/qabstractbutton.h \
- /usr/include/qt/QtCore/QThreadPool /usr/include/qt/QtCore/qthreadpool.h \
- /usr/include/qt/QtCore/qthread.h /usr/include/qt/QtCore/qrunnable.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/AX466XHGUV/moc_LabeledLineEdit.cpp \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/AX466XHGUV/../../../../LabeledLineEdit/LabeledLineEdit.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/XD6G3YPSO6/moc_MenuBar.cpp \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/XD6G3YPSO6/../../../../MenuBar/MenuBar.h \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/73CGNLUYYY/moc_RealTimeChart.cpp \
- /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/73CGNLUYYY/../../../../RealTimeChart/RealTimeChart.h
+ /usr/include/qt/QtWidgets/QVBoxLayout /usr/include/qt/QtWidgets/QWidget \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/2LCCYRVYXB/../../../../src/GUI/../LoopedList/LoopedList.h \
+ /usr/include/qt/QtCore/QVector /usr/include/qt/QtCore/qvector.h \
+ /usr/include/c++/14.2.1/iostream /usr/include/c++/14.2.1/ostream \
+ /usr/include/c++/14.2.1/ios /usr/include/c++/14.2.1/bits/basic_ios.h \
+ /usr/include/c++/14.2.1/bits/locale_facets.h \
+ /usr/include/c++/14.2.1/cwctype /usr/include/wctype.h \
+ /usr/include/bits/wctype-wchar.h \
+ /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/include/c++/14.2.1/bits/locale_facets.tcc \
+ /usr/include/c++/14.2.1/bits/basic_ios.tcc \
+ /usr/include/c++/14.2.1/bits/ostream.tcc /usr/include/c++/14.2.1/istream \
+ /usr/include/c++/14.2.1/bits/istream.tcc \
+ /usr/include/qt/QtWidgets/QComboBox /usr/include/qt/QtWidgets/QLabel \
+ /usr/include/qt/QtWidgets/QMainWindow \
+ /usr/include/qt/QtWidgets/QPushButton /usr/include/qt/QtCore/QThreadPool \
+ /usr/include/qt/QtCore/qthreadpool.h /usr/include/qt/QtCore/qthread.h \
+ /usr/include/qt/QtCore/qrunnable.h /usr/include/qt/QtWidgets/QVBoxLayout \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/XD6G3YPSO6/moc_MenuBar.cpp \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/XD6G3YPSO6/../../../../src/MenuBar/MenuBar.h \
+ /usr/include/qt/QtWidgets/QMenuBar /usr/include/qt/QtWidgets/QMessageBox \
+ /usr/include/qt/QtWidgets/qmessagebox.h \
+ /usr/include/qt/QtWidgets/qdialog.h \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/73CGNLUYYY/moc_RealTimeChart.cpp \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/73CGNLUYYY/../../../../src/RealTimeChart/RealTimeChart.h \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/PCUUY5HOZF/moc_RealTimeWaterfall.cpp \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/PCUUY5HOZF/../../../../src/RealTimeWaterfall/RealTimeWaterfall.h \
+ /usr/include/qt/QtWidgets/QGraphicsScene \
+ /usr/include/qt/QtWidgets/qgraphicsscene.h \
+ /usr/include/qt/QtWidgets/qgraphicsitem.h \
+ /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/PCUUY5HOZF/../../../../src/RealTimeWaterfall/../LoopedList/LoopedList.h

@@ -1,5 +1,5 @@
-/home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/73CGNLUYYY/moc_RealTimeChart.cpp: /home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.h \
-  /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/moc_predefs.h \
+/home/georgy/drfc_qt/build/debug/drfc_qt_autogen/73CGNLUYYY/moc_RealTimeChart.cpp: /home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.h \
+  /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm/errno.h \

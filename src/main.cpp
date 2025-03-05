@@ -8,35 +8,11 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    qDebug() << "Qt version: " << QT_VERSION_STR;
+
     qRegisterMetaType<QList<qint16>>("std::vector<qint16>");
     qRegisterMetaType<QAbstractSocket::SocketError>("QAbstractSocket::SocketError");
     qRegisterMetaType<QPair<qint16, QByteArray>>("QPair<qint16, QByteArray>");
-
-    // LoopedList<QList<qint32>>* ll = new LoopedList<QList<qint32>>(4);
-    // QList<qint32> l1 = {1, 2};
-    // QList<qint32> l2 = {3, 4};
-    // QList<qint32> l3 = {5, 6};
-    // QList<qint32> l4 = {7, 8};
-    // QList<qint32> l5 = {9, 10};
-
-    // ll->prepend(l1);
-    // ll->prepend(l2);
-    // ll->prepend(l3);
-    // ll->prepend(l4);
-    // for (int i = 0; i < ll->getSize(); ++i) {
-    //     qDebug() << "List " << i;
-    //     for (int j = 0; j < ll->getData().at(i).size(); ++j) {
-    //         qDebug() << ll->getData().at(i).at(j);
-    //     }
-    // }
-    // ll->prepend(l5);
-    // for (int i = 0; i < ll->getSize(); ++i) {
-    //     qDebug() << "List " << i;
-    //     for (int j = 0; j < ll->getData().at(i).size(); ++j) {
-    //         qDebug() << ll->getData().at(i).at(j);
-    //     }
-    // }
-
 
     GUI gui;
     gui.setWindowTitle("drfc");

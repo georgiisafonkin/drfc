@@ -31,7 +31,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout;
     QVBoxLayout *mainVL;
     QHBoxLayout *optionsHL;
     QVBoxLayout *comPortStartStopVL;
@@ -59,9 +59,6 @@ public:
     QVBoxLayout *ReflVL;
     QGraphicsView *reflGV;
     QLabel *reflLabel;
-    QVBoxLayout *WaterfallVL;
-    QGraphicsView *waterfallGV;
-    QLabel *waterfallLabel;
     QMenuBar *menuBar;
     QMenu *systemMenu;
     QMenu *aboutMenu;
@@ -73,34 +70,32 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        layoutWidget = new QWidget(centralwidget);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(0, 0, 791, 551));
-        mainVL = new QVBoxLayout(layoutWidget);
+        verticalLayout = new QVBoxLayout(centralwidget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        mainVL = new QVBoxLayout();
         mainVL->setObjectName(QString::fromUtf8("mainVL"));
-        mainVL->setContentsMargins(0, 0, 0, 0);
         optionsHL = new QHBoxLayout();
         optionsHL->setObjectName(QString::fromUtf8("optionsHL"));
         comPortStartStopVL = new QVBoxLayout();
         comPortStartStopVL->setObjectName(QString::fromUtf8("comPortStartStopVL"));
         comPortOptionsVL = new QVBoxLayout();
         comPortOptionsVL->setObjectName(QString::fromUtf8("comPortOptionsVL"));
-        choseComPortLabel = new QLabel(layoutWidget);
+        choseComPortLabel = new QLabel(centralwidget);
         choseComPortLabel->setObjectName(QString::fromUtf8("choseComPortLabel"));
 
         comPortOptionsVL->addWidget(choseComPortLabel);
 
-        comPortsComboBox = new QComboBox(layoutWidget);
+        comPortsComboBox = new QComboBox(centralwidget);
         comPortsComboBox->setObjectName(QString::fromUtf8("comPortsComboBox"));
 
         comPortOptionsVL->addWidget(comPortsComboBox);
 
-        refreshPortsButton = new QPushButton(layoutWidget);
+        refreshPortsButton = new QPushButton(centralwidget);
         refreshPortsButton->setObjectName(QString::fromUtf8("refreshPortsButton"));
 
         comPortOptionsVL->addWidget(refreshPortsButton);
 
-        choosePortButtom = new QPushButton(layoutWidget);
+        choosePortButtom = new QPushButton(centralwidget);
         choosePortButtom->setObjectName(QString::fromUtf8("choosePortButtom"));
 
         comPortOptionsVL->addWidget(choosePortButtom);
@@ -110,12 +105,12 @@ public:
 
         startStopHL = new QHBoxLayout();
         startStopHL->setObjectName(QString::fromUtf8("startStopHL"));
-        startButton = new QPushButton(layoutWidget);
+        startButton = new QPushButton(centralwidget);
         startButton->setObjectName(QString::fromUtf8("startButton"));
 
         startStopHL->addWidget(startButton);
 
-        stopButton = new QPushButton(layoutWidget);
+        stopButton = new QPushButton(centralwidget);
         stopButton->setObjectName(QString::fromUtf8("stopButton"));
 
         startStopHL->addWidget(stopButton);
@@ -128,24 +123,24 @@ public:
 
         parametersVL = new QVBoxLayout();
         parametersVL->setObjectName(QString::fromUtf8("parametersVL"));
-        label = new QLabel(layoutWidget);
+        label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
 
         parametersVL->addWidget(label);
 
-        saveCheckBox = new QCheckBox(layoutWidget);
+        saveCheckBox = new QCheckBox(centralwidget);
         saveCheckBox->setObjectName(QString::fromUtf8("saveCheckBox"));
 
         parametersVL->addWidget(saveCheckBox);
 
         lineLengthHL = new QHBoxLayout();
         lineLengthHL->setObjectName(QString::fromUtf8("lineLengthHL"));
-        lineLengthLabel = new QLabel(layoutWidget);
+        lineLengthLabel = new QLabel(centralwidget);
         lineLengthLabel->setObjectName(QString::fromUtf8("lineLengthLabel"));
 
         lineLengthHL->addWidget(lineLengthLabel);
 
-        lineLengthLE = new QLineEdit(layoutWidget);
+        lineLengthLE = new QLineEdit(centralwidget);
         lineLengthLE->setObjectName(QString::fromUtf8("lineLengthLE"));
 
         lineLengthHL->addWidget(lineLengthLE);
@@ -155,12 +150,12 @@ public:
 
         pulseFreqHL = new QHBoxLayout();
         pulseFreqHL->setObjectName(QString::fromUtf8("pulseFreqHL"));
-        pulseFreqLabel = new QLabel(layoutWidget);
+        pulseFreqLabel = new QLabel(centralwidget);
         pulseFreqLabel->setObjectName(QString::fromUtf8("pulseFreqLabel"));
 
         pulseFreqHL->addWidget(pulseFreqLabel);
 
-        pulseFreqLE = new QLineEdit(layoutWidget);
+        pulseFreqLE = new QLineEdit(centralwidget);
         pulseFreqLE->setObjectName(QString::fromUtf8("pulseFreqLE"));
 
         pulseFreqHL->addWidget(pulseFreqLE);
@@ -170,12 +165,12 @@ public:
 
         pulseWidthHL = new QHBoxLayout();
         pulseWidthHL->setObjectName(QString::fromUtf8("pulseWidthHL"));
-        pulseWidthLabel = new QLabel(layoutWidget);
+        pulseWidthLabel = new QLabel(centralwidget);
         pulseWidthLabel->setObjectName(QString::fromUtf8("pulseWidthLabel"));
 
         pulseWidthHL->addWidget(pulseWidthLabel);
 
-        pulseWidthLE = new QLineEdit(layoutWidget);
+        pulseWidthLE = new QLineEdit(centralwidget);
         pulseWidthLE->setObjectName(QString::fromUtf8("pulseWidthLE"));
 
         pulseWidthHL->addWidget(pulseWidthLE);
@@ -193,12 +188,12 @@ public:
         GraphicsHL->setObjectName(QString::fromUtf8("GraphicsHL"));
         ReflVL = new QVBoxLayout();
         ReflVL->setObjectName(QString::fromUtf8("ReflVL"));
-        reflGV = new QGraphicsView(layoutWidget);
+        reflGV = new QGraphicsView(centralwidget);
         reflGV->setObjectName(QString::fromUtf8("reflGV"));
 
         ReflVL->addWidget(reflGV);
 
-        reflLabel = new QLabel(layoutWidget);
+        reflLabel = new QLabel(centralwidget);
         reflLabel->setObjectName(QString::fromUtf8("reflLabel"));
 
         ReflVL->addWidget(reflLabel);
@@ -206,23 +201,11 @@ public:
 
         GraphicsHL->addLayout(ReflVL);
 
-        WaterfallVL = new QVBoxLayout();
-        WaterfallVL->setObjectName(QString::fromUtf8("WaterfallVL"));
-        waterfallGV = new QGraphicsView(layoutWidget);
-        waterfallGV->setObjectName(QString::fromUtf8("waterfallGV"));
-
-        WaterfallVL->addWidget(waterfallGV);
-
-        waterfallLabel = new QLabel(layoutWidget);
-        waterfallLabel->setObjectName(QString::fromUtf8("waterfallLabel"));
-
-        WaterfallVL->addWidget(waterfallLabel);
-
-
-        GraphicsHL->addLayout(WaterfallVL);
-
 
         mainVL->addLayout(GraphicsHL);
+
+
+        verticalLayout->addLayout(mainVL);
 
         MainWindow->setCentralWidget(centralwidget);
         menuBar = new QMenuBar(MainWindow);
@@ -256,7 +239,6 @@ public:
         pulseFreqLabel->setText(QCoreApplication::translate("MainWindow", "\320\247\320\260\321\201\321\202\320\276\321\202\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\276\320\262", nullptr));
         pulseWidthLabel->setText(QCoreApplication::translate("MainWindow", "\320\250\320\270\321\200\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", nullptr));
         reflLabel->setText(QCoreApplication::translate("MainWindow", "\320\240\320\265\321\204\320\273\320\265\320\272\321\202\320\276\320\263\321\200\320\260\320\274\320\274\320\260", nullptr));
-        waterfallLabel->setText(QCoreApplication::translate("MainWindow", "\320\222\320\276\320\264\320\276\320\277\320\260\320\264", nullptr));
         systemMenu->setTitle(QCoreApplication::translate("MainWindow", "\320\241\320\270\321\201\321\202\320\265\320\274\320\260", nullptr));
         aboutMenu->setTitle(QCoreApplication::translate("MainWindow", "\320\241\320\277\321\200\320\260\320\262\320\272\320\260", nullptr));
     } // retranslateUi

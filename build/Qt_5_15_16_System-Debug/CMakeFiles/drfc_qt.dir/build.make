@@ -177,19 +177,19 @@ CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/georgy/drfc_qt/src/MenuBar/MenuBar.cpp -o CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.s
 
-CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o: CMakeFiles/drfc_qt.dir/flags.make
-CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o: /home/georgy/drfc_qt/src/LabeledLineEdit/LabeledLineEdit.cpp
-CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o: CMakeFiles/drfc_qt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o -MF CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o.d -o CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o -c /home/georgy/drfc_qt/src/LabeledLineEdit/LabeledLineEdit.cpp
+CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o: CMakeFiles/drfc_qt.dir/flags.make
+CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o: /home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.cpp
+CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o: CMakeFiles/drfc_qt.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/georgy/drfc_qt/src/build/Qt_5_15_16_System-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o -MF CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o.d -o CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o -c /home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.cpp
 
-CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/georgy/drfc_qt/src/LabeledLineEdit/LabeledLineEdit.cpp > CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.i
+CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.cpp > CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.i
 
-CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/georgy/drfc_qt/src/LabeledLineEdit/LabeledLineEdit.cpp -o CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.s
+CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.cpp -o CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.s
 
 # Object files for target drfc_qt
 drfc_qt_OBJECTS = \
@@ -200,7 +200,7 @@ drfc_qt_OBJECTS = \
 "CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.o" \
 "CMakeFiles/drfc_qt.dir/FileWriter/FileWriter.cpp.o" \
 "CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o" \
-"CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o"
+"CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o"
 
 # External object files for target drfc_qt
 drfc_qt_EXTERNAL_OBJECTS =
@@ -212,7 +212,7 @@ drfc_qt: CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o
 drfc_qt: CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.o
 drfc_qt: CMakeFiles/drfc_qt.dir/FileWriter/FileWriter.cpp.o
 drfc_qt: CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o
-drfc_qt: CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o
+drfc_qt: CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o
 drfc_qt: CMakeFiles/drfc_qt.dir/build.make
 drfc_qt: CMakeFiles/drfc_qt.dir/compiler_depend.ts
 drfc_qt: /usr/lib/libQt5Network.so.5.15.16

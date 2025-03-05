@@ -1,5 +1,5 @@
-/home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/O5ZBPDTSZK/moc_DataTransmissionHandler.cpp: /home/georgy/drfc_qt/src/DataTransmissionHandler/DataTransmissionHandler.h \
-  /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/moc_predefs.h \
+/home/georgy/drfc_qt/build/debug/drfc_qt_autogen/O5ZBPDTSZK/moc_DataTransmissionHandler.cpp: /home/georgy/drfc_qt/src/DataTransmissionHandler/DataTransmissionHandler.h \
+  /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm/errno.h \

@@ -50,6 +50,10 @@ void GUI::refreshComPorts() {
 }
 
 void GUI::startReflRead() {
+    dth->setLineLength(uiDAS->lineLengthLE->text().toInt());
+    dth->setFreqSendData(uiDAS->pulseFreqLE->text().toInt());
+    dth->setPulseWidth(uiDAS->pulseWidthLE->text().toInt());
+
     fw->start();
 
     dth->start();

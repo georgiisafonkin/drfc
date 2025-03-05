@@ -9,8 +9,8 @@ class LoopedList {
 public:
     explicit LoopedList(int capacity) : capacity(capacity) {}
 
-    using iterator = typename QList<T>::iterator; //зачем typename???
-    using const_iterator = typename QList<T>::const_iterator;
+    using iterator = typename QVector<T>::iterator; //зачем typename???
+    using const_iterator = typename QVector<T>::const_iterator;
 
     iterator begin() { return data.begin(); }
     iterator end() { return data.end(); }

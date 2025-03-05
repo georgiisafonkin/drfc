@@ -78,6 +78,21 @@ void DataTransmissionHandler::setComPortName(const QString &newComPortName)
     comPortName = newComPortName;
 }
 
+void DataTransmissionHandler::setLineLength(int newLineLength)
+{
+    lineLength = newLineLength;
+}
+
+void DataTransmissionHandler::setFreqSendData(int newFreqSendData)
+{
+    freqSendData = newFreqSendData;
+}
+
+void DataTransmissionHandler::setPulseWidth(int newPulseWidth)
+{
+    pulseWidth = newPulseWidth;
+}
+
 void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
     elapsedTimer.restart();
     static int prevNumPack = 0;
@@ -129,6 +144,8 @@ void DataTransmissionHandler::connectToComPort() {
 
 void DataTransmissionHandler::run() {
     qDebug() << "DataTransmissionHandler::run()";
+
+    qDebug() << "lineLength: " << lineLength;
 
     this->sock = new QUdpSocket(this);
     if (!sock->bind(myAddress, myPort)) {

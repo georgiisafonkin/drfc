@@ -14,164 +14,144 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>791</width>
-      <height>551</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="mainVL">
-     <item>
-      <layout class="QHBoxLayout" name="optionsHL">
-       <item>
-        <layout class="QVBoxLayout" name="comPortStartStopVL">
-         <item>
-          <layout class="QVBoxLayout" name="comPortOptionsVL">
-           <item>
-            <widget class="QLabel" name="label_6">
-             <property name="text">
-              <string>Выбрать COM-порт:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="comboBox"/>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_3">
-             <property name="text">
-              <string>Обновить</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton">
-             <property name="text">
-              <string>Выбрать</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="startStopHL">
-           <item>
-            <widget class="QPushButton" name="pushButton_2">
-             <property name="text">
-              <string>Старт</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_4">
-             <property name="text">
-              <string>Стоп</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="parametersVL">
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>Параметры</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="checkBox">
-           <property name="text">
-            <string>Сохранять в файлы</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="lineLengthHL">
-           <item>
-            <widget class="QLabel" name="label_7">
-             <property name="text">
-              <string>Длина линии</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit_3"/>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="pulseFreqHL">
-           <item>
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>Частота импульсов</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit"/>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="pulseWidthHL">
-           <item>
-            <widget class="QLabel" name="label_3">
-             <property name="text">
-              <string>Ширина импульса</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit_2"/>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="GraphicsHL">
-       <item>
-        <layout class="QVBoxLayout" name="ReflVL">
-         <item>
-          <widget class="QGraphicsView" name="graphicsView"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_4">
-           <property name="text">
-            <string>Рефлектограмма</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="WaterfallVL">
-         <item>
-          <widget class="QGraphicsView" name="graphicsView_2"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_5">
-           <property name="text">
-            <string>Водопад</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="mainVL">
+      <item>
+       <layout class="QHBoxLayout" name="optionsHL">
+        <item>
+         <layout class="QVBoxLayout" name="comPortStartStopVL">
+          <item>
+           <layout class="QVBoxLayout" name="comPortOptionsVL">
+            <item>
+             <widget class="QLabel" name="choseComPortLabel">
+              <property name="text">
+               <string>Выбрать COM-порт:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comPortsComboBox"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="refreshPortsButton">
+              <property name="text">
+               <string>Обновить</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="choosePortButtom">
+              <property name="text">
+               <string>Выбрать</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="startStopHL">
+            <item>
+             <widget class="QPushButton" name="startButton">
+              <property name="text">
+               <string>Старт</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="stopButton">
+              <property name="text">
+               <string>Стоп</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="parametersVL">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Параметры</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="saveCheckBox">
+            <property name="text">
+             <string>Сохранять в файлы</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="lineLengthHL">
+            <item>
+             <widget class="QLabel" name="lineLengthLabel">
+              <property name="text">
+               <string>Длина линии</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineLengthLE"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="pulseFreqHL">
+            <item>
+             <widget class="QLabel" name="pulseFreqLabel">
+              <property name="text">
+               <string>Частота импульсов</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="pulseFreqLE"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="pulseWidthHL">
+            <item>
+             <widget class="QLabel" name="pulseWidthLabel">
+              <property name="text">
+               <string>Ширина импульса</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="pulseWidthLE"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="GraphicsHL">
+        <item>
+         <layout class="QVBoxLayout" name="ReflVL">
+          <item>
+           <widget class="QGraphicsView" name="reflGV"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="reflLabel">
+            <property name="text">
+             <string>Рефлектограмма</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

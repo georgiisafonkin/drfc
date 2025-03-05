@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/georgy/drfc_qt/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/georgy/drfc_qt/src/build/debug
+CMAKE_BINARY_DIR = /home/georgy/drfc_qt/build/debug
 
 # Utility rule file for drfc_qt_autogen.
 
@@ -71,9 +71,9 @@ CMakeFiles/drfc_qt_autogen: drfc_qt_autogen/timestamp
 drfc_qt_autogen/timestamp: /usr/bin/moc
 drfc_qt_autogen/timestamp: /usr/bin/uic
 drfc_qt_autogen/timestamp: CMakeFiles/drfc_qt_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/georgy/drfc_qt/src/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target drfc_qt"
-	/usr/bin/cmake -E cmake_autogen /home/georgy/drfc_qt/src/build/debug/CMakeFiles/drfc_qt_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/georgy/drfc_qt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target drfc_qt"
+	/usr/bin/cmake -E cmake_autogen /home/georgy/drfc_qt/build/debug/CMakeFiles/drfc_qt_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/timestamp
 
 CMakeFiles/drfc_qt_autogen.dir/codegen:
 .PHONY : CMakeFiles/drfc_qt_autogen.dir/codegen
@@ -92,6 +92,6 @@ CMakeFiles/drfc_qt_autogen.dir/clean:
 .PHONY : CMakeFiles/drfc_qt_autogen.dir/clean
 
 CMakeFiles/drfc_qt_autogen.dir/depend:
-	cd /home/georgy/drfc_qt/src/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/georgy/drfc_qt/src /home/georgy/drfc_qt/src /home/georgy/drfc_qt/src/build/debug /home/georgy/drfc_qt/src/build/debug /home/georgy/drfc_qt/src/build/debug/CMakeFiles/drfc_qt_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/georgy/drfc_qt/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/georgy/drfc_qt/src /home/georgy/drfc_qt/src /home/georgy/drfc_qt/build/debug /home/georgy/drfc_qt/build/debug /home/georgy/drfc_qt/build/debug/CMakeFiles/drfc_qt_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/drfc_qt_autogen.dir/depend
 

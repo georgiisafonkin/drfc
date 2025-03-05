@@ -12,10 +12,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/georgy/drfc_qt/src/DataTransmissionHandler/DataTransmissionHandler.cpp" "CMakeFiles/drfc_qt.dir/DataTransmissionHandler/DataTransmissionHandler.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/DataTransmissionHandler/DataTransmissionHandler.cpp.o.d"
   "/home/georgy/drfc_qt/src/FileWriter/FileWriter.cpp" "CMakeFiles/drfc_qt.dir/FileWriter/FileWriter.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/FileWriter/FileWriter.cpp.o.d"
   "/home/georgy/drfc_qt/src/GUI/gui.cpp" "CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o.d"
-  "/home/georgy/drfc_qt/src/LabeledLineEdit/LabeledLineEdit.cpp" "CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/LabeledLineEdit/LabeledLineEdit.cpp.o.d"
   "/home/georgy/drfc_qt/src/MenuBar/MenuBar.cpp" "CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o.d"
   "/home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.cpp" "CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/RealTimeChart/RealTimeChart.cpp.o.d"
-  "/home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/mocs_compilation.cpp" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o.d"
+  "/home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.cpp" "CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/RealTimeWaterfall/RealTimeWaterfall.cpp.o.d"
+  "/home/georgy/drfc_qt/build/debug/drfc_qt_autogen/mocs_compilation.cpp" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o.d"
   "/home/georgy/drfc_qt/src/main.cpp" "CMakeFiles/drfc_qt.dir/main.cpp.o" "gcc" "CMakeFiles/drfc_qt.dir/main.cpp.o.d"
   "" "drfc_qt" "gcc" "CMakeFiles/drfc_qt.dir/link.d"
   )

@@ -1,10 +1,10 @@
-/home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/2LCCYRVYXB/moc_gui.cpp: /home/georgy/drfc_qt/src/GUI/gui.h \
-  /home/georgy/drfc_qt/src/build/debug/drfc_qt_autogen/moc_predefs.h \
+/home/georgy/drfc_qt/build/debug/drfc_qt_autogen/2LCCYRVYXB/moc_gui.cpp: /home/georgy/drfc_qt/src/GUI/gui.h \
+  /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/moc_predefs.h \
   /home/georgy/drfc_qt/src/DataTransmissionHandler/DataTransmissionHandler.h \
   /home/georgy/drfc_qt/src/FileWriter/FileWriter.h \
-  /home/georgy/drfc_qt/src/LabeledLineEdit/LabeledLineEdit.h \
-  /home/georgy/drfc_qt/src/MenuBar/MenuBar.h \
+  /home/georgy/drfc_qt/src/LoopedList/LoopedList.h \
   /home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.h \
+  /home/georgy/drfc_qt/src/mainWindowDAS/mainWindowDAS.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm/errno.h \
@@ -103,6 +103,7 @@
   /usr/include/c++/14.2.1/bits/hash_bytes.h \
   /usr/include/c++/14.2.1/bits/invoke.h \
   /usr/include/c++/14.2.1/bits/ios_base.h \
+  /usr/include/c++/14.2.1/bits/istream.tcc \
   /usr/include/c++/14.2.1/bits/iterator_concepts.h \
   /usr/include/c++/14.2.1/bits/list.tcc \
   /usr/include/c++/14.2.1/bits/locale_classes.h \
@@ -201,6 +202,8 @@
   /usr/include/c++/14.2.1/initializer_list \
   /usr/include/c++/14.2.1/ios \
   /usr/include/c++/14.2.1/iosfwd \
+  /usr/include/c++/14.2.1/iostream \
+  /usr/include/c++/14.2.1/istream \
   /usr/include/c++/14.2.1/iterator \
   /usr/include/c++/14.2.1/limits \
   /usr/include/c++/14.2.1/list \
@@ -272,6 +275,7 @@
   /usr/include/qt/QtCore/QThreadPool \
   /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/QVariant \
+  /usr/include/qt/QtCore/QVector \
   /usr/include/qt/QtCore/QWaitCondition \
   /usr/include/qt/QtCore/QtGlobal \
   /usr/include/qt/QtCore/qabstractitemmodel.h \
@@ -289,11 +293,13 @@
   /usr/include/qt/QtCore/qcontainerfwd.h \
   /usr/include/qt/QtCore/qcontainertools_impl.h \
   /usr/include/qt/QtCore/qcontiguouscache.h \
+  /usr/include/qt/QtCore/qcoreapplication.h \
   /usr/include/qt/QtCore/qcoreevent.h \
   /usr/include/qt/QtCore/qdatastream.h \
   /usr/include/qt/QtCore/qdeadlinetimer.h \
   /usr/include/qt/QtCore/qdebug.h \
   /usr/include/qt/QtCore/qelapsedtimer.h \
+  /usr/include/qt/QtCore/qeventloop.h \
   /usr/include/qt/QtCore/qfile.h \
   /usr/include/qt/QtCore/qfiledevice.h \
   /usr/include/qt/QtCore/qflags.h \
@@ -364,8 +370,10 @@
   /usr/include/qt/QtGui/qfont.h \
   /usr/include/qt/QtGui/qfontinfo.h \
   /usr/include/qt/QtGui/qfontmetrics.h \
+  /usr/include/qt/QtGui/qguiapplication.h \
   /usr/include/qt/QtGui/qicon.h \
   /usr/include/qt/QtGui/qimage.h \
+  /usr/include/qt/QtGui/qinputmethod.h \
   /usr/include/qt/QtGui/qkeysequence.h \
   /usr/include/qt/QtGui/qmatrix.h \
   /usr/include/qt/QtGui/qpaintdevice.h \
@@ -397,16 +405,18 @@
   /usr/include/qt/QtSerialPort/QSerialPort \
   /usr/include/qt/QtSerialPort/qserialport.h \
   /usr/include/qt/QtSerialPort/qserialportglobal.h \
+  /usr/include/qt/QtWidgets/QAction \
+  /usr/include/qt/QtWidgets/QApplication \
+  /usr/include/qt/QtWidgets/QCheckBox \
   /usr/include/qt/QtWidgets/QComboBox \
-  /usr/include/qt/QtWidgets/QFormLayout \
   /usr/include/qt/QtWidgets/QGraphicsView \
   /usr/include/qt/QtWidgets/QGraphicsWidget \
+  /usr/include/qt/QtWidgets/QHBoxLayout \
   /usr/include/qt/QtWidgets/QLabel \
-  /usr/include/qt/QtWidgets/QLayout \
   /usr/include/qt/QtWidgets/QLineEdit \
   /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/QMenu \
   /usr/include/qt/QtWidgets/QMenuBar \
-  /usr/include/qt/QtWidgets/QMessageBox \
   /usr/include/qt/QtWidgets/QPushButton \
   /usr/include/qt/QtWidgets/QVBoxLayout \
   /usr/include/qt/QtWidgets/QWidget \
@@ -417,10 +427,10 @@
   /usr/include/qt/QtWidgets/qabstractspinbox.h \
   /usr/include/qt/QtWidgets/qaction.h \
   /usr/include/qt/QtWidgets/qactiongroup.h \
+  /usr/include/qt/QtWidgets/qapplication.h \
   /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qcheckbox.h \
   /usr/include/qt/QtWidgets/qcombobox.h \
-  /usr/include/qt/QtWidgets/qdialog.h \
-  /usr/include/qt/QtWidgets/qformlayout.h \
   /usr/include/qt/QtWidgets/qframe.h \
   /usr/include/qt/QtWidgets/qgraphicsitem.h \
   /usr/include/qt/QtWidgets/qgraphicslayoutitem.h \
@@ -435,7 +445,6 @@
   /usr/include/qt/QtWidgets/qmainwindow.h \
   /usr/include/qt/QtWidgets/qmenu.h \
   /usr/include/qt/QtWidgets/qmenubar.h \
-  /usr/include/qt/QtWidgets/qmessagebox.h \
   /usr/include/qt/QtWidgets/qpushbutton.h \
   /usr/include/qt/QtWidgets/qrubberband.h \
   /usr/include/qt/QtWidgets/qscrollarea.h \

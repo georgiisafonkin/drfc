@@ -16,13 +16,19 @@ public:
     void recieveData();
     void setComPortName(const QString &newComPortName);
 
+    void setLineLength(int newLineLength);
+
+    void setFreqSendData(int newFreqSendData);
+
+    void setPulseWidth(int newPulseWidth);
+
 private:
     //constants for start message
     float Ng = 1.46;
     int lineLength = 5000;
     int lengthUdpPack = 5000;
     int freqSendData = 100;
-    int pulseWidth = 100; //TODO: 100 nanoseconds
+    int pulseWidth = 100;
 
     //for connection
     QUdpSocket* sock;

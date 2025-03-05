@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../DataTransmissionHandler/DataTransmissionHandler.h"
+#include "../../../../src/DataTransmissionHandler/DataTransmissionHandler.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #include <QtCore/QList>
@@ -24,7 +24,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_DataTransmissionHandler_t {
     QByteArrayData data[8];
-    char stringdata0[119];
+    char stringdata0[117];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,16 +36,16 @@ static const qt_meta_stringdata_DataTransmissionHandler_t qt_meta_stringdata_Dat
 QT_MOC_LITERAL(0, 0, 23), // "DataTransmissionHandler"
 QT_MOC_LITERAL(1, 24, 21), // "ReflectogramDataReady"
 QT_MOC_LITERAL(2, 46, 0), // ""
-QT_MOC_LITERAL(3, 47, 25), // "QPair<quint16,QByteArray>"
-QT_MOC_LITERAL(4, 73, 7), // "newPair"
-QT_MOC_LITERAL(5, 81, 14), // "ChartDataReady"
-QT_MOC_LITERAL(6, 96, 14), // "QList<quint16>"
-QT_MOC_LITERAL(7, 111, 7) // "numbers"
+QT_MOC_LITERAL(3, 47, 24), // "QPair<qint16,QByteArray>"
+QT_MOC_LITERAL(4, 72, 7), // "newPair"
+QT_MOC_LITERAL(5, 80, 14), // "ChartDataReady"
+QT_MOC_LITERAL(6, 95, 13), // "QList<qint16>"
+QT_MOC_LITERAL(7, 109, 7) // "numbers"
 
     },
     "DataTransmissionHandler\0ReflectogramDataReady\0"
-    "\0QPair<quint16,QByteArray>\0newPair\0"
-    "ChartDataReady\0QList<quint16>\0numbers"
+    "\0QPair<qint16,QByteArray>\0newPair\0"
+    "ChartDataReady\0QList<qint16>\0numbers"
 };
 #undef QT_MOC_LITERAL
 
@@ -79,8 +79,8 @@ void DataTransmissionHandler::qt_static_metacall(QObject *_o, QMetaObject::Call 
         auto *_t = static_cast<DataTransmissionHandler *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->ReflectogramDataReady((*reinterpret_cast< const QPair<quint16,QByteArray>(*)>(_a[1]))); break;
-        case 1: _t->ChartDataReady((*reinterpret_cast< const QList<quint16>(*)>(_a[1]))); break;
+        case 0: _t->ReflectogramDataReady((*reinterpret_cast< const QPair<qint16,QByteArray>(*)>(_a[1]))); break;
+        case 1: _t->ChartDataReady((*reinterpret_cast< const QList<qint16>(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -90,21 +90,21 @@ void DataTransmissionHandler::qt_static_metacall(QObject *_o, QMetaObject::Call 
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QList<quint16> >(); break;
+                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QList<qint16> >(); break;
             }
             break;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (DataTransmissionHandler::*)(const QPair<quint16,QByteArray> & );
+            using _t = void (DataTransmissionHandler::*)(const QPair<qint16,QByteArray> & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&DataTransmissionHandler::ReflectogramDataReady)) {
                 *result = 0;
                 return;
             }
         }
         {
-            using _t = void (DataTransmissionHandler::*)(const QList<quint16> & );
+            using _t = void (DataTransmissionHandler::*)(const QList<qint16> & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&DataTransmissionHandler::ChartDataReady)) {
                 *result = 1;
                 return;
@@ -154,14 +154,14 @@ int DataTransmissionHandler::qt_metacall(QMetaObject::Call _c, int _id, void **_
 }
 
 // SIGNAL 0
-void DataTransmissionHandler::ReflectogramDataReady(const QPair<quint16,QByteArray> & _t1)
+void DataTransmissionHandler::ReflectogramDataReady(const QPair<qint16,QByteArray> & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1
-void DataTransmissionHandler::ChartDataReady(const QList<quint16> & _t1)
+void DataTransmissionHandler::ChartDataReady(const QList<qint16> & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
