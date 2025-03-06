@@ -374,4 +374,6 @@ CMakeFiles/drfc_qt.dir/GUI/gui.cpp.o: \
  /usr/include/qt/QtWidgets/qdialog.h \
  /usr/include/qt/QtSerialPort/QSerialPortInfo \
  /usr/include/qt/QtSerialPort/qserialportinfo.h \
- /usr/include/qt/QtCore/qdebug.h /usr/include/qt/QtWidgets/QLineEdit
+ /usr/include/qt/QtCore/qdebug.h /usr/include/qt/QtWidgets/QLineEdit \
+ /usr/include/qt/QtNetwork/QNetworkInterface \
+ /usr/include/qt/QtNetwork/qnetworkinterface.h

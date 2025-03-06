@@ -20,6 +20,10 @@ RealTimeChart::RealTimeChart(QWidget *parent)
     QVBoxLayout *layout = new QVBoxLayout();
     layout->addWidget(chartView);
     setLayout(layout);
+
+    if (!chart->axes(Qt::Vertical).isEmpty()) {
+        chart->axes(Qt::Vertical).first()->setRange(-256, 256);
+    }
 }
 
 void RealTimeChart::updateChart(const QList<qint16>& numbers) {
@@ -39,9 +43,6 @@ void RealTimeChart::updateChart(const QList<qint16>& numbers) {
 
     if (!chart->axes(Qt::Horizontal).isEmpty()) {
         chart->axes(Qt::Horizontal).first()->setRange(0, numbers.size());
-    }
-    if (!chart->axes(Qt::Vertical).isEmpty()) {
-        chart->axes(Qt::Vertical).first()->setRange(minVertVal, maxVertVal);
     }
 }
 

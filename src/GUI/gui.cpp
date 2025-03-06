@@ -5,6 +5,7 @@
 #include <QSerialPortInfo>
 #include <qdebug.h>
 #include <QLineEdit>
+#include <QNetworkInterface>
 
 GUI::GUI(QWidget *parent)
     : QMainWindow{parent}, uiDAS(new Ui::MainWindow()),
@@ -36,7 +37,7 @@ GUI::GUI(QWidget *parent)
     connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateChartsData, Qt::QueuedConnection);
 
     connect(plotTimer, &QTimer::timeout, this, &GUI::plotCharts);
-    plotTimer->start(10); //41ms for 24fps charts
+    plotTimer->start(1); //41ms for 24fps charts
 
 }
 
@@ -44,6 +45,7 @@ void GUI::refreshComPorts() {
     uiDAS->comPortsComboBox->clear();
 
     const QList<QSerialPortInfo> ports = QSerialPortInfo::availablePorts();
+    // QList<QNetworkInterface> interfaces = QNetworkInterface::allInterfaces();
     for (const QSerialPortInfo &port : ports) {
         uiDAS->comPortsComboBox->addItem(port.portName()) ;
     }
