@@ -45,16 +45,6 @@ void DataTransmissionHandler::startDataTransmission() {
 void DataTransmissionHandler::recieveData() {
     elapsedTimer.start();
     while (!isInterruptionRequested()) {
-        // while (true) {
-        //     if (chosenPort->waitForReadyRead(1000)) {
-        //         QByteArray datas = chosenPort->readAll();
-        //         qDebug() << "from port: " << QString(datas);
-        //     }
-        // }
-
-        // QByteArray datagram;
-        // datagram.resize(lengthUdpPack + 5);  // Adjust size as needed
-
         // Receive the data from the socket
         QNetworkDatagram networkDatagram;
         networkDatagram = sock->receiveDatagram(lengthUdpPack + 5);

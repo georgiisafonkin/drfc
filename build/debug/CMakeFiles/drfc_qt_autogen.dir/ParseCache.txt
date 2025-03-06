@@ -1557,8 +1557,8 @@
  mdp:/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
  mdp:/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h
 /home/georgy/drfc_qt/src/mainWindowDAS/mainWindowDAS.h
-/home/georgy/drfc_qt/src/GUI/gui.cpp
 /home/georgy/drfc_qt/src/LoopedList/LoopedList.h
+/home/georgy/drfc_qt/src/GUI/gui.cpp
 /home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.h
  mmc:Q_OBJECT
  mdp:/home/georgy/drfc_qt/build/debug/drfc_qt_autogen/moc_predefs.h

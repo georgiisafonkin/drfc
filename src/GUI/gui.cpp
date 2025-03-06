@@ -32,7 +32,7 @@ GUI::GUI(QWidget *parent)
     refreshComPorts();
 
     connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);
-    connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateReflsLoopedList, Qt::QueuedConnection);
+    // connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateReflsLoopedList, Qt::QueuedConnection);
     connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateChartsData, Qt::QueuedConnection);
 
     connect(plotTimer, &QTimer::timeout, this, &GUI::plotCharts);

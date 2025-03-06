@@ -26,7 +26,7 @@ private:
     //constants for start message
     float Ng = 1.46;
     int lineLength = 5000;
-    int lengthUdpPack = 5000;
+    int lengthUdpPack = 1024;
     int pulseFreq = 100;
     int pulseWidth = 100;
 
