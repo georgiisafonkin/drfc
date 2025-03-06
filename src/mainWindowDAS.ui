@@ -89,6 +89,12 @@
            <layout class="QHBoxLayout" name="lineLengthHL">
             <item>
              <widget class="QLabel" name="lineLengthLabel">
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>26</height>
+               </size>
+              </property>
               <property name="text">
                <string>Длина линии</string>
               </property>
@@ -103,6 +109,12 @@
            <layout class="QHBoxLayout" name="pulseFreqHL">
             <item>
              <widget class="QLabel" name="pulseFreqLabel">
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>26</height>
+               </size>
+              </property>
               <property name="text">
                <string>Частота импульсов</string>
               </property>
@@ -117,6 +129,12 @@
            <layout class="QHBoxLayout" name="pulseWidthHL">
             <item>
              <widget class="QLabel" name="pulseWidthLabel">
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>26</height>
+               </size>
+              </property>
               <property name="text">
                <string>Ширина импульса</string>
               </property>

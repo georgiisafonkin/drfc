@@ -18,7 +18,7 @@ public:
 
     void setLineLength(int newLineLength);
 
-    void setFreqSendData(int newFreqSendData);
+    void setPulseFreq(int newFreqSendData);
 
     void setPulseWidth(int newPulseWidth);
 
@@ -27,7 +27,7 @@ private:
     float Ng = 1.46;
     int lineLength = 5000;
     int lengthUdpPack = 5000;
-    int freqSendData = 100;
+    int pulseFreq = 100;
     int pulseWidth = 100;
 
     //for connection

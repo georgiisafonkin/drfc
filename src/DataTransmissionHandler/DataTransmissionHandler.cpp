@@ -27,8 +27,8 @@ QByteArray DataTransmissionHandler::createStartMessage() {
     message.append(static_cast<qint16>(lengthUdpPack) >> 8);
     message.append(static_cast<qint16>(lengthUdpPack) & 0xff);
 
-    message.append(static_cast<qint16>(freqSendData) >> 8);
-    message.append(static_cast<qint16>(freqSendData) & 0xff);
+    message.append(static_cast<qint16>(pulseFreq) >> 8);
+    message.append(static_cast<qint16>(pulseFreq) & 0xff);
 
     message.append(static_cast<qint16>(pulseWidth) >> 8);
     message.append(static_cast<qint16>(pulseWidth) & 0xff);
@@ -83,9 +83,9 @@ void DataTransmissionHandler::setLineLength(int newLineLength)
     lineLength = newLineLength;
 }
 
-void DataTransmissionHandler::setFreqSendData(int newFreqSendData)
+void DataTransmissionHandler::setPulseFreq(int newFreqSendData)
 {
-    freqSendData = newFreqSendData;
+    pulseFreq = newFreqSendData;
 }
 
 void DataTransmissionHandler::setPulseWidth(int newPulseWidth)
@@ -146,6 +146,8 @@ void DataTransmissionHandler::run() {
     qDebug() << "DataTransmissionHandler::run()";
 
     qDebug() << "lineLength: " << lineLength;
+    qDebug() << "pulseWidth: " << pulseWidth;
+    qDebug() << "pulseFreq: " << pulseFreq;
 
     this->sock = new QUdpSocket(this);
     if (!sock->bind(myAddress, myPort)) {

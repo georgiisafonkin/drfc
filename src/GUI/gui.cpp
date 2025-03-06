@@ -50,9 +50,18 @@ void GUI::refreshComPorts() {
 }
 
 void GUI::startReflRead() {
-    dth->setLineLength(uiDAS->lineLengthLE->text().toInt());
-    dth->setFreqSendData(uiDAS->pulseFreqLE->text().toInt());
-    dth->setPulseWidth(uiDAS->pulseWidthLE->text().toInt());
+    QString readLineLength = uiDAS->lineLengthLE->text();
+    if (!readLineLength.isEmpty()) {
+        dth->setLineLength(readLineLength.toInt());
+    }
+    QString readPulseFreq = uiDAS->pulseFreqLE->text();
+    if (!readPulseFreq.isEmpty()) {
+        dth->setPulseFreq(readPulseFreq.toInt());
+    }
+    QString readPulseWidth = uiDAS->pulseWidthLE->text();
+    if (!readPulseWidth.isEmpty()) {
+        dth->setPulseWidth(readPulseWidth.toInt());
+    }
 
     fw->start();
 

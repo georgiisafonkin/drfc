@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'mainwindow.ui'
+** Form generated from reading UI file 'mainWindowDAS.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.15.16
 **
@@ -137,6 +137,7 @@ public:
         lineLengthHL->setObjectName(QString::fromUtf8("lineLengthHL"));
         lineLengthLabel = new QLabel(centralwidget);
         lineLengthLabel->setObjectName(QString::fromUtf8("lineLengthLabel"));
+        lineLengthLabel->setMinimumSize(QSize(120, 26));
 
         lineLengthHL->addWidget(lineLengthLabel);
 
@@ -152,6 +153,7 @@ public:
         pulseFreqHL->setObjectName(QString::fromUtf8("pulseFreqHL"));
         pulseFreqLabel = new QLabel(centralwidget);
         pulseFreqLabel->setObjectName(QString::fromUtf8("pulseFreqLabel"));
+        pulseFreqLabel->setMinimumSize(QSize(120, 26));
 
         pulseFreqHL->addWidget(pulseFreqLabel);
 
@@ -167,6 +169,7 @@ public:
         pulseWidthHL->setObjectName(QString::fromUtf8("pulseWidthHL"));
         pulseWidthLabel = new QLabel(centralwidget);
         pulseWidthLabel->setObjectName(QString::fromUtf8("pulseWidthLabel"));
+        pulseWidthLabel->setMinimumSize(QSize(120, 26));
 
         pulseWidthHL->addWidget(pulseWidthLabel);
 
