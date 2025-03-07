@@ -124,12 +124,6 @@
 			null
 		],
 		[
-			"/home/georgy/drfc_qt/src/MenuBar/MenuBar.h",
-			"MU",
-			"XD6G3YPSO6/moc_MenuBar.cpp",
-			null
-		],
-		[
 			"/home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.h",
 			"MU",
 			"73CGNLUYYY/moc_RealTimeChart.cpp",
@@ -218,7 +212,6 @@
 		],
 		[ "/home/georgy/drfc_qt/src/FileWriter/FileWriter.cpp", "MU", null ],
 		[ "/home/georgy/drfc_qt/src/GUI/gui.cpp", "MU", null ],
-		[ "/home/georgy/drfc_qt/src/MenuBar/MenuBar.cpp", "MU", null ],
 		[
 			"/home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.cpp",
 			"MU",

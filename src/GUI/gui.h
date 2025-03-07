@@ -43,7 +43,7 @@ private:
     qint32 reflsListSize = 200;
     LoopedList<QList<qint16>>* reflsLoopedList;
     void updateChartsData(const QList<qint16>& numbers); //add chart to plotQueue
-    void updateReflsLoopedList(const QList<qint16>& numbers); //refl to waterfall list
+    void updateReflsLoopedList(const QList<qint16>& numbers); //это для дальнейшей отрисовки водопада, но там ничё не реализованно почти
     void plotCharts();
     RealTimeChart* realTimeChart = new RealTimeChart();
     QMutex* queueMutex;

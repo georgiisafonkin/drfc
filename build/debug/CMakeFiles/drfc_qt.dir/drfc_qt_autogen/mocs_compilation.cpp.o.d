@@ -375,11 +375,6 @@ CMakeFiles/drfc_qt.dir/drfc_qt_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtWidgets/QPushButton /usr/include/qt/QtCore/QThreadPool \
  /usr/include/qt/QtCore/qthreadpool.h /usr/include/qt/QtCore/qthread.h \
  /usr/include/qt/QtCore/qrunnable.h /usr/include/qt/QtWidgets/QVBoxLayout \
- /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/XD6G3YPSO6/moc_MenuBar.cpp \
- /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/XD6G3YPSO6/../../../../src/MenuBar/MenuBar.h \
- /usr/include/qt/QtWidgets/QMenuBar /usr/include/qt/QtWidgets/QMessageBox \
- /usr/include/qt/QtWidgets/qmessagebox.h \
- /usr/include/qt/QtWidgets/qdialog.h \
  /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/73CGNLUYYY/moc_RealTimeChart.cpp \
  /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/73CGNLUYYY/../../../../src/RealTimeChart/RealTimeChart.h \
  /home/georgy/drfc_qt/build/debug/drfc_qt_autogen/PCUUY5HOZF/moc_RealTimeWaterfall.cpp \

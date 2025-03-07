@@ -272,30 +272,6 @@ GUI/gui.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/GUI/gui.cpp.s
 .PHONY : GUI/gui.cpp.s
 
-MenuBar/MenuBar.o: MenuBar/MenuBar.cpp.o
-.PHONY : MenuBar/MenuBar.o
-
-# target to build an object file
-MenuBar/MenuBar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.o
-.PHONY : MenuBar/MenuBar.cpp.o
-
-MenuBar/MenuBar.i: MenuBar/MenuBar.cpp.i
-.PHONY : MenuBar/MenuBar.i
-
-# target to preprocess a source file
-MenuBar/MenuBar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.i
-.PHONY : MenuBar/MenuBar.cpp.i
-
-MenuBar/MenuBar.s: MenuBar/MenuBar.cpp.s
-.PHONY : MenuBar/MenuBar.s
-
-# target to generate assembly for a file
-MenuBar/MenuBar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/drfc_qt.dir/build.make CMakeFiles/drfc_qt.dir/MenuBar/MenuBar.cpp.s
-.PHONY : MenuBar/MenuBar.cpp.s
-
 RealTimeChart/RealTimeChart.o: RealTimeChart/RealTimeChart.cpp.o
 .PHONY : RealTimeChart/RealTimeChart.o
 
@@ -416,9 +392,6 @@ help:
 	@echo "... GUI/gui.o"
 	@echo "... GUI/gui.i"
 	@echo "... GUI/gui.s"
-	@echo "... MenuBar/MenuBar.o"
-	@echo "... MenuBar/MenuBar.i"
-	@echo "... MenuBar/MenuBar.s"
 	@echo "... RealTimeChart/RealTimeChart.o"
 	@echo "... RealTimeChart/RealTimeChart.i"
 	@echo "... RealTimeChart/RealTimeChart.s"

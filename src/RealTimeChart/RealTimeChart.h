@@ -14,6 +14,8 @@
 
 QT_CHARTS_USE_NAMESPACE
 
+//класс для отрисовки рефлектограммы
+
 class RealTimeChart : public QWidget
 {
     Q_OBJECT

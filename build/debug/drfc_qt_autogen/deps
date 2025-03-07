@@ -10,8 +10,6 @@ drfc_qt_autogen/timestamp: \
 	/home/georgy/drfc_qt/src/GUI/gui.cpp \
 	/home/georgy/drfc_qt/src/GUI/gui.h \
 	/home/georgy/drfc_qt/src/LoopedList/LoopedList.h \
-	/home/georgy/drfc_qt/src/MenuBar/MenuBar.cpp \
-	/home/georgy/drfc_qt/src/MenuBar/MenuBar.h \
 	/home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.cpp \
 	/home/georgy/drfc_qt/src/RealTimeChart/RealTimeChart.h \
 	/home/georgy/drfc_qt/src/RealTimeWaterfall/RealTimeWaterfall.cpp \
@@ -431,7 +429,6 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtWidgets/QMainWindow \
 	/usr/include/qt/QtWidgets/QMenu \
 	/usr/include/qt/QtWidgets/QMenuBar \
-	/usr/include/qt/QtWidgets/QMessageBox \
 	/usr/include/qt/QtWidgets/QPushButton \
 	/usr/include/qt/QtWidgets/QVBoxLayout \
 	/usr/include/qt/QtWidgets/QWidget \
@@ -446,7 +443,6 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtWidgets/qboxlayout.h \
 	/usr/include/qt/QtWidgets/qcheckbox.h \
 	/usr/include/qt/QtWidgets/qcombobox.h \
-	/usr/include/qt/QtWidgets/qdialog.h \
 	/usr/include/qt/QtWidgets/qframe.h \
 	/usr/include/qt/QtWidgets/qgraphicsitem.h \
 	/usr/include/qt/QtWidgets/qgraphicslayoutitem.h \
@@ -461,7 +457,6 @@ drfc_qt_autogen/timestamp: \
 	/usr/include/qt/QtWidgets/qmainwindow.h \
 	/usr/include/qt/QtWidgets/qmenu.h \
 	/usr/include/qt/QtWidgets/qmenubar.h \
-	/usr/include/qt/QtWidgets/qmessagebox.h \
 	/usr/include/qt/QtWidgets/qpushbutton.h \
 	/usr/include/qt/QtWidgets/qrubberband.h \
 	/usr/include/qt/QtWidgets/qscrollarea.h \

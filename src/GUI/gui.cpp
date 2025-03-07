@@ -27,21 +27,21 @@ GUI::GUI(QWidget *parent)
 
     //separeted thread for data transmission, processing
     dth = new DataTransmissionHandler(this);
-
     fw = new FileWriter(this);
 
+    //устанавливаем в поля с параметрами значения по умолчанию
     uiDAS->lineLengthLE->setText(QString::number(dth->getLineLength()));
     uiDAS->pulseWidthLE->setText(QString::number(dth->getPulseWidth()));
     uiDAS->pulseFreqLE->setText(QString::number(dth->getPulseFreq()));
 
     refreshComPorts();
 
+    //соединяем сигналы и их обработчики, по сути это настройка межпоточного взаимодействия
     connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);
-    // connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateReflsLoopedList, Qt::QueuedConnection);
     connect(dth, &DataTransmissionHandler::ChartDataReady, this, &GUI::updateChartsData, Qt::QueuedConnection);
 
     connect(plotTimer, &QTimer::timeout, this, &GUI::plotCharts);
-    plotTimer->start(1); //41ms for 24fps charts
+    plotTimer->start(1); //сигналим поток гуи, что пора отрисовать имеющиеся в plotQueue данные
 
 }
 
@@ -49,7 +49,6 @@ void GUI::refreshComPorts() {
     uiDAS->comPortsComboBox->clear();
 
     const QList<QSerialPortInfo> ports = QSerialPortInfo::availablePorts();
-    // QList<QNetworkInterface> interfaces = QNetworkInterface::allInterfaces();
     for (const QSerialPortInfo &port : ports) {
         uiDAS->comPortsComboBox->addItem(port.portName()) ;
     }
@@ -85,13 +84,7 @@ void GUI::selectComPort() {
     QString selectedPort = uiDAS->comPortsComboBox->currentText();
     if (!selectedPort.isEmpty()) {
         qDebug() << "Selected COM Port:" << selectedPort;
-
-        // fw->start();
-
         dth->setComPortName(selectedPort);
-        // dth->start();
-
-        // plotCharts();
     } else {
         qDebug() << "No COM Port selected.";
     }
@@ -108,7 +101,6 @@ void GUI::updateChartsData(const QList<qint16>& numbers) {
 }
 
 void GUI::plotCharts() {
-    // qDebug() << "GUI::plotCharts()";
 
     if (plotQueue->empty()) return;
 
@@ -127,10 +119,4 @@ GUI::~GUI() {
     fw->quit();
     fw->wait();
 }
-
-
-//TODO: GUI класс содержит сгенерированный Ui::MainWindow, надо подвязать RealTimeChart к graphicsView и сигналы
-//правильно связать
-
-//TODO: свой циклический список на основе QVarLengthArray
 

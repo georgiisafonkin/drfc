@@ -4,21 +4,26 @@
 #include <QFile>
 #include <qdebug.h>
 
+//
+// ВАЖНО!!!
+// Я не уверен, что FileWriter нужны примитивы синхронизации при записи данных в файлы.
+// Дело в том, что в текущей версии программы у нас один экземпляр этого класса
+// пишет в файл, т.е. разделяемого ресурса нет как такового .
+// Однако, если в будущем захочешь сделать, чтобы сразу несколько потоков работали с файлами
+// использование мьютекса может оказаться необходимым. Поэтому решил оставить
+//
+
 FileWriter::FileWriter(QObject *parent)
     : QThread{parent}, writeQueue(new QQueue<QPair<qint16, QByteArray>>()),
     queueMutex(new QMutex), queueNotEmpty(new QWaitCondition())
 {
-    // qDebug() << "FileWriter object was created in Thread with TID: " << QThread::currentThreadId();
 }
 
 void FileWriter::writeData() {
-    // qDebug() << "FileWriter::writeData() was invoked by thread with TID: " << QThread::currentThreadId();
     while (!QThread::currentThread()->isInterruptionRequested()) {
-        // qDebug() << "FileWriter::writeData() enterd loop by thread with TID: " << QThread::currentThreadId();
         QMutexLocker locker(queueMutex);
 
         while (writeQueue->empty()) {
-            // qDebug() << "empty writeQueue in thread with TID: " << QThread::currentThreadId();
             if (QThread::currentThread()->isInterruptionRequested()) {
                 return;  // Exit thread safely
             }
@@ -26,7 +31,6 @@ void FileWriter::writeData() {
         }
 
         if (!writeQueue->empty()) {
-            // qDebug() << "NOT empty writeQueue in thread with TID: " << QThread::currentThreadId();
             QPair queuePair = writeQueue->dequeue();
 
             locker.unlock();
@@ -38,29 +42,23 @@ void FileWriter::writeData() {
             QFile file(fileName);
 
             if (!file.open(QIODevice::WriteOnly)) {
-                // qDebug() << "Couldn't open " << fileName << "for writing.";
             } else {
                 QDataStream out(&file);
                 out.setByteOrder(QDataStream::BigEndian);
                 out.writeRawData(reflectogram.data(), reflectogram.size());
                 file.close();
-                // qDebug() << "Reflectogram to write: " << reflectogram.data();
-                // qDebug() << "wrote to file " << fileName << ".";
             }
             locker.relock();
         }
     }
-    qDebug() << "FW exit the loop";
 }
 
 void FileWriter::updateReflectogramData(QPair<qint16, QByteArray> newPair) {
-    // qDebug() << "FileWriter::updateReflectogramData invoked in Thread with TID: " << QThread::currentThreadId();
     QMutexLocker locker(queueMutex);
     writeQueue->enqueue(newPair);
     queueNotEmpty->wakeOne();
 }
 
 void FileWriter::run() {
-    // qDebug() << "FileWriter::run() invoked in Thread with TID: " << QThread::currentThreadId();
     writeData();
 }

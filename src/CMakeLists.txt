@@ -23,7 +23,6 @@ add_executable(drfc_qt
 
   RealTimeChart/RealTimeChart.h RealTimeChart/RealTimeChart.cpp
   FileWriter/FileWriter.h FileWriter/FileWriter.cpp
-  MenuBar/MenuBar.h MenuBar/MenuBar.cpp
   mainWindowDAS/mainWindowDAS.h
   mainWindowDAS.ui
 

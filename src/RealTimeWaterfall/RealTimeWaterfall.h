@@ -6,6 +6,10 @@
 #include <qgraphicsitem.h>
 #include "../LoopedList/LoopedList.h"
 
+//класс для отрисовки водопада
+
+//толком ничего не написано, поэтому, возможно, стоит начать писать его с нуля
+
 class RealTimeWaterFall : public QWidget
 {
     Q_OBJECT

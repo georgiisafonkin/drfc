@@ -17,7 +17,6 @@ DataTransmissionHandler::DataTransmissionHandler(QObject *parent)
 QByteArray DataTransmissionHandler::createStartMessage() {
     static QByteArray message;
 
-    // Start message creation MSB -> LSB //в тз сказано LSB -> MSB, но если так сделать ломается всё
     message.append(static_cast<qint16>(1000 * Ng) >> 8);
     message.append(static_cast<qint16>(1000 * Ng) & 0xff);
 
@@ -45,7 +44,6 @@ void DataTransmissionHandler::startDataTransmission() {
 void DataTransmissionHandler::recieveData() {
     elapsedTimer.start();
     while (!isInterruptionRequested()) {
-        // Receive the data from the socket
         QNetworkDatagram networkDatagram;
         networkDatagram = sock->receiveDatagram(lengthUdpPack + 5);
         if (networkDatagram.data().size() > 0) {
@@ -60,7 +58,6 @@ void DataTransmissionHandler::recieveData() {
             }
         }
     }
-    qDebug() << "DTH exit the loop";
 }
 
 void DataTransmissionHandler::setComPortName(const QString &newComPortName)
@@ -102,18 +99,15 @@ void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
     elapsedTimer.restart();
     static int prevNumPack = 0;
     int numPack = int(data[1] << 8 | data[2]);
-    // qDebug() << "numPack: " << numPack;
     if (numPack == 0) {
         if (index != 0) {
             QPair<qint16, QByteArray>* newPair = new QPair<qint16, QByteArray>(index, *array);
-            emit ReflectogramDataReady(*newPair);
-            emit ChartDataReady(prepareNumbers(*array));
-            // qDebug() << "DataTranslationHandler in Thread with TID " << QThread::currentThreadId() <<" emit signals";
-            // qDebug() << "Reflectogram received";
+            emit ReflectogramDataReady(*newPair); //сигналим FileWriter, что очередная рефлектограмма готова для записи в файл
+            emit ChartDataReady(prepareNumbers(*array)); //сигналим GUI, что данные для отрисовки готовы
+
             array->clear();
         }
         array->append(data.begin() + 5, data.size() - 5);
-        // qDebug() << "Array size: " << array->size() << "data size: " << data.size();
         prevNumPack = numPack;
         index += 1;
     }
@@ -121,9 +115,9 @@ void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
         prevNumPack = numPack;
         array->append(data.begin() + 5, data.size() - 5);
     }
-    // qDebug() << "Processing received data of size:" << data.size();
 }
 
+// функция ниже написана для случая когда новые данные перестают приходить и срабатывает elapsedTimer
 void DataTransmissionHandler::processReceivedData() {
     ReflectogramDataReady(QPair<qint16, QByteArray>(index, *array));
     ChartDataReady(prepareNumbers(*array));
@@ -131,7 +125,6 @@ void DataTransmissionHandler::processReceivedData() {
 }
 
 void DataTransmissionHandler::connectToComPort() {
-    // QString portName = comPortCombo->currentData().toString();
     chosenPort->setPortName(comPortName);
     chosenPort->setBaudRate(QSerialPort::Baud115200, QSerialPort::AllDirections);
     chosenPort->setDataBits(QSerialPort::Data8);
@@ -148,12 +141,6 @@ void DataTransmissionHandler::connectToComPort() {
 }
 
 void DataTransmissionHandler::run() {
-    qDebug() << "DataTransmissionHandler::run()";
-
-    qDebug() << "lineLength: " << lineLength;
-    qDebug() << "pulseWidth: " << pulseWidth;
-    qDebug() << "pulseFreq: " << pulseFreq;
-
     this->sock = new QUdpSocket(this);
     if (!sock->bind(myAddress, myPort)) {
         qDebug() << "Socket bind error:" << sock->errorString();
@@ -161,22 +148,23 @@ void DataTransmissionHandler::run() {
         qDebug() << "Socket binded to " << myAddress.toString() << "on the port " << myPort;
     }
     sock->open(QIODevice::ReadWrite);
+
     this->chosenPort = new QSerialPort(this);
     this->connectToComPort();
     this->startDataTransmission();
     this->recieveData();
 }
 
+//функция ниже переводит сырые байты рефлектограммы в список двубайтных целочисленных значений для отрисовки
 QList<qint16> DataTransmissionHandler::prepareNumbers(QByteArray rawBytes) {
     QList<qint16> numbers = QList<qint16>();
 
     quint32 i = 0;
     while (i < rawBytes.size() - 1) {
-        qint16 highByte = static_cast<qint8>(rawBytes[i]);      // Приводим к беззнаковому
-        qint16 lowByte = static_cast<qint8>(rawBytes[i + 1]);   // Приводим к беззнаковому
+        qint16 highByte = static_cast<qint8>(rawBytes[i]);
+        qint16 lowByte = static_cast<qint8>(rawBytes[i + 1]);
 
         qint16 number = (highByte << 8) | lowByte; // Big-endian порядок
-        // qDebug() << number;
         numbers.push_back(number);
 
         i += 2;

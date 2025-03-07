@@ -14,22 +14,18 @@ public:
     DataTransmissionHandler(const QHostAddress& address, quint16 port);
     void startDataTransmission();
     void recieveData();
+
     void setComPortName(const QString &newComPortName);
-
     void setLineLength(int newLineLength);
-
     void setPulseFreq(int newFreqSendData);
-
     void setPulseWidth(int newPulseWidth);
 
     int getLineLength() const;
-
     int getPulseFreq() const;
-
     int getPulseWidth() const;
 
 private:
-    //constants for start message
+    //constants for start message (card parameters)
     float Ng = 1.46;
     int lineLength = 5000;
     int lengthUdpPack = 1024;
@@ -44,16 +40,26 @@ private:
     quint16 clPort = 8080;
     QString comPortName;
     QSerialPort* chosenPort;
-    void setStaticIP();
+
+    //
+    //ВАЖНО!
+    // void setStaticIP();
+    // Статический АйПи я выставлял вручную внутри ОС.
+    // Чтобы это происходило автоматически,
+    // необходимо реализовать эту функцию.
+    // Когда будешь тестировать программу на своём ПК настрой сначала статический АйПи
+    // на соответствующем ethernet-интерфейсе, либо реализуй эту функцию.
+    //
+
     void connectToComPort();
 
-    QByteArray* array = new QByteArray();
+    QByteArray* array = new QByteArray(); //массив для рефлектограммы
     QByteArray createStartMessage();
     void processReceivedData(const QByteArray &data);
     void processReceivedData();
     void finishTransmission();
     quint16 index = 0;
-    QElapsedTimer elapsedTimer;
+    QElapsedTimer elapsedTimer; //таймер на случай, если новые данные перестанут приходить
 
     QList<qint16> prepareNumbers(QByteArray rawBytes);
 protected:
