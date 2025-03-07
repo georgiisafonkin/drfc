@@ -22,6 +22,12 @@ public:
 
     void setPulseWidth(int newPulseWidth);
 
+    int getLineLength() const;
+
+    int getPulseFreq() const;
+
+    int getPulseWidth() const;
+
 private:
     //constants for start message
     float Ng = 1.46;

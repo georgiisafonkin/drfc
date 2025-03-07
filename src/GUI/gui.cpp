@@ -30,6 +30,10 @@ GUI::GUI(QWidget *parent)
 
     fw = new FileWriter(this);
 
+    uiDAS->lineLengthLE->setText(QString::number(dth->getLineLength()));
+    uiDAS->pulseWidthLE->setText(QString::number(dth->getPulseWidth()));
+    uiDAS->pulseFreqLE->setText(QString::number(dth->getPulseFreq()));
+
     refreshComPorts();
 
     connect(dth, &DataTransmissionHandler::ReflectogramDataReady, fw, &FileWriter::updateReflectogramData, Qt::QueuedConnection);

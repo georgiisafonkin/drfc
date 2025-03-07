@@ -83,6 +83,21 @@ void DataTransmissionHandler::setPulseWidth(int newPulseWidth)
     pulseWidth = newPulseWidth;
 }
 
+int DataTransmissionHandler::getLineLength() const
+{
+    return lineLength;
+}
+
+int DataTransmissionHandler::getPulseFreq() const
+{
+    return pulseFreq;
+}
+
+int DataTransmissionHandler::getPulseWidth() const
+{
+    return pulseWidth;
+}
+
 void DataTransmissionHandler::processReceivedData(const QByteArray &data) {
     elapsedTimer.restart();
     static int prevNumPack = 0;
